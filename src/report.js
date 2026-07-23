@@ -6,7 +6,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const RUNS_DIR = process.env.RUN_OUT_DIR || 'docs/runs';
 const OUT = process.env.REPORT_OUT || 'docs/index.html';
-const RETENTION_DAYS = Number(process.env.RETENTION_DAYS || 1);
+const RETENTION_DAYS = Number(process.env.RETENTION_DAYS || 7);
 const TEMPLATE = path.join(__dirname, 'report-template.html');
 
 // Load run files, pruning (and deleting) anything older than the retention window.
