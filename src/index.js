@@ -4,7 +4,7 @@ import { config } from '../config.js';
 import { runApiChecks } from './apiChecks.js';
 import { runJourney } from './journey.js';
 import { logToSheets } from './sheetsLogger.js';
-import { buildIssues, notifyChat } from './chatNotifier.js';
+import { buildIssues, notifyRun } from './chatNotifier.js';
 
 const DRY_RUN = process.env.DRY_RUN === '1' || process.env.DRY_RUN === 'true';
 
@@ -59,13 +59,13 @@ async function collect() {
 }
 
 // Persist one run as JSON for the dashboard to render later.
-function writeRunFile(dir, run) {
+function writeRunFile(dir, run, summary) {
   fs.mkdirSync(dir, { recursive: true });
   const safe = run.timestamp.replace(/[:.]/g, '-');
   const payload = {
     timestamp: run.timestamp,
     thresholds: config.thresholds,
-    summary: summarize(run.apiRows, run.journeyRows, run.netErrorRows, run.issues),
+    summary,
     api: run.apiRows,
     journey: run.journeyRows,
     netErrors: run.netErrorRows,
@@ -84,8 +84,10 @@ async function main() {
   printTable('Journey', journeyRows, ['step', 'load_time_ms', 'result', 'detail']);
   printTable('Network errors', netErrorRows, ['page', 'request_url', 'status', 'detail']);
 
+  const summary = summarize(apiRows, journeyRows, netErrorRows, issues);
+
   // Persist the run for the dashboard (used in CI; harmless locally).
-  if (process.env.RUN_OUT_DIR) writeRunFile(process.env.RUN_OUT_DIR, run);
+  if (process.env.RUN_OUT_DIR) writeRunFile(process.env.RUN_OUT_DIR, run, summary);
 
   if (DRY_RUN) {
     console.log(`\n${issues.length} alert-worthy issue(s). [DRY RUN — not writing to Sheets or Chat]`);
@@ -104,16 +106,14 @@ async function main() {
   }
 
   if (!process.env.GCHAT_WEBHOOK_URL) {
-    console.log(`Chat alerts not configured (deferred). ${issues.length} issue(s) would have been posted.`);
-  } else if (issues.length) {
+    console.log('GCHAT_WEBHOOK_URL not set — skipping Chat summary.');
+  } else {
     try {
-      await notifyChat(issues, timestamp);
-      console.log(`Posted ${issues.length} issue(s) to Google Chat.`);
+      await notifyRun({ summary, issues, timestamp, dashboardUrl: config.dashboardUrl });
+      console.log('Posted run summary to Google Chat.');
     } catch (e) {
       console.error('Chat notify failed:', e.message);
     }
-  } else {
-    console.log('All healthy — no Chat alert sent.');
   }
 }
 

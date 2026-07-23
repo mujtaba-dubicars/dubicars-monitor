@@ -70,4 +70,7 @@ export const config = {
   sheets: {
     tabs: { api: 'API_Log', journey: 'Journey_Log', netErrors: 'Network_Errors' },
   },
+
+  // Link included in Google Chat messages.
+  dashboardUrl: 'https://mujtaba-dubicars.github.io/dubicars-monitor/',
 };

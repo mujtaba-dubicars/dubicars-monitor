@@ -18,18 +18,46 @@ export function buildIssues(apiRows, journeyRows) {
   return issues;
 }
 
-// Post one grouped message to the Google Chat space. Requires env GCHAT_WEBHOOK_URL.
-export async function notifyChat(issues, timestamp) {
+function statusEmoji(s) {
+  return s.fail > 0 ? '🔴' : s.slow > 0 ? '🟠' : '✅';
+}
+function statusWord(s) {
+  if (s.fail > 0) return `${s.fail} failed`;
+  if (s.slow > 0) return `${s.slow} slow`;
+  return 'all healthy';
+}
+
+// Build the per-run summary message (Google Chat text format).
+export function buildRunMessage(summary, issues, timestamp, dashboardUrl) {
+  const ts = `${timestamp.replace('T', ' ').slice(0, 16)} UTC`;
+  const lines = [
+    `*DubiCars Monitor* ${statusEmoji(summary)} ${statusWord(summary)}`,
+    `${ts}  ·  ${summary.pass}✅  ${summary.slow}🟠  ${summary.fail}🔴`
+      + (summary.netErrors ? `  ·  ${summary.netErrors} net err` : ''),
+  ];
+  for (const i of issues.slice(0, 12)) {
+    lines.push(`${i.result === RESULT.FAIL ? '🔴' : '🟠'} ${i.label}: ${i.detail}`);
+  }
+  if (issues.length > 12) lines.push(`…and ${issues.length - 12} more`);
+  if (dashboardUrl) lines.push(`<${dashboardUrl}|Open dashboard>`);
+  return lines.join('\n');
+}
+
+async function postToChat(text) {
   const webhook = process.env.GCHAT_WEBHOOK_URL;
   if (!webhook) throw new Error('GCHAT_WEBHOOK_URL not set');
-
-  const lines = issues.map((i) => `${i.result === RESULT.FAIL ? '🔴' : '🟠'} ${i.label}: ${i.detail}`);
-  const text = `*DubiCars Monitor* — ${issues.length} issue(s) @ ${timestamp}\n${lines.join('\n')}`;
-
   const res = await fetch(webhook, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json; charset=UTF-8' },
     body: JSON.stringify({ text }),
   });
-  if (!res.ok) throw new Error(`chat webhook responded ${res.status}`);
+  if (!res.ok) {
+    const body = await res.text().catch(() => '');
+    throw new Error(`chat webhook responded ${res.status}: ${body.slice(0, 120)}`);
+  }
+}
+
+// Post one summary message for the completed run.
+export async function notifyRun({ summary, issues, timestamp, dashboardUrl }) {
+  await postToChat(buildRunMessage(summary, issues, timestamp, dashboardUrl));
 }
