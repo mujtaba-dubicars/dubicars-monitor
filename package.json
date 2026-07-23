@@ -1,0 +1,17 @@
+{
+  "name": "dubicars-monitor",
+  "version": "1.0.0",
+  "description": "Automated monitor for DubiCars APIs and key page journeys.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dry": "DRY_RUN=1 node src/index.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "playwright": "^1.48.0"
+  }
+}
