@@ -48,7 +48,21 @@ jobs:
           git add docs/
           if git diff --cached --quiet; then
             echo "No changes to commit."
-          else
-            git commit -m "monitor: run $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
-            git push
+            exit 0
           fi
+          git commit -m "monitor: run $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            if git rebase origin/main; then
+              if git push; then
+                echo "Pushed on attempt $i."
+                exit 0
+              fi
+            else
+              git rebase --abort || true
+            fi
+            echo "Push race on attempt $i; retrying..."
+            sleep 4
+          done
+          echo "Could not push after 5 attempts." >&2
+          exit 1
