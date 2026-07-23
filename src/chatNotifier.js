@@ -48,9 +48,16 @@ function apiValue(r) {
   return `HTTP ${r.http_status || '—'}`;
 }
 
+// Timestamps are stored UTC; display in GMT+5.
+function toLocal(timestamp) {
+  const ms = Date.parse(timestamp);
+  if (isNaN(ms)) return timestamp;
+  return `${new Date(ms + 5 * 3600 * 1000).toISOString().slice(0, 16).replace('T', ' ')} GMT+5`;
+}
+
 // Build a Google Chat cardsV2 payload listing every check.
 export function buildRunCard(summary, apiRows, journeyRows, timestamp, dashboardUrl) {
-  const ts = `${timestamp.replace('T', ' ').slice(0, 16)} UTC`;
+  const ts = toLocal(timestamp);
   const emoji = summary.fail > 0 ? '🔴' : summary.slow > 0 ? '🟠' : '🟢';
 
   const counts = `✅ <b>${summary.pass}</b> passed   🟠 <b>${summary.slow}</b> slow   🔴 <b>${summary.fail}</b> failed`

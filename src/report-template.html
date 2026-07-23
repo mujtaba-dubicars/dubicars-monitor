@@ -168,8 +168,13 @@
   const RUNS = __RUNS__;          // newest-first
   const GENERATED = "__GENERATED__";
 
+  // Timestamps are stored UTC; display in GMT+5.
+  const TZ_OFFSET_MIN = 5 * 60;
+  const TZ_LABEL = 'GMT+5';
+  const shift = (ts) => new Date(Date.parse(ts) + TZ_OFFSET_MIN * 60000);
+
   const clsOf = (r) => ({ PASS: 'pass', SLOW: 'slow', FAIL: 'fail', SKIPPED: 'skip' }[r] || 'skip');
-  const fmt = (ts) => { const d = new Date(ts); return isNaN(d) ? ts : d.toISOString().slice(0, 16).replace('T', ' ') + ' UTC'; };
+  const fmt = (ts) => { const ms = Date.parse(ts); return isNaN(ms) ? ts : shift(ts).toISOString().slice(0, 16).replace('T', ' ') + ' ' + TZ_LABEL; };
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
   function gauge(value, threshold, scaleMax, result) {
@@ -360,7 +365,7 @@
       if (i === pts.length - 1) { ctx.lineWidth = 2; ctx.strokeStyle = '#fff'; ctx.stroke(); }
     }
 
-    const lab = (ts) => { const d = new Date(ts); return isNaN(d) ? '' : d.toISOString().slice(5, 16).replace('T', ' '); };
+    const lab = (ts) => { const ms = Date.parse(ts); return isNaN(ms) ? '' : shift(ts).toISOString().slice(5, 16).replace('T', ' '); };
     const mid = Math.floor((pts.length - 1) / 2);
     ctx.fillStyle = C.faint; ctx.font = '10px ui-monospace, monospace';
     ctx.textAlign = 'left'; ctx.fillText(lab(pts[0].t), pad.l, cssH - 8);
