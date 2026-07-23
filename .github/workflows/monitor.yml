@@ -2,7 +2,7 @@ name: DubiCars Monitor
 
 on:
   schedule:
-    - cron: '0 * * * *' # every hour, on the hour (UTC). GitHub crons are best-effort.
+    - cron: '*/5 * * * *' # every hour, on the hour (UTC). GitHub crons are best-effort.
   workflow_dispatch: {} # allow manual runs
 
 permissions:
