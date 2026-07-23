@@ -6,7 +6,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const RUNS_DIR = process.env.RUN_OUT_DIR || 'docs/runs';
 const OUT = process.env.REPORT_OUT || 'docs/index.html';
-const RETENTION_DAYS = Number(process.env.RETENTION_DAYS || 7);
+const RETENTION_DAYS = Number(process.env.RETENTION_DAYS || 1);
 const TEMPLATE = path.join(__dirname, 'report-template.html');
 
 // Load run files, pruning (and deleting) anything older than the retention window.
@@ -35,13 +35,20 @@ function loadRuns() {
   return runs;
 }
 
+function windowLabel(days) {
+  if (days <= 1) return 'last 24 hours';
+  if (days < 1) return `last ${Math.round(days * 24)} hours`;
+  return `last ${days} days`;
+}
+
 function build(runs) {
   const template = fs.readFileSync(TEMPLATE, 'utf8');
   // Escape "<" so any "</script>" or "<" inside data can't break the inline script.
   const runsJson = JSON.stringify(runs).replace(/</g, '\\u003c');
   return template
     .replace('__RUNS__', runsJson)
-    .replace('__GENERATED__', new Date().toISOString());
+    .replace('__GENERATED__', new Date().toISOString())
+    .replace(/__WINDOW__/g, windowLabel(RETENTION_DAYS));
 }
 
 const runs = loadRuns();
