@@ -17,7 +17,11 @@ export const config = {
     suggestions: {
       name: 'suggestions',
       base: 'https://api-suggestions.dubicars.com/v1/suggestions',
-      word: 'toyota', // typed one keystroke at a time -> t, to, toy, ...
+      // Query a few random full make names each run. More representative than
+      // typing one word letter-by-letter (those popular prefixes were mostly
+      // served from CloudFront cache); rarer makes are likelier to hit origin.
+      makes: ['toyota', 'honda', 'nissan', 'byd', 'mercedes', 'bmw', 'audi'],
+      sampleCount: 3,
       ul: 'KW',
     },
     items: {

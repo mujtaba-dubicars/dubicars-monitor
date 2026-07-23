@@ -45,8 +45,8 @@ function makeRow(endpoint, query, r, thresholdMs) {
   };
 }
 
-function cumulativePrefixes(word) {
-  return Array.from({ length: word.length }, (_, i) => word.slice(0, i + 1));
+function pickRandom(arr, count) {
+  return [...arr].sort(() => Math.random() - 0.5).slice(0, count);
 }
 
 // Pick up to `count` random item ids from a search response body.
@@ -77,10 +77,10 @@ export async function runApiChecks(cfg) {
   const homeRes = await timedFetch(cfg.api.homepage.url);
   rows.push(makeRow('homepage', '', homeRes, t));
 
-  // A3. Suggestions — one request per cumulative prefix (t, to, toy, ...).
-  for (const prefix of cumulativePrefixes(cfg.api.suggestions.word)) {
-    const url = `${cfg.api.suggestions.base}?q=${encodeURIComponent(prefix)}&ul=${encodeURIComponent(cfg.api.suggestions.ul)}`;
-    rows.push(makeRow('suggestions', prefix, await timedFetch(url), t));
+  // A3. Suggestions — a few random full make names per run.
+  for (const make of pickRandom(cfg.api.suggestions.makes, cfg.api.suggestions.sampleCount)) {
+    const url = `${cfg.api.suggestions.base}?q=${encodeURIComponent(make)}&ul=${encodeURIComponent(cfg.api.suggestions.ul)}`;
+    rows.push(makeRow('suggestions', make, await timedFetch(url), t));
   }
 
   // A4. Items — chained from the search response.
