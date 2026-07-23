@@ -1,6 +1,8 @@
 import { RESULT } from './classify.js';
 
 const STEP_TITLES = { land: 'Homepage', search: 'Search', open_ad: 'Open ad' };
+const ICON = { PASS: '✅', SLOW: '🟠', FAIL: '🔴', SKIPPED: '⚪' };
+const icon = (r) => ICON[r] || '⚪';
 
 // Turn a row's detail into a short, human-readable reason.
 function cleanReason(detail) {
@@ -10,87 +12,71 @@ function cleanReason(detail) {
   return first;
 }
 
-// Collect alert-worthy issues (FAIL/SLOW) as structured objects for the card.
+// Alert-worthy issues (used only for the summary.issues count).
 export function buildIssues(apiRows, journeyRows) {
   const issues = [];
-  for (const r of apiRows) {
-    if (r.result === RESULT.FAIL || r.result === RESULT.SLOW) {
-      issues.push({
-        result: r.result,
-        category: 'API',
-        name: r.endpoint + (r.query ? ` · ${r.query}` : ''),
-        value: r.response_time_ms !== '' && r.response_time_ms != null ? `${r.response_time_ms} ms` : `HTTP ${r.http_status}`,
-        reason: cleanReason(r.detail),
-      });
-    }
-  }
-  for (const r of journeyRows) {
-    if (r.result === RESULT.FAIL || r.result === RESULT.SLOW) {
-      issues.push({
-        result: r.result,
-        category: 'Page',
-        name: STEP_TITLES[r.step] || r.step,
-        value: r.load_time_ms !== '' && r.load_time_ms != null ? `${r.load_time_ms} ms` : '',
-        reason: cleanReason(r.detail),
-      });
-    }
+  for (const r of [...apiRows, ...journeyRows]) {
+    if (r.result === RESULT.FAIL || r.result === RESULT.SLOW) issues.push(r);
   }
   return issues;
 }
 
-function statusEmoji(s) {
-  return s.fail > 0 ? '🔴' : s.slow > 0 ? '🟠' : '🟢';
-}
 function statusWord(s) {
   if (s.fail > 0) return `${s.fail} failed`;
   if (s.slow > 0) return `${s.slow} slow`;
   return 'All healthy';
 }
 
-// Build a Google Chat cardsV2 message payload for a completed run.
-export function buildRunCard(summary, issues, timestamp, dashboardUrl) {
+// One decoratedText widget for a single check.
+function checkWidget({ label, result, value, detail }) {
+  const cached = /cache\?/.test(detail || '');
+  let sub = '';
+  if (result === RESULT.SLOW || result === RESULT.FAIL) sub = cleanReason(detail);
+  else if (cached) sub = 'cached (CDN)';
+  const w = {
+    topLabel: label,
+    text: `${icon(result)} <b>${value}</b>`,
+    wrapText: true,
+  };
+  if (sub) w.bottomLabel = sub;
+  return { decoratedText: w };
+}
+
+function apiValue(r) {
+  if (r.result === RESULT.SKIPPED) return 'skipped';
+  if (r.response_time_ms !== '' && r.response_time_ms != null) return `${r.response_time_ms} ms`;
+  return `HTTP ${r.http_status || '—'}`;
+}
+
+// Build a Google Chat cardsV2 payload listing every check.
+export function buildRunCard(summary, apiRows, journeyRows, timestamp, dashboardUrl) {
   const ts = `${timestamp.replace('T', ' ').slice(0, 16)} UTC`;
-  const emoji = statusEmoji(summary);
+  const emoji = summary.fail > 0 ? '🔴' : summary.slow > 0 ? '🟠' : '🟢';
 
-  const sections = [];
+  const counts = `✅ <b>${summary.pass}</b> passed   🟠 <b>${summary.slow}</b> slow   🔴 <b>${summary.fail}</b> failed`
+    + (summary.netErrors ? `   ⚠️ <b>${summary.netErrors}</b> net err` : '');
 
-  // Summary counts.
-  const counts = `✅ <b>${summary.pass}</b> passed    🟠 <b>${summary.slow}</b> slow    🔴 <b>${summary.fail}</b> failed`
-    + (summary.netErrors ? `    ⚠️ <b>${summary.netErrors}</b> net err` : '');
-  sections.push({
-    widgets: [
-      { decoratedText: { topLabel: `Checks (${summary.total})`, text: counts, wrapText: true } },
-    ],
-  });
+  const apiWidgets = (apiRows || []).map((r) => checkWidget({
+    label: `${r.endpoint}${r.query ? ` · ${r.query}` : ''}`,
+    result: r.result,
+    value: apiValue(r),
+    detail: r.detail,
+  }));
 
-  // Issue rows, or an all-clear note.
-  if (issues.length) {
-    const shown = issues.slice(0, 12);
-    const widgets = shown.map((i) => ({
-      decoratedText: {
-        topLabel: `${i.result === RESULT.FAIL ? '🔴' : '🟠'} ${i.category} · ${i.name}`,
-        text: `<b>${i.value || i.result}</b>`,
-        bottomLabel: i.reason,
-        wrapText: true,
-      },
-    }));
-    if (issues.length > shown.length) {
-      widgets.push({ textParagraph: { text: `…and ${issues.length - shown.length} more` } });
-    }
-    sections.push({ header: 'Needs attention', widgets });
-  } else {
-    sections.push({
-      widgets: [{ textParagraph: { text: 'All checks passed within their thresholds.' } }],
-    });
-  }
+  const journeyWidgets = (journeyRows || []).map((r) => checkWidget({
+    label: STEP_TITLES[r.step] || r.step,
+    result: r.result,
+    value: r.load_time_ms !== '' && r.load_time_ms != null ? `${r.load_time_ms} ms` : '—',
+    detail: r.detail,
+  }));
 
-  // Dashboard button.
+  const sections = [
+    { widgets: [{ decoratedText: { topLabel: `Checks (${summary.total})`, text: counts, wrapText: true } }] },
+    { header: 'APIs', collapsible: false, widgets: apiWidgets },
+    { header: 'Buyer journey', collapsible: false, widgets: journeyWidgets },
+  ];
   if (dashboardUrl) {
-    sections.push({
-      widgets: [
-        { buttonList: { buttons: [{ text: 'Open dashboard', onClick: { openLink: { url: dashboardUrl } } }] } },
-      ],
-    });
+    sections.push({ widgets: [{ buttonList: { buttons: [{ text: 'Open dashboard', onClick: { openLink: { url: dashboardUrl } } }] } }] });
   }
 
   return {
@@ -98,10 +84,7 @@ export function buildRunCard(summary, issues, timestamp, dashboardUrl) {
       {
         cardId: 'dubicars-monitor-run',
         card: {
-          header: {
-            title: `${emoji}  DubiCars Monitor`,
-            subtitle: `${statusWord(summary)}  ·  ${ts}`,
-          },
+          header: { title: `${emoji}  DubiCars Monitor`, subtitle: `${statusWord(summary)}  ·  ${ts}` },
           sections,
         },
       },
@@ -123,7 +106,7 @@ async function postToChat(payload) {
   }
 }
 
-// Post one card for the completed run.
-export async function notifyRun({ summary, issues, timestamp, dashboardUrl }) {
-  await postToChat(buildRunCard(summary, issues, timestamp, dashboardUrl));
+// Post one card (all checks) for the completed run.
+export async function notifyRun({ summary, apiRows, journeyRows, timestamp, dashboardUrl }) {
+  await postToChat(buildRunCard(summary, apiRows, journeyRows, timestamp, dashboardUrl));
 }

@@ -109,7 +109,7 @@ async function main() {
     console.log('GCHAT_WEBHOOK_URL not set — skipping Chat summary.');
   } else {
     try {
-      await notifyRun({ summary, issues, timestamp, dashboardUrl: config.dashboardUrl });
+      await notifyRun({ summary, apiRows, journeyRows, timestamp, dashboardUrl: config.dashboardUrl });
       console.log('Posted run summary to Google Chat.');
     } catch (e) {
       console.error('Chat notify failed:', e.message);
