@@ -99,9 +99,52 @@ export function buildRunCard(summary, apiRows, journeyRows, timestamp, dashboard
   };
 }
 
-async function postToChat(payload) {
-  const webhook = process.env.GCHAT_WEBHOOK_URL;
-  if (!webhook) throw new Error('GCHAT_WEBHOOK_URL not set');
+// Should the alerts space be pinged? Any failure, or >= threshold slow checks.
+export function shouldAlert(summary, slowThreshold) {
+  return summary.fail > 0 || summary.slow >= slowThreshold;
+}
+
+// One row (API or journey) → a decoratedText widget, labeled by kind.
+function rowWidget(r) {
+  const isApi = 'endpoint' in r;
+  const label = isApi
+    ? `API · ${r.endpoint}${r.query ? ` · ${r.query}` : ''}`
+    : `Page · ${STEP_TITLES[r.step] || r.step}`;
+  const value = isApi
+    ? apiValue(r)
+    : (r.load_time_ms !== '' && r.load_time_ms != null ? `${r.load_time_ms} ms` : '—');
+  return checkWidget({ label, result: r.result, value, detail: r.detail });
+}
+
+// Concise card for the alerts space — only the failed/slow checks.
+export function buildAlertCard(summary, apiRows, journeyRows, timestamp, dashboardUrl) {
+  const problems = [...apiRows, ...journeyRows].filter((r) => r.result === RESULT.FAIL || r.result === RESULT.SLOW);
+  const emoji = summary.fail > 0 ? '🔴' : '🟠';
+  const sub = [summary.fail ? `${summary.fail} failed` : null, summary.slow ? `${summary.slow} slow` : null]
+    .filter(Boolean).join(' · ');
+
+  const sections = [
+    { widgets: [{ decoratedText: { topLabel: `${summary.total} checks`, text: `🔴 <b>${summary.fail}</b> failed   🟠 <b>${summary.slow}</b> slow`, wrapText: true } }] },
+    { header: 'Problems', collapsible: false, widgets: problems.map(rowWidget) },
+  ];
+  if (dashboardUrl) {
+    sections.push({ widgets: [{ buttonList: { buttons: [{ text: 'Open dashboard', onClick: { openLink: { url: dashboardUrl } } }] } }] });
+  }
+
+  return {
+    cardsV2: [
+      {
+        cardId: 'dubicars-monitor-alert',
+        card: {
+          header: { title: `${emoji}  DubiCars Monitor — Alert`, subtitle: `${sub}  ·  ${toLocal(timestamp)}` },
+          sections,
+        },
+      },
+    ],
+  };
+}
+
+async function postToChat(webhook, payload) {
   const res = await fetch(webhook, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json; charset=UTF-8' },
@@ -113,7 +156,16 @@ async function postToChat(payload) {
   }
 }
 
-// Post one card (all checks) for the completed run.
+// Post the full-run card to the main space.
 export async function notifyRun({ summary, apiRows, journeyRows, timestamp, dashboardUrl }) {
-  await postToChat(buildRunCard(summary, apiRows, journeyRows, timestamp, dashboardUrl));
+  const webhook = process.env.GCHAT_WEBHOOK_URL;
+  if (!webhook) throw new Error('GCHAT_WEBHOOK_URL not set');
+  await postToChat(webhook, buildRunCard(summary, apiRows, journeyRows, timestamp, dashboardUrl));
+}
+
+// Post the concise alert card to the alerts space.
+export async function notifyAlert({ summary, apiRows, journeyRows, timestamp, dashboardUrl }) {
+  const webhook = process.env.GCHAT_ALERT_WEBHOOK_URL;
+  if (!webhook) throw new Error('GCHAT_ALERT_WEBHOOK_URL not set');
+  await postToChat(webhook, buildAlertCard(summary, apiRows, journeyRows, timestamp, dashboardUrl));
 }

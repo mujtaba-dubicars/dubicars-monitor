@@ -77,4 +77,8 @@ export const config = {
 
   // Link included in Google Chat messages.
   dashboardUrl: 'https://mujtaba-dubicars.github.io/dubicars-monitor/',
+
+  // Second Chat space (GCHAT_ALERT_WEBHOOK_URL) is pinged only when there's a
+  // problem: any FAIL, or at least this many SLOW checks in one run.
+  alertSlowThreshold: 5,
 };

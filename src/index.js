@@ -4,7 +4,7 @@ import { config } from '../config.js';
 import { runApiChecks } from './apiChecks.js';
 import { runJourney } from './journey.js';
 import { logToSheets } from './sheetsLogger.js';
-import { buildIssues, notifyRun } from './chatNotifier.js';
+import { buildIssues, notifyRun, notifyAlert, shouldAlert } from './chatNotifier.js';
 
 const DRY_RUN = process.env.DRY_RUN === '1' || process.env.DRY_RUN === 'true';
 
@@ -113,6 +113,16 @@ async function main() {
       console.log('Posted run summary to Google Chat.');
     } catch (e) {
       console.error('Chat notify failed:', e.message);
+    }
+  }
+
+  // Second space: only when there's a problem (any FAIL, or >= threshold SLOW).
+  if (process.env.GCHAT_ALERT_WEBHOOK_URL && shouldAlert(summary, config.alertSlowThreshold)) {
+    try {
+      await notifyAlert({ summary, apiRows, journeyRows, timestamp, dashboardUrl: config.dashboardUrl });
+      console.log('Posted alert to the alerts space.');
+    } catch (e) {
+      console.error('Alert notify failed:', e.message);
     }
   }
 }

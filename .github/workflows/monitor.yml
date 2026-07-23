@@ -36,6 +36,7 @@ jobs:
           SHEETS_WEBAPP_URL: ${{ secrets.SHEETS_WEBAPP_URL }}
           SHEETS_WEBAPP_SECRET: ${{ secrets.SHEETS_WEBAPP_SECRET }}
           GCHAT_WEBHOOK_URL: ${{ secrets.GCHAT_WEBHOOK_URL }}
+          GCHAT_ALERT_WEBHOOK_URL: ${{ secrets.GCHAT_ALERT_WEBHOOK_URL }}
         run: npm start
 
       - name: Build dashboard (7-day window)
