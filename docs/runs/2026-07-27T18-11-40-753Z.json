@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-07-27T18:11:40.753Z",
+  "thresholds": {
+    "apiMs": 600,
+    "pageMs": 4000
+  },
+  "summary": {
+    "total": 11,
+    "pass": 5,
+    "slow": 3,
+    "fail": 3,
+    "skipped": 0,
+    "netErrors": 0,
+    "issues": 6
+  },
+  "api": [
+    {
+      "endpoint": "search",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 2059,
+      "result": "SLOW",
+      "detail": "2059ms > 600ms"
+    },
+    {
+      "endpoint": "homepage",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 896,
+      "result": "SLOW",
+      "detail": "896ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "bmw",
+      "http_status": 200,
+      "response_time_ms": 634,
+      "result": "SLOW",
+      "detail": "634ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "audi",
+      "http_status": 200,
+      "response_time_ms": 109,
+      "result": "PASS",
+      "detail": "cache?(Age:3554,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "toyota",
+      "http_status": 200,
+      "response_time_ms": 107,
+      "result": "PASS",
+      "detail": "cache?(Age:3555,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "items",
+      "query": "984343",
+      "http_status": 200,
+      "response_time_ms": 417,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "913698",
+      "http_status": 200,
+      "response_time_ms": 426,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "978026",
+      "http_status": 200,
+      "response_time_ms": 361,
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "journey": [
+    {
+      "step": "land",
+      "url": "https://www.dubicars.com/",
+      "load_time_ms": 1909,
+      "result": "FAIL",
+      "detail": "1 console error(s); 7 non-critical request(s) ignored"
+    },
+    {
+      "step": "search",
+      "url": "https://www.dubicars.com/search?c=&ul=AE&ma=75&mo=1194&tr%5B%5D=&k=&cr=USD&eo%5B%5D=export-only&eo%5B%5D=can-be-exported",
+      "load_time_ms": 2369,
+      "result": "FAIL",
+      "detail": "search via typed input; 1 console error(s); 15 non-critical request(s) ignored"
+    },
+    {
+      "step": "open_ad",
+      "url": "https://www.dubicars.com/2025-nissan-navara-navara-25-diesel-pro4x-4x4-at-2025-my-engine-type-25d-mid-output-diesel-816770.html",
+      "load_time_ms": 2055,
+      "result": "FAIL",
+      "detail": "1 console error(s); 10 non-critical request(s) ignored"
+    }
+  ],
+  "netErrors": []
+}
