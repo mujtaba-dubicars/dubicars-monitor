@@ -66,6 +66,11 @@ export const config = {
         'assets\\.dubicars\\.com/fonts',
         'CORS policy',
         'advergic', // third-party ad script that intentionally disables itself
+        // Google Sign-In / FedCM noise — fails in headless (no Google session), not a site bug.
+        'GSI_LOGGER',
+        'FedCM',
+        "Provider's accounts list is empty",
+        'identity provider', // "Not signed in with the identity provider" (Google Sign-In)
       ],
     },
     navTimeoutMs: 45000,
