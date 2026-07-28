@@ -238,8 +238,6 @@
         + '<h3>' + esc(r.kind) + ' — ' + esc(r.result) + '</h3><p>' + esc(r.detail || '') + '</p></div>').join('');
 
     const known = ''
-      + '<div class="finding info"><div class="sev"></div><h3>Font blocked by CORS (known, suppressed)</h3>'
-      + '<p><code>assets.dubicars.com/…/tajawal/medium.woff2</code> returns 200 but lacks an <code>Access-Control-Allow-Origin</code> header, so browsers reject it. Fix at the CDN.</p></div>'
       + '<div class="finding info"><div class="sev"></div><h3>Suggestions API is CDN-cached</h3>'
       + '<p>CloudFront serves suggestions from cache and ignores client cache-busting, so those timings reflect the CDN, not the origin. Cached responses are flagged in the log detail.</p></div>';
 

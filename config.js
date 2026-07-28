@@ -63,8 +63,6 @@ export const config = {
       // dropped because resource failures are tracked precisely by the network listener.
       consolePatterns: [
         'Failed to load resource',
-        'assets\\.dubicars\\.com/fonts',
-        'CORS policy',
         'advergic', // third-party ad script that intentionally disables itself
         // Google Sign-In / FedCM noise — fails in headless (no Google session), not a site bug.
         'GSI_LOGGER',
