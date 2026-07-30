@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-07-30T18:11:48.579Z",
+  "thresholds": {
+    "apiMs": 600,
+    "pageMs": 4000
+  },
+  "summary": {
+    "total": 11,
+    "pass": 5,
+    "slow": 6,
+    "fail": 0,
+    "skipped": 0,
+    "netErrors": 0,
+    "issues": 6
+  },
+  "api": [
+    {
+      "endpoint": "search",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 3884,
+      "result": "SLOW",
+      "detail": "3884ms > 600ms"
+    },
+    {
+      "endpoint": "homepage",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 12074,
+      "result": "SLOW",
+      "detail": "12074ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "byd",
+      "http_status": 200,
+      "response_time_ms": 90796,
+      "result": "SLOW",
+      "detail": "90796ms > 600ms; cache?(Age:5000,X-Cache:RefreshHit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "mercedes",
+      "http_status": 200,
+      "response_time_ms": 90584,
+      "result": "SLOW",
+      "detail": "90584ms > 600ms; cache?(Age:18197,X-Cache:RefreshHit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "nissan",
+      "http_status": 200,
+      "response_time_ms": 90582,
+      "result": "SLOW",
+      "detail": "90582ms > 600ms; cache?(Age:5181,X-Cache:RefreshHit from cloudfront)"
+    },
+    {
+      "endpoint": "items",
+      "query": "902432",
+      "http_status": 200,
+      "response_time_ms": 427,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "914920",
+      "http_status": 200,
+      "response_time_ms": 441,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "951672",
+      "http_status": 200,
+      "response_time_ms": 407,
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "journey": [
+    {
+      "step": "land",
+      "url": "https://www.dubicars.com/",
+      "load_time_ms": 1640,
+      "result": "PASS",
+      "detail": "7 non-critical request(s) ignored"
+    },
+    {
+      "step": "search",
+      "url": "https://www.dubicars.com/",
+      "load_time_ms": 45916,
+      "result": "SLOW",
+      "detail": "search via typed input; 45916ms > 4000ms"
+    },
+    {
+      "step": "open_ad",
+      "url": "https://www.dubicars.com/2023-bmw-m4-competition-m-xdrive-uaes-very-best-example-aed-5006-per-month-830518.html",
+      "load_time_ms": 1525,
+      "result": "PASS",
+      "detail": "1 console error(s) [info]; 8 non-critical request(s) ignored"
+    }
+  ],
+  "netErrors": []
+}
