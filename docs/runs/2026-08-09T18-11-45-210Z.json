@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-08-09T18:11:45.210Z",
+  "thresholds": {
+    "apiMs": 600,
+    "pageMs": 4000
+  },
+  "summary": {
+    "total": 11,
+    "pass": 5,
+    "slow": 6,
+    "fail": 0,
+    "skipped": 0,
+    "netErrors": 0,
+    "issues": 6
+  },
+  "api": [
+    {
+      "endpoint": "search",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 7279,
+      "result": "SLOW",
+      "detail": "7279ms > 600ms"
+    },
+    {
+      "endpoint": "homepage",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 24092,
+      "result": "SLOW",
+      "detail": "24092ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "honda",
+      "http_status": 200,
+      "response_time_ms": 90864,
+      "result": "SLOW",
+      "detail": "90864ms > 600ms; cache?(Age:8778,X-Cache:RefreshHit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "mercedes",
+      "http_status": 200,
+      "response_time_ms": 90626,
+      "result": "SLOW",
+      "detail": "90626ms > 600ms; cache?(Age:18210,X-Cache:RefreshHit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "byd",
+      "http_status": 200,
+      "response_time_ms": 146,
+      "result": "PASS",
+      "detail": "cache?(Age:1633,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "items",
+      "query": "986886",
+      "http_status": 200,
+      "response_time_ms": 395,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "965020",
+      "http_status": 200,
+      "response_time_ms": 354,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "965684",
+      "http_status": 200,
+      "response_time_ms": 501,
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "journey": [
+    {
+      "step": "land",
+      "url": "https://www.dubicars.com/",
+      "load_time_ms": 1475,
+      "result": "PASS",
+      "detail": "7 non-critical request(s) ignored"
+    },
+    {
+      "step": "search",
+      "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
+      "load_time_ms": 25359,
+      "result": "SLOW",
+      "detail": "search via URL fallback (typed failed: page.waitForFunction: Timeout 10000ms exceeded.); 25359ms > 4000ms; 28 non-critical request(s) ignored"
+    },
+    {
+      "step": "open_ad",
+      "url": "https://www.dubicars.com/2010-ferrari-sf90-2024-ferrari-sf90-spider-novitec-carbon-kit-jbl-sound-system-986334.html",
+      "load_time_ms": 29090,
+      "result": "SLOW",
+      "detail": "29090ms > 4000ms; 10 non-critical request(s) ignored"
+    }
+  ],
+  "netErrors": []
+}
