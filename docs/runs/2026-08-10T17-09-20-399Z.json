@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-08-10T17:09:20.399Z",
+  "thresholds": {
+    "apiMs": 600,
+    "pageMs": 4000
+  },
+  "summary": {
+    "total": 11,
+    "pass": 9,
+    "slow": 2,
+    "fail": 0,
+    "skipped": 0,
+    "netErrors": 0,
+    "issues": 2
+  },
+  "api": [
+    {
+      "endpoint": "search",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 1029,
+      "result": "SLOW",
+      "detail": "1029ms > 600ms"
+    },
+    {
+      "endpoint": "homepage",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 646,
+      "result": "SLOW",
+      "detail": "646ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "toyota",
+      "http_status": 200,
+      "response_time_ms": 557,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "honda",
+      "http_status": 200,
+      "response_time_ms": 112,
+      "result": "PASS",
+      "detail": "cache?(Age:3434,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "nissan",
+      "http_status": 200,
+      "response_time_ms": 114,
+      "result": "PASS",
+      "detail": "cache?(Age:3441,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "items",
+      "query": "999517",
+      "http_status": 200,
+      "response_time_ms": 406,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1003399",
+      "http_status": 200,
+      "response_time_ms": 422,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "789255",
+      "http_status": 200,
+      "response_time_ms": 454,
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "journey": [
+    {
+      "step": "land",
+      "url": "https://www.dubicars.com/",
+      "load_time_ms": 1445,
+      "result": "PASS",
+      "detail": "7 non-critical request(s) ignored"
+    },
+    {
+      "step": "search",
+      "url": "https://www.dubicars.com/search?c=&ul=AE&ma=75&mo=1194&tr%5B%5D=&k=&cr=USD",
+      "load_time_ms": 2816,
+      "result": "PASS",
+      "detail": "search via typed input; 16 non-critical request(s) ignored"
+    },
+    {
+      "step": "open_ad",
+      "url": "https://www.dubicars.com/2025-nissan-navara-2025-25l-diesel-automatic-4x4-best-price-export-only-952480.html",
+      "load_time_ms": 2131,
+      "result": "PASS",
+      "detail": "10 non-critical request(s) ignored"
+    }
+  ],
+  "netErrors": []
+}
