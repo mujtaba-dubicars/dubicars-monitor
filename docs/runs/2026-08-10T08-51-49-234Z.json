@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-08-10T08:51:49.234Z",
+  "thresholds": {
+    "apiMs": 600,
+    "pageMs": 4000
+  },
+  "summary": {
+    "total": 11,
+    "pass": 7,
+    "slow": 4,
+    "fail": 0,
+    "skipped": 0,
+    "netErrors": 0,
+    "issues": 4
+  },
+  "api": [
+    {
+      "endpoint": "search",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 1471,
+      "result": "SLOW",
+      "detail": "1471ms > 600ms"
+    },
+    {
+      "endpoint": "homepage",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 1212,
+      "result": "SLOW",
+      "detail": "1212ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "toyota",
+      "http_status": 200,
+      "response_time_ms": 588,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "honda",
+      "http_status": 200,
+      "response_time_ms": 735,
+      "result": "SLOW",
+      "detail": "735ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "mercedes",
+      "http_status": 200,
+      "response_time_ms": 675,
+      "result": "SLOW",
+      "detail": "675ms > 600ms"
+    },
+    {
+      "endpoint": "items",
+      "query": "964181",
+      "http_status": 200,
+      "response_time_ms": 357,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "964271",
+      "http_status": 200,
+      "response_time_ms": 454,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "910620",
+      "http_status": 200,
+      "response_time_ms": 363,
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "journey": [
+    {
+      "step": "land",
+      "url": "https://www.dubicars.com/",
+      "load_time_ms": 2243,
+      "result": "PASS",
+      "detail": "8 non-critical request(s) ignored"
+    },
+    {
+      "step": "search",
+      "url": "https://www.dubicars.com/search?c=&ul=AE&ma=75&mo=1194&tr%5B%5D=&k=&cr=USD",
+      "load_time_ms": 3081,
+      "result": "PASS",
+      "detail": "search via typed input; 15 non-critical request(s) ignored"
+    },
+    {
+      "step": "open_ad",
+      "url": "https://www.dubicars.com/2025-nissan-navara-nissan-navara-manual-transmission-4x4-949018.html",
+      "load_time_ms": 2572,
+      "result": "PASS",
+      "detail": "11 non-critical request(s) ignored"
+    }
+  ],
+  "netErrors": []
+}
