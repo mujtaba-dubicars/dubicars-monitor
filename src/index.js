@@ -117,7 +117,7 @@ async function main() {
   }
 
   // Second space: only when there's a problem (any FAIL, or >= threshold SLOW).
-  if (process.env.GCHAT_ALERT_WEBHOOK_URL && shouldAlert(summary, config.alertSlowThreshold)) {
+  if (config.alertsEnabled && process.env.GCHAT_ALERT_WEBHOOK_URL && shouldAlert(summary, config.alertSlowThreshold)) {
     try {
       await notifyAlert({ summary, apiRows, journeyRows, timestamp, dashboardUrl: config.dashboardUrl });
       console.log('Posted alert to the alerts space.');

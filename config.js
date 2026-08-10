@@ -83,5 +83,8 @@ export const config = {
 
   // Second Chat space (GCHAT_ALERT_WEBHOOK_URL) is pinged only when there's a
   // problem: any FAIL, or at least this many SLOW checks in one run.
+  // Set alertsEnabled=false to silence the alerts space entirely (main space still
+  // gets every run).
+  alertsEnabled: false,
   alertSlowThreshold: 5,
 };
