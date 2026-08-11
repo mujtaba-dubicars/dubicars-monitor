@@ -69,7 +69,12 @@ export async function runJourney(cfg) {
     ignoreUrlRes.some((re) => re.test(n.url));
   const isIgnorableConsole = (text) => ignoreConsoleRes.some((re) => re.test(text));
 
-  const browser = await chromium.launch({ headless: true });
+  // --no-sandbox / --disable-dev-shm-usage: needed for reliable headless Chromium
+  // on server VMs (small /dev/shm, non-desktop environment).
+  const browser = await chromium.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-dev-shm-usage'],
+  });
   const context = await browser.newContext();
   const page = await context.newPage();
 
