@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-08-12T05:03:03.093Z",
+  "thresholds": {
+    "apiMs": 600,
+    "pageMs": 4000
+  },
+  "summary": {
+    "total": 11,
+    "pass": 7,
+    "slow": 4,
+    "fail": 0,
+    "skipped": 0,
+    "netErrors": 0,
+    "issues": 4
+  },
+  "api": [
+    {
+      "endpoint": "search",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 2202,
+      "result": "SLOW",
+      "detail": "2202ms > 600ms"
+    },
+    {
+      "endpoint": "homepage",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 888,
+      "result": "SLOW",
+      "detail": "888ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "mercedes",
+      "http_status": 200,
+      "response_time_ms": 184,
+      "result": "PASS",
+      "detail": "cache?(Age:3082,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "honda",
+      "http_status": 200,
+      "response_time_ms": 1367,
+      "result": "SLOW",
+      "detail": "1367ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "toyota",
+      "http_status": 200,
+      "response_time_ms": 1285,
+      "result": "SLOW",
+      "detail": "1285ms > 600ms"
+    },
+    {
+      "endpoint": "items",
+      "query": "884072",
+      "http_status": 200,
+      "response_time_ms": 554,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "942039",
+      "http_status": 200,
+      "response_time_ms": 409,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "985272",
+      "http_status": 200,
+      "response_time_ms": 486,
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "journey": [
+    {
+      "step": "land",
+      "url": "https://www.dubicars.com/",
+      "load_time_ms": 2291,
+      "result": "PASS",
+      "detail": "8 non-critical request(s) ignored"
+    },
+    {
+      "step": "search",
+      "url": "https://www.dubicars.com/search?c=&ul=AE&ma=75&mo=1194&tr%5B%5D=&k=&cr=USD",
+      "load_time_ms": 2648,
+      "result": "PASS",
+      "detail": "search via typed input; 16 non-critical request(s) ignored"
+    },
+    {
+      "step": "open_ad",
+      "url": "https://www.dubicars.com/2025-nissan-navara-csf-25l-158-hp-2025-nissan-navara-dlx-csf-25l-turbo-diesel-161-hp-manual-4x4-gcc-specs-948839.html",
+      "load_time_ms": 1215,
+      "result": "PASS",
+      "detail": "9 non-critical request(s) ignored"
+    }
+  ],
+  "netErrors": []
+}
