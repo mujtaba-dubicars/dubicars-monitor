@@ -1,0 +1,929 @@
+{
+  "timestamp": "2026-08-16T13:11:41.604Z",
+  "thresholds": {
+    "apiMs": 600,
+    "pageMs": 4000
+  },
+  "summary": {
+    "total": 11,
+    "pass": 5,
+    "slow": 3,
+    "fail": 3,
+    "skipped": 0,
+    "netErrors": 137,
+    "issues": 6
+  },
+  "api": [
+    {
+      "endpoint": "search",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 778,
+      "result": "SLOW",
+      "detail": "778ms > 600ms"
+    },
+    {
+      "endpoint": "homepage",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 653,
+      "result": "SLOW",
+      "detail": "653ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "audi",
+      "http_status": 200,
+      "response_time_ms": 248,
+      "result": "PASS",
+      "detail": "cache?(Age:627,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "honda",
+      "http_status": 200,
+      "response_time_ms": 102,
+      "result": "PASS",
+      "detail": "cache?(Age:3593,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "bmw",
+      "http_status": 200,
+      "response_time_ms": 102,
+      "result": "PASS",
+      "detail": "cache?(Age:3593,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "items",
+      "query": "963381",
+      "http_status": 200,
+      "response_time_ms": 1006,
+      "result": "SLOW",
+      "detail": "1006ms > 600ms"
+    },
+    {
+      "endpoint": "items",
+      "query": "980943",
+      "http_status": 200,
+      "response_time_ms": 453,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "976222",
+      "http_status": 200,
+      "response_time_ms": 462,
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "journey": [
+    {
+      "step": "land",
+      "url": "https://www.dubicars.com/",
+      "load_time_ms": 1588,
+      "result": "FAIL",
+      "detail": "69 network request(s) failed; 7 non-critical request(s) ignored"
+    },
+    {
+      "step": "search",
+      "url": "https://www.dubicars.com/search?c=&ul=AE&ma=75&mo=1194&tr%5B%5D=&k=&cr=USD",
+      "load_time_ms": 2258,
+      "result": "FAIL",
+      "detail": "search via typed input; 3 network request(s) failed; 15 non-critical request(s) ignored"
+    },
+    {
+      "step": "open_ad",
+      "url": "https://www.dubicars.com/2025-nissan-navara-2025-25l-diesel-automatic-4x4-best-price-guaranteed-export-only-952481.html",
+      "load_time_ms": 988,
+      "result": "FAIL",
+      "detail": "65 network request(s) failed; 9 non-critical request(s) ignored"
+    }
+  ],
+  "netErrors": [
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/dealers/the-car-superstore-logo.jpg?cr",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/modified-cars.png?arude",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/circle.svg?jewel",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/f43cfd/r_960x540/makes/make_6a54ea3f4dacd_ford-loog.png?6",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/mid-size.png?arude",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/b1888b/r_960x540/makes/make_6a54ea6441a16_bmw-logo.png?6",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/car-logos/land-rover.png?cr",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/luxury.png?arude",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/efcf6a/r_960x540/makes/make_6824820099d52_hyundai-logo.jpg?6",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/private.png?arude",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/low-mileage.png?arude",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/6151e8/r_960x540/makes/make_6a54ea736fa9c_chevrolet-logo.png?6",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/super.png?arudex",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/desert.png?arudex",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/family.png?arude",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/muscle.png?arudex",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/b73e1c/r_960x540/makes/make_648188bfc4558_mitsubishi-logo.png?6",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/1ad52a/r_960x540/makes/make_6a54eb6255326_porsche-logo.png?6",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/c1ec5f/r_960x540/makes/make_6a54eacdbee5b_honda-logo.png?6",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/installment.png?arudex",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/cheap.png?arude",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/vintage.png?arude",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/exotic.png?arude",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/big.png?arude",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/commercial.png?arude",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/off-road.png?arude",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/small.png?arude",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/sports.png?arude",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/micro.png?arude",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/ambulance.png?arude",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/hot-hatch.png?arude",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/3-wheelers.webp",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/zeroDownPayment.webp",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/armored.webp",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/cpo.png",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/warrantyCars.png",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/car.svg?cruide",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/security-camera.svg?cruide",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/user.svg?cruide",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/icons/check.svg?cruide",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/ea577d/r_400x234/makes/make_6a54ebb5c6870_toyota-logo.png",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/ab698f/r_400x234/makes/make_6a54eb5114f27_nissan-logo.png",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/e7caca/r_400x234/makes/make_68248124162e0_kia-logo.jpg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/0b82a3/r_400x234/makes/make_6a54ea6441a16_bmw-logo.png",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/95f194/r_400x234/makes/make_6a54eb4101358_mercedes-benz-logo.png",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/21509e/r_400x234/makes/make_6a54ea3f4dacd_ford-loog.png",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/18a35b/r_400x234/makes/make_6824820099d52_hyundai-logo.jpg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/8519e5/r_400x234/makes/make_6a54eb6255326_porsche-logo.png",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/03d4ab/r_400x234/makes/make_648188bfc4558_mitsubishi-logo.png",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/fcdad6/r_400x234/makes/make_6a54eb21a2608_lexus-logo.png",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/908cf5/r_400x234/makes/make_6a54eacdbee5b_honda-logo.png",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/f21776/r_400x234/makes/make_6a54ea2e2eaec_audi-logo.png",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/9cdc54/r_400x234/makes/make_691ee6d980e17_suzuki-logo.jpg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/3e82e1/r_400x234/makes/make_6948dad030dcb_mazda-logo.jpg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/d818cc/r_400x234/makes/make_6a54e712518d8_mg-logo.png",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/1bf530/r_400x234/makes/make_6a54ea736fa9c_chevrolet-logo.png",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/02ca39/r_400x234/makes/make_6a54eaefe1200_jetour-logo.png",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/99c1cc/r_400x234/makes/make_6a54ea8525f6d_dodge-logo.png",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/2cdb16/r_400x234/makes/make_6a54eb9db7799_tesla-logo.png",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/6173c4/r_400x234/makes/make_691ef75b7d258_jeep-logo.jpg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/57e841/r_400x234/makes/make_6a54eb78dc6b5_ram-logo.png",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/de8dc2/r_400x234/makes/make_6a54ebc579592_volkswagen-logo.png",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/f28d84/r_400x234/makes/make_6a54ea925eda2_ferrari-logo.png",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/79f281/r_400x234/makes/make_6a54eb03e0dd0_lamborghini-logo.png",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/338853/r_400x234/makes/make_6977424773fcc_isuzu-logo.jpg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/4131d1/r_400x234/makes/make_692409124910b_infinity-logo.jpg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/homepage/pink-background.svg?cruide",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/97213c/f_500x282/approved-automotive/d78d3321-a790-4aa7-b3b1-29617922bc47.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "land",
+      "request_url": "https://www.dubicars.com/images/ab0fa2/f_500x282/approved-automotive/8ccd403b-657b-4deb-948a-6d3cc7db9bcc.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "search",
+      "request_url": "https://www.dubicars.com/images/settings.svg?2in",
+      "status": "FAILED",
+      "detail": "net::ERR_FAILED"
+    },
+    {
+      "page": "search",
+      "request_url": "https://www.dubicars.com/images/spec-icons/calendar.svg",
+      "status": "FAILED",
+      "detail": "net::ERR_FAILED"
+    },
+    {
+      "page": "search",
+      "request_url": "https://www.dubicars.com/images/50a5bb/400x234/777-cars-trading/db066cc0-b9ec-4570-9f75-203f3c79dee9.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/5afbf9/130x76/steerwell-auto/b746d7a2-960f-49cd-a959-ec1c18947ed4.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_FAILED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/ee75a2/130x76/steerwell-auto/961e4470-7233-46c4-b3d5-90ea07128bde.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_FAILED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/23d661/130x76/steerwell-auto/3b67e7a8-e04a-4ea3-a9c6-55c99699406f.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_FAILED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/747814/130x76/steerwell-auto/2d72d89c-0935-4797-982a-269c8044d75d.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_FAILED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/6a2161/130x76/steerwell-auto/17547982-0ff7-45e9-bae0-3275a1ff1da2.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_FAILED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/1439fe/130x76/steerwell-auto/833abacb-3948-4866-a081-83450f644dff.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_FAILED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/af158f/130x76/steerwell-auto/0803c86f-299a-48df-b3a1-ce3f24e0e65b.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_FAILED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/436a5e/130x76/steerwell-auto/b967a7be-132c-4dc3-969e-cef1b04b175f.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_FAILED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/a88ce2/130x76/steerwell-auto/025b75d5-d457-4d40-b1fa-82a754134210.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_FAILED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/d2bbaf/w_1300x760/steerwell-auto/3b67e7a8-e04a-4ea3-a9c6-55c99699406f.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/ced1b5/w_1300x760/steerwell-auto/517b5d04-8808-4e32-a6df-54e6e477ff1b.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/283b78/w_1300x760/steerwell-auto/025b75d5-d457-4d40-b1fa-82a754134210.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/6401fd/w_1300x760/steerwell-auto/e268eb42-b353-487e-9044-89aa99371e2e.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/2f26f7/w_1300x760/steerwell-auto/f4367185-05c3-49b5-9834-951a2dcdae9c.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/5d4221/w_1300x760/steerwell-auto/c5eec6aa-23d8-476c-bde5-ba468014b507.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/6c9669/w_1300x760/steerwell-auto/5e61f6f3-8d99-468e-93b5-22365254ebd5.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/58d9eb/w_1300x760/steerwell-auto/c3abe359-2def-4fd7-8575-c65bf587521a.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/79b163/w_1300x760/steerwell-auto/78567e21-7b70-496f-9389-671fb046950b.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/939d79/w_1300x760/steerwell-auto/715c7ff4-bfae-4601-b331-505bacda39a5.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/10edf6/w_1300x760/steerwell-auto/4358de8b-597b-444e-a03b-de73f80ece30.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/2d2190/w_1300x760/steerwell-auto/34aa2fb7-be88-476c-be7c-f259352a6caa.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/43c6dd/w_1300x760/steerwell-auto/d4419cfd-d6ca-44de-b0c6-30bc4deb1b7e.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/2fc4d9/w_1300x760/steerwell-auto/b2cebd4a-20c8-4446-9cf6-8bdb37246488.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/c0c48c/w_1300x760/steerwell-auto/7dcb0805-9f41-46b0-9200-0ca68e8a5dba.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/102bfa/w_1300x760/steerwell-auto/6bc75dd6-82e9-44ba-b9d0-55b0e8519ed1.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/0b7fb0/w_1300x760/steerwell-auto/935da089-6adb-4375-ba50-15625d24988d.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/50f805/w_1300x760/steerwell-auto/0f22e6b7-920b-417b-99a7-e1f798bce130.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/1f1700/w_1300x760/steerwell-auto/b5d7c23b-2088-43b4-b559-c9a2c9c4e6cd.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/df82f3/w_1300x760/steerwell-auto/5621a0ea-3533-4dc8-a22c-a73cc7242cdc.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/b80bdc/w_1300x760/steerwell-auto/57d56120-b76c-4aac-98ca-1bfe567b0bf6.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/bc0666/130x76/steerwell-auto/57d56120-b76c-4aac-98ca-1bfe567b0bf6.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_FAILED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/58eb4e/130x76/steerwell-auto/5621a0ea-3533-4dc8-a22c-a73cc7242cdc.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_FAILED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/5fdd30/130x76/steerwell-auto/715c7ff4-bfae-4601-b331-505bacda39a5.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_FAILED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/1c1567/130x76/steerwell-auto/d4419cfd-d6ca-44de-b0c6-30bc4deb1b7e.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_FAILED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/settings.svg",
+      "status": "FAILED",
+      "detail": "net::ERR_FAILED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/email-new.svg",
+      "status": "FAILED",
+      "detail": "net::ERR_FAILED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/location.svg",
+      "status": "FAILED",
+      "detail": "net::ERR_FAILED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/calender-highlight.svg?321",
+      "status": "FAILED",
+      "detail": "net::ERR_FAILED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/engine-capacity.svg",
+      "status": "FAILED",
+      "detail": "net::ERR_FAILED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/report-flag-blue.svg?323",
+      "status": "FAILED",
+      "detail": "net::ERR_SOCKET_NOT_CONNECTED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/direction.svg",
+      "status": "FAILED",
+      "detail": "net::ERR_SOCKET_NOT_CONNECTED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/steering-trade-in.svg",
+      "status": "FAILED",
+      "detail": "net::ERR_SOCKET_NOT_CONNECTED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/listing/car-inspection.webp?troki",
+      "status": "FAILED",
+      "detail": "net::ERR_SOCKET_NOT_CONNECTED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/listing/sell-my-car-art.webp?hlop",
+      "status": "FAILED",
+      "detail": "net::ERR_SOCKET_NOT_CONNECTED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/2d2191/f_500x282/horse-power-motors/08541764-ec71-430d-8ee3-59d6dde04980.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_SOCKET_NOT_CONNECTED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/8b76dc/f_500x282/horse-power-motors/8d7f1ffa-c64a-48af-8558-5af1a95a0cd4.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_SOCKET_NOT_CONNECTED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/441642/f_500x282/pollux-auto/2282ba3f-1ff9-401e-9180-f21a66783b13.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_SOCKET_NOT_CONNECTED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/596d4c/f_500x282/777-cars-trading/5b8b5526-e50a-4252-8bdb-f7583578e8f2.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_SOCKET_NOT_CONNECTED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/a737d4/f_500x282/777-cars-trading/a149923e-1ec5-47ad-bcd9-bde9aa41031e.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_SOCKET_NOT_CONNECTED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/5f7aee/f_500x282/777-cars-trading/db066cc0-b9ec-4570-9f75-203f3c79dee9.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_SOCKET_NOT_CONNECTED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/1c8aab/f_500x282/777-cars-trading/42b4d67f-091b-4dc9-91c1-b014c6863f08.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_SOCKET_NOT_CONNECTED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/6ea109/f_500x282/steerwell-auto/3078717b-1c1a-418a-8955-b1344e36d25a.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_SOCKET_NOT_CONNECTED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/img/feature_groups/interior.png",
+      "status": "FAILED",
+      "detail": "net::ERR_SOCKET_NOT_CONNECTED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/img/feature_groups/infotainment.png",
+      "status": "FAILED",
+      "detail": "net::ERR_SOCKET_NOT_CONNECTED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/img/feature_groups/exterior.png",
+      "status": "FAILED",
+      "detail": "net::ERR_SOCKET_NOT_CONNECTED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/img/feature_groups/safety.png",
+      "status": "FAILED",
+      "detail": "net::ERR_SOCKET_NOT_CONNECTED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/img/feature_groups/comfort_convenience.png",
+      "status": "FAILED",
+      "detail": "net::ERR_SOCKET_NOT_CONNECTED"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/b3d59b/130x76/steerwell-auto/517b5d04-8808-4e32-a6df-54e6e477ff1b.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/12c594/130x76/steerwell-auto/f4367185-05c3-49b5-9834-951a2dcdae9c.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/icons/check.svg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/c81c6a/130x76/steerwell-auto/5e61f6f3-8d99-468e-93b5-22365254ebd5.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/8d9839/130x76/steerwell-auto/7dcb0805-9f41-46b0-9200-0ca68e8a5dba.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/cb0f90/130x76/steerwell-auto/c3abe359-2def-4fd7-8575-c65bf587521a.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/3d0e27/130x76/steerwell-auto/935da089-6adb-4375-ba50-15625d24988d.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    },
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/images/8529af/130x76/steerwell-auto/34aa2fb7-be88-476c-be7c-f259352a6caa.jpeg",
+      "status": "FAILED",
+      "detail": "net::ERR_HTTP2_SERVER_REFUSED_STREAM"
+    }
+  ]
+}
