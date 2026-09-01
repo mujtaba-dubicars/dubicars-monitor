@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-09-01T18:31:38.249Z",
+  "thresholds": {
+    "apiMs": 600,
+    "pageMs": 4000
+  },
+  "summary": {
+    "total": 11,
+    "pass": 10,
+    "slow": 1,
+    "fail": 0,
+    "skipped": 0,
+    "netErrors": 0,
+    "issues": 1
+  },
+  "api": [
+    {
+      "endpoint": "search",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 820,
+      "result": "SLOW",
+      "detail": "820ms > 600ms"
+    },
+    {
+      "endpoint": "homepage",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 328,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "bmw",
+      "http_status": 200,
+      "response_time_ms": 195,
+      "result": "PASS",
+      "detail": "cache?(Age:1186,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "mercedes",
+      "http_status": 200,
+      "response_time_ms": 526,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "byd",
+      "http_status": 200,
+      "response_time_ms": 368,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1007959",
+      "http_status": 200,
+      "response_time_ms": 399,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "915295",
+      "http_status": 200,
+      "response_time_ms": 364,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1012050",
+      "http_status": 200,
+      "response_time_ms": 412,
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "journey": [
+    {
+      "step": "land",
+      "url": "https://www.dubicars.com/",
+      "load_time_ms": 1477,
+      "result": "PASS",
+      "detail": "7 non-critical request(s) ignored"
+    },
+    {
+      "step": "search",
+      "url": "https://www.dubicars.com/search?c=&ul=AE&ma=75&mo=1194&tr%5B%5D=&k=&cr=USD",
+      "load_time_ms": 2266,
+      "result": "PASS",
+      "detail": "search via typed input; 14 non-critical request(s) ignored"
+    },
+    {
+      "step": "open_ad",
+      "url": "https://www.dubicars.com/2025-nissan-navara-nissan-navara-25-diesel-pro4x-4x4-at-2025-863149.html",
+      "load_time_ms": 813,
+      "result": "PASS",
+      "detail": "9 non-critical request(s) ignored"
+    }
+  ],
+  "netErrors": []
+}
