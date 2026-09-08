@@ -1,80 +1,80 @@
 {
-  "timestamp": "2026-09-01T07:11:48.146Z",
+  "timestamp": "2026-09-08T07:11:42.783Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 8,
-    "slow": 3,
+    "pass": 10,
+    "slow": 1,
     "fail": 0,
     "skipped": 0,
     "netErrors": 0,
-    "issues": 3
+    "issues": 1
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 1889,
+      "response_time_ms": 853,
       "result": "SLOW",
-      "detail": "1889ms > 600ms"
+      "detail": "853ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 719,
-      "result": "SLOW",
-      "detail": "719ms > 600ms"
+      "response_time_ms": 316,
+      "result": "PASS",
+      "detail": ""
     },
     {
       "endpoint": "suggestions",
       "query": "audi",
       "http_status": 200,
-      "response_time_ms": 652,
-      "result": "SLOW",
-      "detail": "652ms > 600ms"
+      "response_time_ms": 288,
+      "result": "PASS",
+      "detail": "cache?(Age:3589,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "suggestions",
-      "query": "nissan",
+      "query": "toyota",
       "http_status": 200,
-      "response_time_ms": 543,
+      "response_time_ms": 113,
       "result": "PASS",
-      "detail": ""
+      "detail": "cache?(Age:3589,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "suggestions",
-      "query": "byd",
+      "query": "honda",
       "http_status": 200,
-      "response_time_ms": 522,
+      "response_time_ms": 131,
+      "result": "PASS",
+      "detail": "cache?(Age:3588,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "items",
+      "query": "1010477",
+      "http_status": 200,
+      "response_time_ms": 435,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1007807",
+      "query": "990910",
       "http_status": 200,
-      "response_time_ms": 332,
+      "response_time_ms": 396,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "991717",
+      "query": "981499",
       "http_status": 200,
-      "response_time_ms": 357,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "1012624",
-      "http_status": 200,
-      "response_time_ms": 400,
+      "response_time_ms": 472,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1719,
+      "load_time_ms": 1389,
       "result": "PASS",
-      "detail": "7 non-critical request(s) ignored"
+      "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?c=&ul=AE&ma=75&mo=1194&tr%5B%5D=&k=&cr=USD",
-      "load_time_ms": 2728,
+      "load_time_ms": 2370,
       "result": "PASS",
       "detail": "search via typed input; 14 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2025-nissan-navara-2025-nissan-navara-25l-petrol-160-hp-manual-4x4-gcc-specs-982804.html",
-      "load_time_ms": 1488,
+      "url": "https://www.dubicars.com/2025-nissan-navara-2025-nissan-navara-25l-petrol-160-hp-manual-4x4-gcc-specs-982795.html",
+      "load_time_ms": 962,
       "result": "PASS",
       "detail": "10 non-critical request(s) ignored"
     }
