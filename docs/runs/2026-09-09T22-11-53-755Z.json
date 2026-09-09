@@ -1,32 +1,48 @@
 {
-  "timestamp": "2026-09-02T22:11:40.806Z",
+  "timestamp": "2026-09-09T22:11:53.755Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 7,
-    "slow": 4,
+    "pass": 8,
+    "slow": 3,
     "fail": 0,
     "skipped": 0,
     "netErrors": 0,
-    "issues": 4
+    "issues": 3
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 751,
+      "response_time_ms": 788,
       "result": "SLOW",
-      "detail": "751ms > 600ms"
+      "detail": "788ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 389,
+      "response_time_ms": 331,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "toyota",
+      "http_status": 200,
+      "response_time_ms": 257,
+      "result": "PASS",
+      "detail": "cache?(Age:1766,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "audi",
+      "http_status": 200,
+      "response_time_ms": 506,
       "result": "PASS",
       "detail": ""
     },
@@ -34,72 +50,56 @@
       "endpoint": "suggestions",
       "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 235,
+      "response_time_ms": 159,
       "result": "PASS",
-      "detail": "cache?(Age:1289,X-Cache:Hit from cloudfront)"
+      "detail": "cache?(Age:1765,X-Cache:Hit from cloudfront)"
     },
     {
-      "endpoint": "suggestions",
-      "query": "honda",
+      "endpoint": "items",
+      "query": "1019483",
       "http_status": 200,
-      "response_time_ms": 102,
-      "result": "PASS",
-      "detail": "cache?(Age:1290,X-Cache:Hit from cloudfront)"
+      "response_time_ms": 639,
+      "result": "SLOW",
+      "detail": "639ms > 600ms"
     },
     {
-      "endpoint": "suggestions",
-      "query": "toyota",
+      "endpoint": "items",
+      "query": "897331",
       "http_status": 200,
-      "response_time_ms": 302,
+      "response_time_ms": 664,
+      "result": "SLOW",
+      "detail": "664ms > 600ms"
+    },
+    {
+      "endpoint": "items",
+      "query": "789255",
+      "http_status": 200,
+      "response_time_ms": 537,
       "result": "PASS",
       "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "961283",
-      "http_status": 200,
-      "response_time_ms": 660,
-      "result": "SLOW",
-      "detail": "660ms > 600ms"
-    },
-    {
-      "endpoint": "items",
-      "query": "898425",
-      "http_status": 200,
-      "response_time_ms": 717,
-      "result": "SLOW",
-      "detail": "717ms > 600ms"
-    },
-    {
-      "endpoint": "items",
-      "query": "1004842",
-      "http_status": 200,
-      "response_time_ms": 662,
-      "result": "SLOW",
-      "detail": "662ms > 600ms"
     }
   ],
   "journey": [
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1286,
+      "load_time_ms": 1411,
       "result": "PASS",
-      "detail": "7 non-critical request(s) ignored"
+      "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?c=&ul=AE&ma=75&mo=1194&tr%5B%5D=&k=&cr=USD",
-      "load_time_ms": 2400,
+      "load_time_ms": 2811,
       "result": "PASS",
-      "detail": "search via typed input; 14 non-critical request(s) ignored"
+      "detail": "search via typed input; 15 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2025-nissan-navara-2025-25l-diesel-automatic-4x4-best-price-guaranteed-952478.html",
-      "load_time_ms": 1756,
+      "url": "https://www.dubicars.com/2025-nissan-navara-nissan-navara-25l-diesel-pro4x-4x4-warrier-gray-dc-at-model-2025-brand-new-available-colours-war-876810.html",
+      "load_time_ms": 1297,
       "result": "PASS",
-      "detail": "10 non-critical request(s) ignored"
+      "detail": "11 non-critical request(s) ignored"
     }
   ],
   "netErrors": []
