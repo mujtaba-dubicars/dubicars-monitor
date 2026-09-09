@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-09-09T14:11:48.174Z",
+  "thresholds": {
+    "apiMs": 600,
+    "pageMs": 4000
+  },
+  "summary": {
+    "total": 11,
+    "pass": 7,
+    "slow": 4,
+    "fail": 0,
+    "skipped": 0,
+    "netErrors": 0,
+    "issues": 4
+  },
+  "api": [
+    {
+      "endpoint": "search",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 809,
+      "result": "SLOW",
+      "detail": "809ms > 600ms"
+    },
+    {
+      "endpoint": "homepage",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 620,
+      "result": "SLOW",
+      "detail": "620ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "mercedes",
+      "http_status": 200,
+      "response_time_ms": 615,
+      "result": "SLOW",
+      "detail": "615ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "byd",
+      "http_status": 200,
+      "response_time_ms": 20,
+      "result": "PASS",
+      "detail": "cache?(Age:3601,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "nissan",
+      "http_status": 200,
+      "response_time_ms": 162,
+      "result": "PASS",
+      "detail": "cache?(Age:3601,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "items",
+      "query": "983549",
+      "http_status": 200,
+      "response_time_ms": 573,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "981518",
+      "http_status": 200,
+      "response_time_ms": 463,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "985709",
+      "http_status": 200,
+      "response_time_ms": 618,
+      "result": "SLOW",
+      "detail": "618ms > 600ms"
+    }
+  ],
+  "journey": [
+    {
+      "step": "land",
+      "url": "https://www.dubicars.com/",
+      "load_time_ms": 2940,
+      "result": "PASS",
+      "detail": "8 non-critical request(s) ignored"
+    },
+    {
+      "step": "search",
+      "url": "https://www.dubicars.com/search?c=&ul=AE&ma=75&mo=1194&tr%5B%5D=&k=&cr=USD",
+      "load_time_ms": 2486,
+      "result": "PASS",
+      "detail": "search via typed input; 13 non-critical request(s) ignored"
+    },
+    {
+      "step": "open_ad",
+      "url": "https://www.dubicars.com/2025-nissan-navara-nissan-navara-25l-diesel-pro4x-4x4-warrier-gray-dc-at-model-2025-brand-new-available-colours-war-876810.html",
+      "load_time_ms": 1984,
+      "result": "PASS",
+      "detail": "12 non-critical request(s) ignored"
+    }
+  ],
+  "netErrors": []
+}
