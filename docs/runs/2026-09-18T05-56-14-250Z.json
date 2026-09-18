@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-09-18T05:56:14.250Z",
+  "thresholds": {
+    "apiMs": 600,
+    "pageMs": 4000
+  },
+  "summary": {
+    "total": 11,
+    "pass": 6,
+    "slow": 5,
+    "fail": 0,
+    "skipped": 0,
+    "netErrors": 0,
+    "issues": 5
+  },
+  "api": [
+    {
+      "endpoint": "search",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 1785,
+      "result": "SLOW",
+      "detail": "1785ms > 600ms"
+    },
+    {
+      "endpoint": "homepage",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 796,
+      "result": "SLOW",
+      "detail": "796ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "mercedes",
+      "http_status": 200,
+      "response_time_ms": 300,
+      "result": "PASS",
+      "detail": "cache?(Age:2673,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "byd",
+      "http_status": 200,
+      "response_time_ms": 182,
+      "result": "PASS",
+      "detail": "cache?(Age:2672,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "nissan",
+      "http_status": 200,
+      "response_time_ms": 182,
+      "result": "PASS",
+      "detail": "cache?(Age:2672,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "items",
+      "query": "1000423",
+      "http_status": 200,
+      "response_time_ms": 1589,
+      "result": "SLOW",
+      "detail": "1589ms > 600ms"
+    },
+    {
+      "endpoint": "items",
+      "query": "1002309",
+      "http_status": 200,
+      "response_time_ms": 668,
+      "result": "SLOW",
+      "detail": "668ms > 600ms"
+    },
+    {
+      "endpoint": "items",
+      "query": "1016191",
+      "http_status": 200,
+      "response_time_ms": 623,
+      "result": "SLOW",
+      "detail": "623ms > 600ms"
+    }
+  ],
+  "journey": [
+    {
+      "step": "land",
+      "url": "https://www.dubicars.com/",
+      "load_time_ms": 1452,
+      "result": "PASS",
+      "detail": "8 non-critical request(s) ignored"
+    },
+    {
+      "step": "search",
+      "url": "https://www.dubicars.com/search?c=&ul=AE&ma=75&mo=1194&tr%5B%5D=&k=&cr=USD",
+      "load_time_ms": 2604,
+      "result": "PASS",
+      "detail": "search via typed input; 12 non-critical request(s) ignored"
+    },
+    {
+      "step": "open_ad",
+      "url": "https://www.dubicars.com/2025-nissan-navara-2025-nissan-navara-25l-petrol-160-hp-manual-4x4-gcc-specs-982795.html",
+      "load_time_ms": 1311,
+      "result": "PASS",
+      "detail": "12 non-critical request(s) ignored"
+    }
+  ],
+  "netErrors": []
+}
