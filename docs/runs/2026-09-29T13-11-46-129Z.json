@@ -1,80 +1,80 @@
 {
-  "timestamp": "2026-09-22T13:11:43.198Z",
+  "timestamp": "2026-09-29T13:11:46.129Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 10,
-    "slow": 1,
+    "pass": 8,
+    "slow": 3,
     "fail": 0,
     "skipped": 0,
     "netErrors": 0,
-    "issues": 1
+    "issues": 3
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 961,
+      "response_time_ms": 938,
       "result": "SLOW",
-      "detail": "961ms > 600ms"
+      "detail": "938ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
+      "http_status": 200,
+      "response_time_ms": 570,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "nissan",
+      "http_status": 200,
+      "response_time_ms": 615,
+      "result": "SLOW",
+      "detail": "615ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "byd",
+      "http_status": 200,
+      "response_time_ms": 109,
+      "result": "PASS",
+      "detail": "cache?(Age:3604,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "mercedes",
+      "http_status": 200,
+      "response_time_ms": 106,
+      "result": "PASS",
+      "detail": "cache?(Age:3604,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "items",
+      "query": "977602",
+      "http_status": 200,
+      "response_time_ms": 401,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1018488",
       "http_status": 200,
       "response_time_ms": 404,
       "result": "PASS",
       "detail": ""
     },
     {
-      "endpoint": "suggestions",
-      "query": "mercedes",
-      "http_status": 200,
-      "response_time_ms": 503,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "bmw",
-      "http_status": 200,
-      "response_time_ms": 113,
-      "result": "PASS",
-      "detail": "cache?(Age:3594,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "nissan",
-      "http_status": 200,
-      "response_time_ms": 381,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
       "endpoint": "items",
-      "query": "1019157",
+      "query": "997098",
       "http_status": 200,
-      "response_time_ms": 436,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "928062",
-      "http_status": 200,
-      "response_time_ms": 500,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "976672",
-      "http_status": 200,
-      "response_time_ms": 446,
+      "response_time_ms": 497,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1440,
+      "load_time_ms": 2115,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
-      "url": "https://www.dubicars.com/search?c=&ul=AE&ma=75&mo=1194&tr%5B%5D=&k=&cr=USD",
-      "load_time_ms": 2676,
-      "result": "PASS",
-      "detail": "search via typed input; 9 non-critical request(s) ignored"
+      "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
+      "load_time_ms": 5195,
+      "result": "SLOW",
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5195ms > 4000ms; 9 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2025-nissan-navara-navara-25-diesel-pro4x-4x4-at-2025-my-engine-type-25d-mid-output-diesel-816770.html",
-      "load_time_ms": 2553,
+      "url": "https://www.dubicars.com/2025-jeep-wrangler-unlimited-export-price-392-64l-v8-final-edition-919923.html",
+      "load_time_ms": 1324,
       "result": "PASS",
       "detail": "11 non-critical request(s) ignored"
     }
