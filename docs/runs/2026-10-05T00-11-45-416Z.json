@@ -1,80 +1,80 @@
 {
-  "timestamp": "2026-09-28T00:11:44.578Z",
+  "timestamp": "2026-10-05T00:11:45.416Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 10,
-    "slow": 1,
+    "pass": 9,
+    "slow": 2,
     "fail": 0,
     "skipped": 0,
     "netErrors": 0,
-    "issues": 1
+    "issues": 2
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 815,
+      "response_time_ms": 782,
       "result": "SLOW",
-      "detail": "815ms > 600ms"
+      "detail": "782ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 384,
+      "response_time_ms": 280,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "bmw",
+      "query": "toyota",
       "http_status": 200,
-      "response_time_ms": 477,
-      "result": "PASS",
-      "detail": ""
+      "response_time_ms": 615,
+      "result": "SLOW",
+      "detail": "615ms > 600ms"
     },
     {
       "endpoint": "suggestions",
       "query": "honda",
       "http_status": 200,
-      "response_time_ms": 295,
+      "response_time_ms": 527,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "mercedes",
+      "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 295,
+      "response_time_ms": 365,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "965084",
+      "query": "958668",
       "http_status": 200,
-      "response_time_ms": 421,
+      "response_time_ms": 343,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "980375",
+      "query": "1025754",
       "http_status": 200,
-      "response_time_ms": 428,
+      "response_time_ms": 363,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "959777",
+      "query": "898425",
       "http_status": 200,
-      "response_time_ms": 418,
+      "response_time_ms": 381,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 2002,
+      "load_time_ms": 2331,
       "result": "PASS",
-      "detail": "8 non-critical request(s) ignored"
+      "detail": "10 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?c=&ul=AE&ma=75&mo=1194&tr%5B%5D=&k=&cr=USD",
-      "load_time_ms": 3285,
+      "load_time_ms": 2703,
       "result": "PASS",
       "detail": "search via typed input; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
       "url": "https://www.dubicars.com/2017-nissan-navara-se-csf-1027977.html",
-      "load_time_ms": 1573,
+      "load_time_ms": 1527,
       "result": "PASS",
       "detail": "17 non-critical request(s) ignored"
     }
