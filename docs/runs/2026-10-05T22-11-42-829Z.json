@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-28T22:01:27.330Z",
+  "timestamp": "2026-10-05T22:11:42.829Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
@@ -18,15 +18,15 @@
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 931,
+      "response_time_ms": 781,
       "result": "SLOW",
-      "detail": "931ms > 600ms"
+      "detail": "781ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 336,
+      "response_time_ms": 333,
       "result": "PASS",
       "detail": ""
     },
@@ -34,7 +34,15 @@
       "endpoint": "suggestions",
       "query": "byd",
       "http_status": 200,
-      "response_time_ms": 587,
+      "response_time_ms": 584,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "audi",
+      "http_status": 200,
+      "response_time_ms": 464,
       "result": "PASS",
       "detail": ""
     },
@@ -42,62 +50,54 @@
       "endpoint": "suggestions",
       "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 507,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "bmw",
-      "http_status": 200,
-      "response_time_ms": 351,
+      "response_time_ms": 457,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "960042",
+      "query": "976026",
       "http_status": 200,
-      "response_time_ms": 633,
+      "response_time_ms": 635,
       "result": "SLOW",
-      "detail": "633ms > 600ms"
+      "detail": "635ms > 600ms"
     },
     {
       "endpoint": "items",
-      "query": "951672",
+      "query": "964798",
       "http_status": 200,
-      "response_time_ms": 628,
-      "result": "SLOW",
-      "detail": "628ms > 600ms"
+      "response_time_ms": 583,
+      "result": "PASS",
+      "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "960033",
+      "query": "984173",
       "http_status": 200,
-      "response_time_ms": 894,
+      "response_time_ms": 645,
       "result": "SLOW",
-      "detail": "894ms > 600ms"
+      "detail": "645ms > 600ms"
     }
   ],
   "journey": [
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 2591,
+      "load_time_ms": 1888,
       "result": "PASS",
-      "detail": "8 non-critical request(s) ignored"
+      "detail": "9 non-critical request(s) ignored"
     },
     {
       "step": "search",
-      "url": "https://www.dubicars.com/search?c=&ul=AE&ma=75&mo=1194&tr%5B%5D=&k=&cr=USD",
-      "load_time_ms": 3159,
-      "result": "PASS",
-      "detail": "search via typed input; 10 non-critical request(s) ignored"
+      "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
+      "load_time_ms": 5009,
+      "result": "SLOW",
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5009ms > 4000ms; 9 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2017-nissan-navara-se-csf-1027977.html",
-      "load_time_ms": 2222,
+      "url": "https://www.dubicars.com/2002-mercedes-benz-sl55-amg-964798.html",
+      "load_time_ms": 1266,
       "result": "PASS",
       "detail": "11 non-critical request(s) ignored"
     }
