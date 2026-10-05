@@ -1,80 +1,80 @@
 {
-  "timestamp": "2026-09-28T14:11:48.913Z",
+  "timestamp": "2026-10-05T14:11:49.956Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 9,
-    "slow": 2,
+    "pass": 8,
+    "slow": 3,
     "fail": 0,
     "skipped": 0,
     "netErrors": 0,
-    "issues": 2
+    "issues": 3
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 855,
+      "response_time_ms": 879,
       "result": "SLOW",
-      "detail": "855ms > 600ms"
+      "detail": "879ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 353,
+      "response_time_ms": 383,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "byd",
+      "query": "bmw",
       "http_status": 200,
-      "response_time_ms": 655,
-      "result": "SLOW",
-      "detail": "655ms > 600ms"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "toyota",
-      "http_status": 200,
-      "response_time_ms": 163,
+      "response_time_ms": 424,
       "result": "PASS",
-      "detail": "cache?(Age:3600,X-Cache:Hit from cloudfront)"
+      "detail": "cache?(Age:3601,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "suggestions",
       "query": "audi",
       "http_status": 200,
-      "response_time_ms": 506,
+      "response_time_ms": 404,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "nissan",
+      "http_status": 200,
+      "response_time_ms": 564,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "978764",
+      "query": "1016334",
       "http_status": 200,
-      "response_time_ms": 459,
+      "response_time_ms": 531,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "876779",
+      "query": "1017363",
       "http_status": 200,
-      "response_time_ms": 565,
+      "response_time_ms": 432,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "955685",
+      "query": "1017061",
       "http_status": 200,
-      "response_time_ms": 342,
+      "response_time_ms": 483,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1958,
-      "result": "PASS",
-      "detail": "8 non-critical request(s) ignored"
+      "load_time_ms": 4384,
+      "result": "SLOW",
+      "detail": "4384ms > 4000ms; 8 non-critical request(s) ignored"
     },
     {
       "step": "search",
-      "url": "https://www.dubicars.com/search?c=&ul=AE&ma=75&mo=1194&tr%5B%5D=&k=&cr=USD",
-      "load_time_ms": 2822,
-      "result": "PASS",
-      "detail": "search via typed input; 10 non-critical request(s) ignored"
+      "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
+      "load_time_ms": 4897,
+      "result": "SLOW",
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4897ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2017-nissan-navara-se-csf-1027977.html",
-      "load_time_ms": 1420,
+      "url": "https://www.dubicars.com/2026-mercedes-benz-c200-amg-15t-rwd-gcc-0km-with-2-years-unlimited-mileage-warranty-1016334.html",
+      "load_time_ms": 1748,
       "result": "PASS",
       "detail": "11 non-critical request(s) ignored"
     }
