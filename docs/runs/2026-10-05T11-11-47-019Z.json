@@ -1,48 +1,48 @@
 {
-  "timestamp": "2026-09-28T11:11:50.875Z",
+  "timestamp": "2026-10-05T11:11:47.019Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 10,
-    "slow": 1,
+    "pass": 9,
+    "slow": 2,
     "fail": 0,
     "skipped": 0,
     "netErrors": 0,
-    "issues": 1
+    "issues": 2
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 890,
+      "response_time_ms": 674,
       "result": "SLOW",
-      "detail": "890ms > 600ms"
+      "detail": "674ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 322,
+      "response_time_ms": 323,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "nissan",
+      "query": "honda",
       "http_status": 200,
-      "response_time_ms": 348,
+      "response_time_ms": 210,
       "result": "PASS",
-      "detail": "cache?(Age:3608,X-Cache:Hit from cloudfront)"
+      "detail": "cache?(Age:3600,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "suggestions",
-      "query": "bmw",
+      "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 513,
+      "response_time_ms": 510,
       "result": "PASS",
       "detail": ""
     },
@@ -50,31 +50,31 @@
       "endpoint": "suggestions",
       "query": "byd",
       "http_status": 200,
-      "response_time_ms": 163,
-      "result": "PASS",
-      "detail": "cache?(Age:3609,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "items",
-      "query": "1028526",
-      "http_status": 200,
-      "response_time_ms": 447,
+      "response_time_ms": 346,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "977967",
+      "query": "1020607",
       "http_status": 200,
-      "response_time_ms": 388,
+      "response_time_ms": 381,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1002278",
+      "query": "1006108",
       "http_status": 200,
-      "response_time_ms": 375,
+      "response_time_ms": 331,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "923570",
+      "http_status": 200,
+      "response_time_ms": 321,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1635,
+      "load_time_ms": 1857,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
-      "url": "https://www.dubicars.com/search?c=&ul=AE&ma=75&mo=1194&tr%5B%5D=&k=&cr=USD",
-      "load_time_ms": 2824,
-      "result": "PASS",
-      "detail": "search via typed input; 13 non-critical request(s) ignored"
+      "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
+      "load_time_ms": 5006,
+      "result": "SLOW",
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5006ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2025-nissan-navara-full-option-919042.html",
-      "load_time_ms": 1690,
+      "url": "https://www.dubicars.com/2026-toyota-rav4-adventure-25l-hybrid-radar-remote-engine-start-rear-camera-wireless-charger-1031273.html",
+      "load_time_ms": 1683,
       "result": "PASS",
       "detail": "11 non-critical request(s) ignored"
     }
