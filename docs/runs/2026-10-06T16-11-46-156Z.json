@@ -1,105 +1,105 @@
 {
-  "timestamp": "2026-09-29T15:52:32.960Z",
+  "timestamp": "2026-10-06T16:11:46.156Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 8,
-    "slow": 3,
+    "pass": 5,
+    "slow": 6,
     "fail": 0,
     "skipped": 0,
     "netErrors": 0,
-    "issues": 3
+    "issues": 6
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 760,
+      "response_time_ms": 868,
       "result": "SLOW",
-      "detail": "760ms > 600ms"
+      "detail": "868ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 285,
+      "response_time_ms": 521,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "bmw",
+      "query": "audi",
       "http_status": 200,
-      "response_time_ms": 606,
+      "response_time_ms": 619,
       "result": "SLOW",
-      "detail": "606ms > 600ms"
+      "detail": "619ms > 600ms"
     },
     {
       "endpoint": "suggestions",
-      "query": "toyota",
+      "query": "byd",
       "http_status": 200,
-      "response_time_ms": 375,
+      "response_time_ms": 321,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "honda",
+      "query": "mercedes",
       "http_status": 200,
-      "response_time_ms": 588,
+      "response_time_ms": 319,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "871469",
+      "query": "1031763",
       "http_status": 200,
-      "response_time_ms": 457,
-      "result": "PASS",
-      "detail": ""
+      "response_time_ms": 722,
+      "result": "SLOW",
+      "detail": "722ms > 600ms"
     },
     {
       "endpoint": "items",
-      "query": "850943",
+      "query": "1031842",
       "http_status": 200,
-      "response_time_ms": 410,
-      "result": "PASS",
-      "detail": ""
+      "response_time_ms": 902,
+      "result": "SLOW",
+      "detail": "902ms > 600ms"
     },
     {
       "endpoint": "items",
-      "query": "971591",
+      "query": "988598",
       "http_status": 200,
-      "response_time_ms": 377,
-      "result": "PASS",
-      "detail": ""
+      "response_time_ms": 738,
+      "result": "SLOW",
+      "detail": "738ms > 600ms"
     }
   ],
   "journey": [
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 2139,
+      "load_time_ms": 2170,
       "result": "PASS",
-      "detail": "9 non-critical request(s) ignored"
+      "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4740,
+      "load_time_ms": 4967,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4740ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4967ms > 4000ms; 9 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2021-mercedes-benz-e300-eq-power-plug-in-hybrid-european-specs-5000-km-898117.html",
-      "load_time_ms": 904,
+      "url": "https://www.dubicars.com/2019-rolls-royce-cullinan-facelifted-1031603.html",
+      "load_time_ms": 1751,
       "result": "PASS",
-      "detail": "10 non-critical request(s) ignored"
+      "detail": "11 non-critical request(s) ignored"
     }
   ],
   "netErrors": []
