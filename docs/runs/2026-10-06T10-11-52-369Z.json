@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-29T10:11:47.168Z",
+  "timestamp": "2026-10-06T10:11:52.369Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
@@ -18,63 +18,63 @@
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 1060,
+      "response_time_ms": 741,
       "result": "SLOW",
-      "detail": "1060ms > 600ms"
+      "detail": "741ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 445,
+      "response_time_ms": 335,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "audi",
+      "query": "byd",
       "http_status": 200,
-      "response_time_ms": 726,
-      "result": "SLOW",
-      "detail": "726ms > 600ms"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "toyota",
-      "http_status": 200,
-      "response_time_ms": 516,
+      "response_time_ms": 474,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "honda",
+      "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 547,
+      "response_time_ms": 487,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "mercedes",
+      "http_status": 200,
+      "response_time_ms": 45,
+      "result": "PASS",
+      "detail": "cache?(Age:3601,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "items",
+      "query": "1030452",
+      "http_status": 200,
+      "response_time_ms": 488,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "994359",
+      "query": "974495",
       "http_status": 200,
-      "response_time_ms": 444,
+      "response_time_ms": 549,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1020085",
+      "query": "993689",
       "http_status": 200,
-      "response_time_ms": 466,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "1018446",
-      "http_status": 200,
-      "response_time_ms": 444,
+      "response_time_ms": 482,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1482,
+      "load_time_ms": 2466,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
-      "url": "https://www.dubicars.com/search?c=&ul=AE&ma=75&mo=1194&tr%5B%5D=&k=&cr=USD",
-      "load_time_ms": 3016,
-      "result": "PASS",
-      "detail": "search via typed input; 11 non-critical request(s) ignored"
+      "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
+      "load_time_ms": 4910,
+      "result": "SLOW",
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4910ms > 4000ms; 9 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2017-nissan-navara-se-csf-1027977.html",
-      "load_time_ms": 1992,
+      "url": "https://www.dubicars.com/2020-toyota-prado-2020-vxr-27l-4-cylinder-pull-option-1019071.html",
+      "load_time_ms": 1543,
       "result": "PASS",
       "detail": "11 non-critical request(s) ignored"
     }
