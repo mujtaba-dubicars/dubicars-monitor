@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-10-06T10:18:50.156Z",
+  "thresholds": {
+    "apiMs": 600,
+    "pageMs": 4000
+  },
+  "summary": {
+    "total": 11,
+    "pass": 9,
+    "slow": 2,
+    "fail": 0,
+    "skipped": 0,
+    "netErrors": 0,
+    "issues": 2
+  },
+  "api": [
+    {
+      "endpoint": "search",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 608,
+      "result": "SLOW",
+      "detail": "608ms > 600ms"
+    },
+    {
+      "endpoint": "homepage",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 363,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "byd",
+      "http_status": 200,
+      "response_time_ms": 291,
+      "result": "PASS",
+      "detail": "cache?(Age:418,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "mercedes",
+      "http_status": 200,
+      "response_time_ms": 198,
+      "result": "PASS",
+      "detail": "cache?(Age:417,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "nissan",
+      "http_status": 200,
+      "response_time_ms": 198,
+      "result": "PASS",
+      "detail": "cache?(Age:417,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "items",
+      "query": "1020807",
+      "http_status": 200,
+      "response_time_ms": 356,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1017990",
+      "http_status": 200,
+      "response_time_ms": 434,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1021057",
+      "http_status": 200,
+      "response_time_ms": 433,
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "journey": [
+    {
+      "step": "land",
+      "url": "https://www.dubicars.com/",
+      "load_time_ms": 2129,
+      "result": "PASS",
+      "detail": "8 non-critical request(s) ignored"
+    },
+    {
+      "step": "search",
+      "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
+      "load_time_ms": 4768,
+      "result": "SLOW",
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4768ms > 4000ms; 9 non-critical request(s) ignored"
+    },
+    {
+      "step": "open_ad",
+      "url": "https://www.dubicars.com/2024-jetour-t2-2024-aed-1520month-0-dp-30-day-return-warranty-1031729.html",
+      "load_time_ms": 1215,
+      "result": "PASS",
+      "detail": "11 non-critical request(s) ignored"
+    }
+  ],
+  "netErrors": []
+}
