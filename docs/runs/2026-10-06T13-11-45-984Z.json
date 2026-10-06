@@ -1,32 +1,32 @@
 {
-  "timestamp": "2026-09-29T13:11:46.129Z",
+  "timestamp": "2026-10-06T13:11:45.984Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 8,
-    "slow": 3,
+    "pass": 9,
+    "slow": 2,
     "fail": 0,
     "skipped": 0,
     "netErrors": 0,
-    "issues": 3
+    "issues": 2
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 938,
+      "response_time_ms": 805,
       "result": "SLOW",
-      "detail": "938ms > 600ms"
+      "detail": "805ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 570,
+      "response_time_ms": 285,
       "result": "PASS",
       "detail": ""
     },
@@ -34,47 +34,47 @@
       "endpoint": "suggestions",
       "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 615,
-      "result": "SLOW",
-      "detail": "615ms > 600ms"
+      "response_time_ms": 569,
+      "result": "PASS",
+      "detail": ""
     },
     {
       "endpoint": "suggestions",
       "query": "byd",
       "http_status": 200,
-      "response_time_ms": 109,
+      "response_time_ms": 6,
       "result": "PASS",
-      "detail": "cache?(Age:3604,X-Cache:Hit from cloudfront)"
+      "detail": "cache?(Age:3602,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "suggestions",
-      "query": "mercedes",
+      "query": "bmw",
       "http_status": 200,
-      "response_time_ms": 106,
-      "result": "PASS",
-      "detail": "cache?(Age:3604,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "items",
-      "query": "977602",
-      "http_status": 200,
-      "response_time_ms": 401,
+      "response_time_ms": 362,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1018488",
+      "query": "1008983",
       "http_status": 200,
-      "response_time_ms": 404,
+      "response_time_ms": 473,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "997098",
+      "query": "1003911",
       "http_status": 200,
-      "response_time_ms": 497,
+      "response_time_ms": 313,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1003864",
+      "http_status": 200,
+      "response_time_ms": 388,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 2115,
+      "load_time_ms": 1621,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 5195,
+      "load_time_ms": 4679,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 5195ms > 4000ms; 9 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4679ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2025-jeep-wrangler-unlimited-export-price-392-64l-v8-final-edition-919923.html",
-      "load_time_ms": 1324,
+      "url": "https://www.dubicars.com/2022-alfa-romeo-giulia-2022-special-offer-18-30-sep-gargash-warranty-service-free-insurance-finance-from-09-1027065.html",
+      "load_time_ms": 1898,
       "result": "PASS",
       "detail": "11 non-critical request(s) ignored"
     }
