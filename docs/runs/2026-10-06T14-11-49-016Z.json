@@ -1,80 +1,80 @@
 {
-  "timestamp": "2026-09-29T14:12:13.467Z",
+  "timestamp": "2026-10-06T14:11:49.016Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 9,
-    "slow": 2,
+    "pass": 8,
+    "slow": 3,
     "fail": 0,
     "skipped": 0,
     "netErrors": 0,
-    "issues": 2
+    "issues": 3
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 1229,
+      "response_time_ms": 798,
       "result": "SLOW",
-      "detail": "1229ms > 600ms"
+      "detail": "798ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 338,
+      "response_time_ms": 374,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "nissan",
+      "query": "mercedes",
       "http_status": 200,
-      "response_time_ms": 331,
-      "result": "PASS",
-      "detail": "cache?(Age:3627,X-Cache:Hit from cloudfront)"
+      "response_time_ms": 602,
+      "result": "SLOW",
+      "detail": "602ms > 600ms"
     },
     {
       "endpoint": "suggestions",
       "query": "toyota",
       "http_status": 200,
-      "response_time_ms": 474,
+      "response_time_ms": 539,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "byd",
+      "query": "audi",
       "http_status": 200,
-      "response_time_ms": 122,
-      "result": "PASS",
-      "detail": "cache?(Age:3627,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "items",
-      "query": "989142",
-      "http_status": 200,
-      "response_time_ms": 432,
+      "response_time_ms": 529,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1000009",
+      "query": "989137",
       "http_status": 200,
-      "response_time_ms": 448,
+      "response_time_ms": 463,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "975985",
+      "query": "994140",
       "http_status": 200,
-      "response_time_ms": 399,
+      "response_time_ms": 380,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "996641",
+      "http_status": 200,
+      "response_time_ms": 469,
       "result": "PASS",
       "detail": ""
     }
@@ -83,23 +83,23 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 2278,
+      "load_time_ms": 2433,
       "result": "PASS",
-      "detail": "7 non-critical request(s) ignored"
+      "detail": "9 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4982,
+      "load_time_ms": 4935,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4982ms > 4000ms; 9 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4935ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2015-lamborghini-aventador-2015-lamborghini-aventador-roadster-excellent-condition-fully-loaded-gcc-spec-978031.html",
-      "load_time_ms": 1197,
+      "url": "https://www.dubicars.com/2012-mercedes-benz-s350-lwb-994140.html",
+      "load_time_ms": 1579,
       "result": "PASS",
-      "detail": "10 non-critical request(s) ignored"
+      "detail": "11 non-critical request(s) ignored"
     }
   ],
   "netErrors": []
