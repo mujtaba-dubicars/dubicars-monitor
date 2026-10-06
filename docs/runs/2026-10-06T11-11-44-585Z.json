@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-29T11:11:42.508Z",
+  "timestamp": "2026-10-06T11:11:44.585Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
@@ -18,63 +18,63 @@
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 1176,
+      "response_time_ms": 752,
       "result": "SLOW",
-      "detail": "1176ms > 600ms"
+      "detail": "752ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 354,
+      "response_time_ms": 384,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "honda",
+      "query": "bmw",
       "http_status": 200,
-      "response_time_ms": 169,
+      "response_time_ms": 409,
       "result": "PASS",
-      "detail": "cache?(Age:3594,X-Cache:Hit from cloudfront)"
+      "detail": ""
     },
     {
       "endpoint": "suggestions",
       "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 473,
+      "response_time_ms": 103,
       "result": "PASS",
-      "detail": ""
+      "detail": "cache?(Age:3174,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "suggestions",
-      "query": "mercedes",
+      "query": "honda",
       "http_status": 200,
-      "response_time_ms": 503,
+      "response_time_ms": 295,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "922006",
+      "query": "989141",
       "http_status": 200,
-      "response_time_ms": 680,
+      "response_time_ms": 646,
       "result": "SLOW",
-      "detail": "680ms > 600ms"
+      "detail": "646ms > 600ms"
     },
     {
       "endpoint": "items",
-      "query": "1000114",
+      "query": "946708",
       "http_status": 200,
-      "response_time_ms": 806,
-      "result": "SLOW",
-      "detail": "806ms > 600ms"
+      "response_time_ms": 487,
+      "result": "PASS",
+      "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "989137",
+      "query": "1029508",
       "http_status": 200,
-      "response_time_ms": 565,
+      "response_time_ms": 428,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1483,
+      "load_time_ms": 1857,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
-      "url": "https://www.dubicars.com/search?c=&ul=AE&ma=75&mo=1194&tr%5B%5D=&k=&cr=USD",
-      "load_time_ms": 2847,
-      "result": "PASS",
-      "detail": "search via typed input; 11 non-critical request(s) ignored"
+      "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
+      "load_time_ms": 5083,
+      "result": "SLOW",
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5083ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2017-nissan-navara-se-csf-1027977.html",
-      "load_time_ms": 1369,
+      "url": "https://www.dubicars.com/2025-mercedes-benz-g63-amg-mercedes-amg-g63-carbon-interior-exterior-a22-suspension-warrantyservice-package-1031598.html",
+      "load_time_ms": 1448,
       "result": "PASS",
       "detail": "11 non-critical request(s) ignored"
     }
