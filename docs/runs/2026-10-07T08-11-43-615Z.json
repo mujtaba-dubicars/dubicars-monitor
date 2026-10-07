@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-30T08:11:58.765Z",
+  "timestamp": "2026-10-07T08:11:43.615Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
@@ -18,31 +18,23 @@
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 1109,
+      "response_time_ms": 738,
       "result": "SLOW",
-      "detail": "1109ms > 600ms"
+      "detail": "738ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 407,
+      "response_time_ms": 341,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "bmw",
-      "http_status": 200,
-      "response_time_ms": 346,
-      "result": "PASS",
-      "detail": "cache?(Age:3603,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "suggestions",
       "query": "byd",
       "http_status": 200,
-      "response_time_ms": 450,
+      "response_time_ms": 566,
       "result": "PASS",
       "detail": ""
     },
@@ -50,31 +42,39 @@
       "endpoint": "suggestions",
       "query": "audi",
       "http_status": 200,
-      "response_time_ms": 128,
+      "response_time_ms": 455,
       "result": "PASS",
-      "detail": "cache?(Age:3604,X-Cache:Hit from cloudfront)"
+      "detail": ""
     },
     {
-      "endpoint": "items",
-      "query": "1016572",
+      "endpoint": "suggestions",
+      "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 894,
-      "result": "SLOW",
-      "detail": "894ms > 600ms"
-    },
-    {
-      "endpoint": "items",
-      "query": "1028676",
-      "http_status": 200,
-      "response_time_ms": 446,
+      "response_time_ms": 451,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1027781",
+      "query": "949526",
       "http_status": 200,
-      "response_time_ms": 495,
+      "response_time_ms": 465,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "990222",
+      "http_status": 200,
+      "response_time_ms": 549,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1029013",
+      "http_status": 200,
+      "response_time_ms": 394,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 2145,
+      "load_time_ms": 2233,
       "result": "PASS",
-      "detail": "9 non-critical request(s) ignored"
+      "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
-      "url": "https://www.dubicars.com/search?c=&ul=AE&ma=75&mo=1194&tr%5B%5D=&k=&cr=USD",
-      "load_time_ms": 2892,
-      "result": "PASS",
-      "detail": "search via typed input; 16 non-critical request(s) ignored"
+      "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
+      "load_time_ms": 4841,
+      "result": "SLOW",
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4841ms > 4000ms; 9 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2017-nissan-navara-se-csf-1027977.html",
-      "load_time_ms": 1556,
+      "url": "https://www.dubicars.com/2026-ferrari-roma-grey-2026my-export-price-1029012.html",
+      "load_time_ms": 1544,
       "result": "PASS",
       "detail": "11 non-critical request(s) ignored"
     }
