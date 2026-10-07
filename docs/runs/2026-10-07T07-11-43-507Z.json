@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-30T06:44:08.102Z",
+  "timestamp": "2026-10-07T07:11:43.507Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
@@ -18,63 +18,63 @@
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 985,
+      "response_time_ms": 796,
       "result": "SLOW",
-      "detail": "985ms > 600ms"
+      "detail": "796ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 444,
-      "result": "PASS",
-      "detail": ""
+      "response_time_ms": 959,
+      "result": "SLOW",
+      "detail": "959ms > 600ms"
     },
     {
       "endpoint": "suggestions",
-      "query": "mercedes",
+      "query": "toyota",
       "http_status": 200,
-      "response_time_ms": 642,
-      "result": "SLOW",
-      "detail": "642ms > 600ms"
+      "response_time_ms": 287,
+      "result": "PASS",
+      "detail": "cache?(Age:3599,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "suggestions",
       "query": "honda",
       "http_status": 200,
-      "response_time_ms": 103,
+      "response_time_ms": 495,
       "result": "PASS",
-      "detail": "cache?(Age:1945,X-Cache:Hit from cloudfront)"
+      "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "audi",
+      "query": "bmw",
       "http_status": 200,
-      "response_time_ms": 456,
+      "response_time_ms": 495,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "964833",
+      "query": "872791",
       "http_status": 200,
-      "response_time_ms": 394,
+      "response_time_ms": 500,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "964861",
+      "query": "1023988",
       "http_status": 200,
-      "response_time_ms": 398,
+      "response_time_ms": 493,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1022161",
+      "query": "1024184",
       "http_status": 200,
-      "response_time_ms": 402,
+      "response_time_ms": 552,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1298,
+      "load_time_ms": 2685,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 5201,
+      "load_time_ms": 5292,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 5201ms > 4000ms; 9 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5292ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2026-kia-sportage-brand-new-2026-kia-sportage-n-kia-spo-16-26-o-16l-turbo-5-seater-hatchback-gcc-spec-expor-948837.html",
-      "load_time_ms": 1324,
+      "url": "https://www.dubicars.com/2026-byd-leopard-5-15-hybrid-872791.html",
+      "load_time_ms": 1208,
       "result": "PASS",
       "detail": "11 non-critical request(s) ignored"
     }
