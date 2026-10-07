@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-30T05:11:44.620Z",
+  "timestamp": "2026-10-07T05:11:42.104Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
@@ -18,31 +18,15 @@
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 876,
+      "response_time_ms": 874,
       "result": "SLOW",
-      "detail": "876ms > 600ms"
+      "detail": "874ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 354,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "honda",
-      "http_status": 200,
-      "response_time_ms": 37,
-      "result": "PASS",
-      "detail": "cache?(Age:3593,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "byd",
-      "http_status": 200,
-      "response_time_ms": 447,
+      "response_time_ms": 375,
       "result": "PASS",
       "detail": ""
     },
@@ -50,31 +34,47 @@
       "endpoint": "suggestions",
       "query": "toyota",
       "http_status": 200,
-      "response_time_ms": 7,
+      "response_time_ms": 600,
       "result": "PASS",
-      "detail": "cache?(Age:3594,X-Cache:Hit from cloudfront)"
+      "detail": ""
     },
     {
-      "endpoint": "items",
-      "query": "1017274",
+      "endpoint": "suggestions",
+      "query": "honda",
       "http_status": 200,
-      "response_time_ms": 440,
+      "response_time_ms": 117,
+      "result": "PASS",
+      "detail": "cache?(Age:3579,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "audi",
+      "http_status": 200,
+      "response_time_ms": 484,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1002533",
+      "query": "1028792",
       "http_status": 200,
-      "response_time_ms": 449,
+      "response_time_ms": 472,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1020782",
+      "query": "1001317",
       "http_status": 200,
-      "response_time_ms": 458,
+      "response_time_ms": 471,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "999851",
+      "http_status": 200,
+      "response_time_ms": 442,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 2943,
+      "load_time_ms": 3639,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 5153,
+      "load_time_ms": 5119,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 5153ms > 4000ms; 9 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5119ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2026-mitsubishi-canter-2026-cargo-truck-body-euro-v-30l-turbo-dsl-export-only-1016294.html",
-      "load_time_ms": 1548,
+      "url": "https://www.dubicars.com/2026-suzuki-grand-vitara-suv-15l-2wd-360-camera-6-srs-airbags-panoramic-sunroof-export-only-983125.html",
+      "load_time_ms": 1509,
       "result": "PASS",
       "detail": "11 non-critical request(s) ignored"
     }
