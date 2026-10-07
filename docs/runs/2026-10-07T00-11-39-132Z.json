@@ -1,32 +1,32 @@
 {
-  "timestamp": "2026-09-30T00:11:44.728Z",
+  "timestamp": "2026-10-07T00:11:39.132Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 8,
-    "slow": 3,
+    "pass": 9,
+    "slow": 2,
     "fail": 0,
     "skipped": 0,
     "netErrors": 0,
-    "issues": 3
+    "issues": 2
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 765,
+      "response_time_ms": 823,
       "result": "SLOW",
-      "detail": "765ms > 600ms"
+      "detail": "823ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 336,
+      "response_time_ms": 440,
       "result": "PASS",
       "detail": ""
     },
@@ -34,37 +34,37 @@
       "endpoint": "suggestions",
       "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 642,
-      "result": "SLOW",
-      "detail": "642ms > 600ms"
+      "response_time_ms": 555,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "honda",
+      "http_status": 200,
+      "response_time_ms": 327,
+      "result": "PASS",
+      "detail": ""
     },
     {
       "endpoint": "suggestions",
       "query": "toyota",
       "http_status": 200,
-      "response_time_ms": 489,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "bmw",
-      "http_status": 200,
-      "response_time_ms": 383,
+      "response_time_ms": 329,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "966863",
+      "query": "982267",
       "http_status": 200,
-      "response_time_ms": 386,
+      "response_time_ms": 481,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "972840",
+      "query": "961728",
       "http_status": 200,
       "response_time_ms": 446,
       "result": "PASS",
@@ -72,9 +72,9 @@
     },
     {
       "endpoint": "items",
-      "query": "834289",
+      "query": "997431",
       "http_status": 200,
-      "response_time_ms": 365,
+      "response_time_ms": 476,
       "result": "PASS",
       "detail": ""
     }
@@ -83,23 +83,23 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1544,
+      "load_time_ms": 2780,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4880,
+      "load_time_ms": 4925,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4880ms > 4000ms; 9 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4925ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2017-toyota-land-cruiser-2017-model-facelift-to-lc300-2025-shape-exterior-and-interior-both-very-clean-and-perfect-condition-973646.html",
-      "load_time_ms": 1179,
+      "url": "https://www.dubicars.com/2015-toyota-land-cruiser-915295.html",
+      "load_time_ms": 1128,
       "result": "PASS",
-      "detail": "10 non-critical request(s) ignored"
+      "detail": "11 non-critical request(s) ignored"
     }
   ],
   "netErrors": []
