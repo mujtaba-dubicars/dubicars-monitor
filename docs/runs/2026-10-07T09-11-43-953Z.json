@@ -1,48 +1,32 @@
 {
-  "timestamp": "2026-09-30T09:11:48.466Z",
+  "timestamp": "2026-10-07T09:11:43.953Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 10,
-    "slow": 1,
+    "pass": 9,
+    "slow": 2,
     "fail": 0,
     "skipped": 0,
     "netErrors": 0,
-    "issues": 1
+    "issues": 2
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 1244,
+      "response_time_ms": 787,
       "result": "SLOW",
-      "detail": "1244ms > 600ms"
+      "detail": "787ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 348,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "honda",
-      "http_status": 200,
-      "response_time_ms": 487,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "toyota",
-      "http_status": 200,
-      "response_time_ms": 342,
+      "response_time_ms": 319,
       "result": "PASS",
       "detail": ""
     },
@@ -50,31 +34,47 @@
       "endpoint": "suggestions",
       "query": "byd",
       "http_status": 200,
-      "response_time_ms": 25,
+      "response_time_ms": 266,
       "result": "PASS",
-      "detail": "cache?(Age:3589,X-Cache:Hit from cloudfront)"
+      "detail": "cache?(Age:3600,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "bmw",
+      "http_status": 200,
+      "response_time_ms": 177,
+      "result": "PASS",
+      "detail": "cache?(Age:1919,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "honda",
+      "http_status": 200,
+      "response_time_ms": 183,
+      "result": "PASS",
+      "detail": "cache?(Age:1920,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "items",
-      "query": "1021549",
+      "query": "1008114",
       "http_status": 200,
-      "response_time_ms": 423,
+      "response_time_ms": 495,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1029012",
+      "query": "1022466",
       "http_status": 200,
-      "response_time_ms": 396,
+      "response_time_ms": 469,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1029013",
+      "query": "1013998",
       "http_status": 200,
-      "response_time_ms": 463,
+      "response_time_ms": 480,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 2185,
+      "load_time_ms": 2805,
       "result": "PASS",
-      "detail": "9 non-critical request(s) ignored"
+      "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
-      "url": "https://www.dubicars.com/search?c=&ul=AE&ma=75&mo=1194&tr%5B%5D=&k=&cr=USD",
-      "load_time_ms": 3160,
-      "result": "PASS",
-      "detail": "search via typed input; 11 non-critical request(s) ignored"
+      "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
+      "load_time_ms": 5294,
+      "result": "SLOW",
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5294ms > 4000ms; 9 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2017-nissan-navara-se-csf-1027977.html",
-      "load_time_ms": 1290,
+      "url": "https://www.dubicars.com/2026-lexus-lx600-vip-35l-ptr-at-2026-full-with-vip-seats-radar-head-up-display-360-camera-special-of-961051.html",
+      "load_time_ms": 1256,
       "result": "PASS",
       "detail": "12 non-critical request(s) ignored"
     }
