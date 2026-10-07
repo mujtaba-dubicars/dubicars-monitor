@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-10-07T11:11:46.087Z",
+  "thresholds": {
+    "apiMs": 600,
+    "pageMs": 4000
+  },
+  "summary": {
+    "total": 11,
+    "pass": 6,
+    "slow": 5,
+    "fail": 0,
+    "skipped": 0,
+    "netErrors": 0,
+    "issues": 5
+  },
+  "api": [
+    {
+      "endpoint": "search",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 8207,
+      "result": "SLOW",
+      "detail": "8207ms > 600ms"
+    },
+    {
+      "endpoint": "homepage",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 5935,
+      "result": "SLOW",
+      "detail": "5935ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "nissan",
+      "http_status": 200,
+      "response_time_ms": 728,
+      "result": "SLOW",
+      "detail": "728ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "honda",
+      "http_status": 200,
+      "response_time_ms": 484,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "toyota",
+      "http_status": 200,
+      "response_time_ms": 129,
+      "result": "PASS",
+      "detail": "cache?(Age:3612,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "items",
+      "query": "1022570",
+      "http_status": 200,
+      "response_time_ms": 423,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1031577",
+      "http_status": 200,
+      "response_time_ms": 493,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1026393",
+      "http_status": 200,
+      "response_time_ms": 6272,
+      "result": "SLOW",
+      "detail": "6272ms > 600ms"
+    }
+  ],
+  "journey": [
+    {
+      "step": "land",
+      "url": "https://www.dubicars.com/",
+      "load_time_ms": 2107,
+      "result": "PASS",
+      "detail": "9 non-critical request(s) ignored"
+    },
+    {
+      "step": "search",
+      "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
+      "load_time_ms": 5176,
+      "result": "SLOW",
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5176ms > 4000ms; 10 non-critical request(s) ignored"
+    },
+    {
+      "step": "open_ad",
+      "url": "https://www.dubicars.com/2025-toyota-fortuner-vxr40lleather-seatspower-seatsfront-cooling-seats4-camerablind-spot18awat2025my-for-e-887363.html",
+      "load_time_ms": 1516,
+      "result": "PASS",
+      "detail": "13 non-critical request(s) ignored"
+    }
+  ],
+  "netErrors": []
+}
