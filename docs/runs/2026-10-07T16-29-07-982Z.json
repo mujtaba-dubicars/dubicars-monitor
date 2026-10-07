@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-10-07T16:29:07.982Z",
+  "thresholds": {
+    "apiMs": 600,
+    "pageMs": 4000
+  },
+  "summary": {
+    "total": 11,
+    "pass": 6,
+    "slow": 5,
+    "fail": 0,
+    "skipped": 0,
+    "netErrors": 0,
+    "issues": 5
+  },
+  "api": [
+    {
+      "endpoint": "search",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 3478,
+      "result": "SLOW",
+      "detail": "3478ms > 600ms"
+    },
+    {
+      "endpoint": "homepage",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 1038,
+      "result": "SLOW",
+      "detail": "1038ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "mercedes",
+      "http_status": 200,
+      "response_time_ms": 405,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "nissan",
+      "http_status": 200,
+      "response_time_ms": 111,
+      "result": "PASS",
+      "detail": "cache?(Age:1042,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "toyota",
+      "http_status": 200,
+      "response_time_ms": 391,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1005813",
+      "http_status": 200,
+      "response_time_ms": 1935,
+      "result": "SLOW",
+      "detail": "1935ms > 600ms"
+    },
+    {
+      "endpoint": "items",
+      "query": "1023528",
+      "http_status": 200,
+      "response_time_ms": 1638,
+      "result": "SLOW",
+      "detail": "1638ms > 600ms"
+    },
+    {
+      "endpoint": "items",
+      "query": "986816",
+      "http_status": 200,
+      "response_time_ms": 457,
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "journey": [
+    {
+      "step": "land",
+      "url": "https://www.dubicars.com/",
+      "load_time_ms": 1691,
+      "result": "PASS",
+      "detail": "8 non-critical request(s) ignored"
+    },
+    {
+      "step": "search",
+      "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
+      "load_time_ms": 5082,
+      "result": "SLOW",
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5082ms > 4000ms; 10 non-critical request(s) ignored"
+    },
+    {
+      "step": "open_ad",
+      "url": "https://www.dubicars.com/2022-toyota-prado-985065.html",
+      "load_time_ms": 1888,
+      "result": "PASS",
+      "detail": "11 non-critical request(s) ignored"
+    }
+  ],
+  "netErrors": []
+}
