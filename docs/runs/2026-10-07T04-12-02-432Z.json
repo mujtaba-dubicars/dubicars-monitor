@@ -1,48 +1,48 @@
 {
-  "timestamp": "2026-09-30T04:11:49.891Z",
+  "timestamp": "2026-10-07T04:12:02.432Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 9,
-    "slow": 2,
+    "pass": 7,
+    "slow": 4,
     "fail": 0,
     "skipped": 0,
     "netErrors": 0,
-    "issues": 2
+    "issues": 4
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 996,
+      "response_time_ms": 835,
       "result": "SLOW",
-      "detail": "996ms > 600ms"
+      "detail": "835ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 373,
+      "response_time_ms": 339,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "audi",
+      "query": "bmw",
       "http_status": 200,
-      "response_time_ms": 568,
-      "result": "PASS",
-      "detail": ""
+      "response_time_ms": 607,
+      "result": "SLOW",
+      "detail": "607ms > 600ms"
     },
     {
       "endpoint": "suggestions",
-      "query": "toyota",
+      "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 460,
+      "response_time_ms": 470,
       "result": "PASS",
       "detail": ""
     },
@@ -50,31 +50,31 @@
       "endpoint": "suggestions",
       "query": "honda",
       "http_status": 200,
-      "response_time_ms": 471,
+      "response_time_ms": 493,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1018865",
+      "query": "1030825",
       "http_status": 200,
-      "response_time_ms": 437,
+      "response_time_ms": 662,
+      "result": "SLOW",
+      "detail": "662ms > 600ms"
+    },
+    {
+      "endpoint": "items",
+      "query": "1029504",
+      "http_status": 200,
+      "response_time_ms": 440,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1025246",
+      "query": "1031482",
       "http_status": 200,
-      "response_time_ms": 397,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "1025754",
-      "http_status": 200,
-      "response_time_ms": 359,
+      "response_time_ms": 484,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1890,
+      "load_time_ms": 1653,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 5129,
+      "load_time_ms": 4792,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 5129ms > 4000ms; 9 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4792ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2014-porsche-718-cayman-34l-flat-6-1019646.html",
-      "load_time_ms": 2011,
+      "url": "https://www.dubicars.com/2014-land-rover-range-rover-1032116.html",
+      "load_time_ms": 665,
       "result": "PASS",
       "detail": "11 non-critical request(s) ignored"
     }
