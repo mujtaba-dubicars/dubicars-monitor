@@ -1,80 +1,80 @@
 {
-  "timestamp": "2026-09-30T00:28:16.849Z",
+  "timestamp": "2026-10-07T01:33:19.280Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 8,
-    "slow": 3,
+    "pass": 7,
+    "slow": 4,
     "fail": 0,
     "skipped": 0,
     "netErrors": 0,
-    "issues": 3
+    "issues": 4
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 875,
+      "response_time_ms": 859,
       "result": "SLOW",
-      "detail": "875ms > 600ms"
+      "detail": "859ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 345,
+      "response_time_ms": 431,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "honda",
+      "query": "bmw",
       "http_status": 200,
-      "response_time_ms": 648,
+      "response_time_ms": 709,
       "result": "SLOW",
-      "detail": "648ms > 600ms"
+      "detail": "709ms > 600ms"
     },
     {
       "endpoint": "suggestions",
       "query": "audi",
       "http_status": 200,
-      "response_time_ms": 338,
+      "response_time_ms": 483,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "toyota",
+      "query": "mercedes",
       "http_status": 200,
-      "response_time_ms": 46,
-      "result": "PASS",
-      "detail": "cache?(Age:993,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "items",
-      "query": "972162",
-      "http_status": 200,
-      "response_time_ms": 430,
+      "response_time_ms": 312,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "973646",
+      "query": "1010571",
       "http_status": 200,
-      "response_time_ms": 378,
+      "response_time_ms": 537,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "978824",
+      "query": "1021099",
       "http_status": 200,
-      "response_time_ms": 403,
+      "response_time_ms": 948,
+      "result": "SLOW",
+      "detail": "948ms > 600ms"
+    },
+    {
+      "endpoint": "items",
+      "query": "1025754",
+      "http_status": 200,
+      "response_time_ms": 462,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1591,
+      "load_time_ms": 2000,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 5037,
+      "load_time_ms": 4886,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 5037ms > 4000ms; 9 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4886ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2019-toyota-land-cruiser-978824.html",
-      "load_time_ms": 1459,
+      "url": "https://www.dubicars.com/2022-toyota-land-cruiser-lc300-2022-model-full-option-1015750.html",
+      "load_time_ms": 785,
       "result": "PASS",
       "detail": "11 non-critical request(s) ignored"
     }
