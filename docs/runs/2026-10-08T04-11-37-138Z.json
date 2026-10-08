@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-10-08T04:11:37.138Z",
+  "thresholds": {
+    "apiMs": 600,
+    "pageMs": 4000
+  },
+  "summary": {
+    "total": 11,
+    "pass": 6,
+    "slow": 5,
+    "fail": 0,
+    "skipped": 0,
+    "netErrors": 0,
+    "issues": 5
+  },
+  "api": [
+    {
+      "endpoint": "search",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 785,
+      "result": "SLOW",
+      "detail": "785ms > 600ms"
+    },
+    {
+      "endpoint": "homepage",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 404,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "bmw",
+      "http_status": 200,
+      "response_time_ms": 443,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "audi",
+      "http_status": 200,
+      "response_time_ms": 474,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "nissan",
+      "http_status": 200,
+      "response_time_ms": 303,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1032155",
+      "http_status": 200,
+      "response_time_ms": 625,
+      "result": "SLOW",
+      "detail": "625ms > 600ms"
+    },
+    {
+      "endpoint": "items",
+      "query": "1023205",
+      "http_status": 200,
+      "response_time_ms": 662,
+      "result": "SLOW",
+      "detail": "662ms > 600ms"
+    },
+    {
+      "endpoint": "items",
+      "query": "1032135",
+      "http_status": 200,
+      "response_time_ms": 609,
+      "result": "SLOW",
+      "detail": "609ms > 600ms"
+    }
+  ],
+  "journey": [
+    {
+      "step": "land",
+      "url": "https://www.dubicars.com/",
+      "load_time_ms": 1988,
+      "result": "PASS",
+      "detail": "8 non-critical request(s) ignored"
+    },
+    {
+      "step": "search",
+      "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
+      "load_time_ms": 4659,
+      "result": "SLOW",
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4659ms > 4000ms; 9 non-critical request(s) ignored"
+    },
+    {
+      "step": "open_ad",
+      "url": "https://www.dubicars.com/2026-jetour-x70-plus-1030005.html",
+      "load_time_ms": 1375,
+      "result": "PASS",
+      "detail": "17 non-critical request(s) ignored"
+    }
+  ],
+  "netErrors": []
+}
