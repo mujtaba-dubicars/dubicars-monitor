@@ -1,32 +1,32 @@
 {
-  "timestamp": "2026-10-01T06:11:50.670Z",
+  "timestamp": "2026-10-08T06:12:01.436Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 10,
-    "slow": 1,
+    "pass": 9,
+    "slow": 2,
     "fail": 0,
     "skipped": 0,
     "netErrors": 0,
-    "issues": 1
+    "issues": 2
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 883,
+      "response_time_ms": 727,
       "result": "SLOW",
-      "detail": "883ms > 600ms"
+      "detail": "727ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 367,
+      "response_time_ms": 280,
       "result": "PASS",
       "detail": ""
     },
@@ -34,47 +34,47 @@
       "endpoint": "suggestions",
       "query": "audi",
       "http_status": 200,
-      "response_time_ms": 259,
+      "response_time_ms": 411,
       "result": "PASS",
-      "detail": "cache?(Age:3568,X-Cache:Hit from cloudfront)"
+      "detail": ""
     },
     {
       "endpoint": "suggestions",
       "query": "bmw",
       "http_status": 200,
-      "response_time_ms": 112,
+      "response_time_ms": 159,
       "result": "PASS",
-      "detail": "cache?(Age:1008,X-Cache:Hit from cloudfront)"
+      "detail": "cache?(Age:3617,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "suggestions",
-      "query": "toyota",
+      "query": "mercedes",
       "http_status": 200,
-      "response_time_ms": 113,
+      "response_time_ms": 161,
       "result": "PASS",
-      "detail": "cache?(Age:1008,X-Cache:Hit from cloudfront)"
+      "detail": "cache?(Age:3619,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "items",
-      "query": "869546",
+      "query": "895867",
       "http_status": 200,
-      "response_time_ms": 538,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "923553",
-      "http_status": 200,
-      "response_time_ms": 459,
+      "response_time_ms": 453,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "958823",
+      "query": "1028757",
       "http_status": 200,
-      "response_time_ms": 407,
+      "response_time_ms": 328,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "897385",
+      "http_status": 200,
+      "response_time_ms": 379,
       "result": "PASS",
       "detail": ""
     }
@@ -83,23 +83,23 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1895,
+      "load_time_ms": 1549,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
-      "url": "https://www.dubicars.com/search?c=&ul=AE&ma=75&mo=1194&tr%5B%5D=&k=&cr=USD",
-      "load_time_ms": 2857,
-      "result": "PASS",
-      "detail": "search via typed input; 11 non-critical request(s) ignored"
+      "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
+      "load_time_ms": 5017,
+      "result": "SLOW",
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5017ms > 4000ms; 9 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2025-nissan-navara-2025-nissan-navara-25l-petrol-160-hp-manual-4x4-gcc-specs-982804.html",
-      "load_time_ms": 2037,
+      "url": "https://www.dubicars.com/2019-toyota-land-cruiser-40l-271-hp-4wd-961730.html",
+      "load_time_ms": 1276,
       "result": "PASS",
-      "detail": "12 non-critical request(s) ignored"
+      "detail": "13 non-critical request(s) ignored"
     }
   ],
   "netErrors": []
