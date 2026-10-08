@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-10-08T05:11:43.076Z",
+  "thresholds": {
+    "apiMs": 600,
+    "pageMs": 4000
+  },
+  "summary": {
+    "total": 11,
+    "pass": 8,
+    "slow": 3,
+    "fail": 0,
+    "skipped": 0,
+    "netErrors": 0,
+    "issues": 3
+  },
+  "api": [
+    {
+      "endpoint": "search",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 851,
+      "result": "SLOW",
+      "detail": "851ms > 600ms"
+    },
+    {
+      "endpoint": "homepage",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 415,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "mercedes",
+      "http_status": 200,
+      "response_time_ms": 385,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "byd",
+      "http_status": 200,
+      "response_time_ms": 454,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "bmw",
+      "http_status": 200,
+      "response_time_ms": 102,
+      "result": "PASS",
+      "detail": "cache?(Age:3607,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "items",
+      "query": "937059",
+      "http_status": 200,
+      "response_time_ms": 888,
+      "result": "SLOW",
+      "detail": "888ms > 600ms"
+    },
+    {
+      "endpoint": "items",
+      "query": "1000028",
+      "http_status": 200,
+      "response_time_ms": 419,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1006167",
+      "http_status": 200,
+      "response_time_ms": 410,
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "journey": [
+    {
+      "step": "land",
+      "url": "https://www.dubicars.com/",
+      "load_time_ms": 1616,
+      "result": "PASS",
+      "detail": "9 non-critical request(s) ignored"
+    },
+    {
+      "step": "search",
+      "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
+      "load_time_ms": 5019,
+      "result": "SLOW",
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5019ms > 4000ms; 10 non-critical request(s) ignored"
+    },
+    {
+      "step": "open_ad",
+      "url": "https://www.dubicars.com/2019-toyota-land-cruiser-40l-271-hp-4wd-961730.html",
+      "load_time_ms": 1470,
+      "result": "PASS",
+      "detail": "17 non-critical request(s) ignored"
+    }
+  ],
+  "netErrors": []
+}
