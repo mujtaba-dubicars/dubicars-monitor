@@ -1,32 +1,32 @@
 {
-  "timestamp": "2026-10-04T04:11:47.804Z",
+  "timestamp": "2026-10-11T04:11:42.707Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 10,
-    "slow": 1,
-    "fail": 0,
+    "pass": 8,
+    "slow": 2,
+    "fail": 1,
     "skipped": 0,
-    "netErrors": 0,
-    "issues": 1
+    "netErrors": 1,
+    "issues": 3
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 710,
+      "response_time_ms": 688,
       "result": "SLOW",
-      "detail": "710ms > 600ms"
+      "detail": "688ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 372,
+      "response_time_ms": 287,
       "result": "PASS",
       "detail": ""
     },
@@ -34,15 +34,7 @@
       "endpoint": "suggestions",
       "query": "toyota",
       "http_status": 200,
-      "response_time_ms": 600,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "audi",
-      "http_status": 200,
-      "response_time_ms": 526,
+      "response_time_ms": 534,
       "result": "PASS",
       "detail": ""
     },
@@ -50,31 +42,39 @@
       "endpoint": "suggestions",
       "query": "honda",
       "http_status": 200,
-      "response_time_ms": 421,
+      "response_time_ms": 349,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "mercedes",
+      "http_status": 200,
+      "response_time_ms": 506,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1029199",
+      "query": "1023228",
       "http_status": 200,
-      "response_time_ms": 392,
+      "response_time_ms": 389,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1029278",
+      "query": "1032348",
       "http_status": 200,
-      "response_time_ms": 361,
+      "response_time_ms": 432,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1020514",
+      "query": "1033758",
       "http_status": 200,
-      "response_time_ms": 445,
+      "response_time_ms": 414,
       "result": "PASS",
       "detail": ""
     }
@@ -83,24 +83,31 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1902,
+      "load_time_ms": 1795,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
-      "url": "https://www.dubicars.com/search?c=&ul=AE&ma=75&mo=1194&tr%5B%5D=&k=&cr=USD",
-      "load_time_ms": 2684,
-      "result": "PASS",
-      "detail": "search via typed input; 10 non-critical request(s) ignored"
+      "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
+      "load_time_ms": 5004,
+      "result": "SLOW",
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5004ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2017-nissan-navara-se-csf-1027977.html",
-      "load_time_ms": 1623,
-      "result": "PASS",
-      "detail": "17 non-critical request(s) ignored"
+      "url": "https://www.dubicars.com/2019-toyota-land-cruiser-40l-271-hp-4wd-961730.html",
+      "load_time_ms": 201,
+      "result": "FAIL",
+      "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
   ],
-  "netErrors": []
+  "netErrors": [
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/2019-toyota-land-cruiser-40l-271-hp-4wd-961730.html",
+      "status": 403,
+      "detail": ""
+    }
+  ]
 }
