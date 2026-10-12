@@ -1,0 +1,113 @@
+{
+  "timestamp": "2026-10-12T22:11:41.355Z",
+  "thresholds": {
+    "apiMs": 600,
+    "pageMs": 4000
+  },
+  "summary": {
+    "total": 11,
+    "pass": 5,
+    "slow": 5,
+    "fail": 1,
+    "skipped": 0,
+    "netErrors": 1,
+    "issues": 6
+  },
+  "api": [
+    {
+      "endpoint": "search",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 890,
+      "result": "SLOW",
+      "detail": "890ms > 600ms"
+    },
+    {
+      "endpoint": "homepage",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 879,
+      "result": "SLOW",
+      "detail": "879ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "toyota",
+      "http_status": 200,
+      "response_time_ms": 702,
+      "result": "SLOW",
+      "detail": "702ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "nissan",
+      "http_status": 200,
+      "response_time_ms": 451,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "byd",
+      "http_status": 200,
+      "response_time_ms": 450,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "982806",
+      "http_status": 200,
+      "response_time_ms": 670,
+      "result": "SLOW",
+      "detail": "670ms > 600ms"
+    },
+    {
+      "endpoint": "items",
+      "query": "1032277",
+      "http_status": 200,
+      "response_time_ms": 567,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "997431",
+      "http_status": 200,
+      "response_time_ms": 555,
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "journey": [
+    {
+      "step": "land",
+      "url": "https://www.dubicars.com/",
+      "load_time_ms": 2083,
+      "result": "PASS",
+      "detail": "8 non-critical request(s) ignored"
+    },
+    {
+      "step": "search",
+      "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
+      "load_time_ms": 5043,
+      "result": "SLOW",
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5043ms > 4000ms; 10 non-critical request(s) ignored"
+    },
+    {
+      "step": "open_ad",
+      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "load_time_ms": 197,
+      "result": "FAIL",
+      "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
+    }
+  ],
+  "netErrors": [
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "status": 403,
+      "detail": ""
+    }
+  ]
+}
