@@ -1,0 +1,113 @@
+{
+  "timestamp": "2026-10-19T06:18:34.855Z",
+  "thresholds": {
+    "apiMs": 600,
+    "pageMs": 4000
+  },
+  "summary": {
+    "total": 11,
+    "pass": 8,
+    "slow": 2,
+    "fail": 1,
+    "skipped": 0,
+    "netErrors": 1,
+    "issues": 3
+  },
+  "api": [
+    {
+      "endpoint": "search",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 834,
+      "result": "SLOW",
+      "detail": "834ms > 600ms"
+    },
+    {
+      "endpoint": "homepage",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 426,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "audi",
+      "http_status": 200,
+      "response_time_ms": 235,
+      "result": "PASS",
+      "detail": "cache?(Age:411,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "honda",
+      "http_status": 200,
+      "response_time_ms": 457,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "byd",
+      "http_status": 200,
+      "response_time_ms": 454,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1030653",
+      "http_status": 200,
+      "response_time_ms": 469,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1023141",
+      "http_status": 200,
+      "response_time_ms": 390,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1032646",
+      "http_status": 200,
+      "response_time_ms": 466,
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "journey": [
+    {
+      "step": "land",
+      "url": "https://www.dubicars.com/",
+      "load_time_ms": 1941,
+      "result": "PASS",
+      "detail": "8 non-critical request(s) ignored"
+    },
+    {
+      "step": "search",
+      "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
+      "load_time_ms": 5003,
+      "result": "SLOW",
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5003ms > 4000ms; 10 non-critical request(s) ignored"
+    },
+    {
+      "step": "open_ad",
+      "url": "https://www.dubicars.com/2025-toyota-land-cruiser-1007190.html",
+      "load_time_ms": 211,
+      "result": "FAIL",
+      "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
+    }
+  ],
+  "netErrors": [
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/2025-toyota-land-cruiser-1007190.html",
+      "status": 403,
+      "detail": ""
+    }
+  ]
+}
