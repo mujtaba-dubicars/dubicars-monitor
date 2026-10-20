@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-13T12:11:42.853Z",
+  "timestamp": "2026-10-20T12:11:43.493Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
@@ -18,63 +18,63 @@
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 940,
+      "response_time_ms": 776,
       "result": "SLOW",
-      "detail": "940ms > 600ms"
+      "detail": "776ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 354,
+      "response_time_ms": 514,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "nissan",
+      "query": "mercedes",
       "http_status": 200,
-      "response_time_ms": 229,
+      "response_time_ms": 198,
       "result": "PASS",
-      "detail": "cache?(Age:1356,X-Cache:Hit from cloudfront)"
+      "detail": "cache?(Age:2048,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "bmw",
+      "http_status": 200,
+      "response_time_ms": 103,
+      "result": "PASS",
+      "detail": "cache?(Age:3599,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "suggestions",
       "query": "honda",
       "http_status": 200,
-      "response_time_ms": 135,
+      "response_time_ms": 104,
       "result": "PASS",
-      "detail": "cache?(Age:3596,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "audi",
-      "http_status": 200,
-      "response_time_ms": 116,
-      "result": "PASS",
-      "detail": "cache?(Age:3597,X-Cache:Hit from cloudfront)"
+      "detail": "cache?(Age:2048,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "items",
-      "query": "980641",
+      "query": "1031495",
       "http_status": 200,
-      "response_time_ms": 396,
+      "response_time_ms": 500,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1001526",
+      "query": "1031235",
       "http_status": 200,
-      "response_time_ms": 492,
+      "response_time_ms": 370,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1031602",
+      "query": "1029505",
       "http_status": 200,
-      "response_time_ms": 443,
+      "response_time_ms": 534,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 2178,
+      "load_time_ms": 1842,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 5054,
+      "load_time_ms": 5149,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 5054ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5149ms > 4000ms; 12 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 161,
+      "url": "https://www.dubicars.com/2026-mercedes-benz-c200-no-hidden-costs-c200-premium-december-agency-warranty-service-contract-1037345.html",
+      "load_time_ms": 221,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "request_url": "https://www.dubicars.com/2026-mercedes-benz-c200-no-hidden-costs-c200-premium-december-agency-warranty-service-contract-1037345.html",
       "status": 403,
       "detail": ""
     }
