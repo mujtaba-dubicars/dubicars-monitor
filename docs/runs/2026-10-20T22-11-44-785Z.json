@@ -1,103 +1,103 @@
 {
-  "timestamp": "2026-10-13T22:11:41.837Z",
+  "timestamp": "2026-10-20T22:11:44.785Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 4,
-    "slow": 6,
+    "pass": 3,
+    "slow": 7,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 7
+    "issues": 8
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 787,
+      "response_time_ms": 731,
       "result": "SLOW",
-      "detail": "787ms > 600ms"
+      "detail": "731ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 345,
-      "result": "PASS",
-      "detail": ""
+      "response_time_ms": 643,
+      "result": "SLOW",
+      "detail": "643ms > 600ms"
     },
     {
       "endpoint": "suggestions",
-      "query": "byd",
+      "query": "toyota",
       "http_status": 200,
-      "response_time_ms": 608,
+      "response_time_ms": 633,
       "result": "SLOW",
-      "detail": "608ms > 600ms"
+      "detail": "633ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "mercedes",
+      "http_status": 200,
+      "response_time_ms": 353,
+      "result": "PASS",
+      "detail": ""
     },
     {
       "endpoint": "suggestions",
       "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 516,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "audi",
-      "http_status": 200,
-      "response_time_ms": 375,
+      "response_time_ms": 343,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "972187",
+      "query": "965084",
       "http_status": 200,
-      "response_time_ms": 815,
+      "response_time_ms": 798,
       "result": "SLOW",
-      "detail": "815ms > 600ms"
+      "detail": "798ms > 600ms"
     },
     {
       "endpoint": "items",
-      "query": "974304",
+      "query": "1015750",
       "http_status": 200,
-      "response_time_ms": 621,
+      "response_time_ms": 719,
       "result": "SLOW",
-      "detail": "621ms > 600ms"
+      "detail": "719ms > 600ms"
     },
     {
       "endpoint": "items",
-      "query": "976038",
+      "query": "965709",
       "http_status": 200,
-      "response_time_ms": 667,
+      "response_time_ms": 647,
       "result": "SLOW",
-      "detail": "667ms > 600ms"
+      "detail": "647ms > 600ms"
     }
   ],
   "journey": [
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1604,
+      "load_time_ms": 1948,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 6009,
+      "load_time_ms": 5151,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 6009ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5151ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 200,
+      "url": "https://www.dubicars.com/2022-toyota-land-cruiser-2022-model-vxr-twin-35l-engine-full-option-very-clean-and-perfect-condition-1030437.html",
+      "load_time_ms": 216,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "request_url": "https://www.dubicars.com/2022-toyota-land-cruiser-2022-model-vxr-twin-35l-engine-full-option-very-clean-and-perfect-condition-1030437.html",
       "status": 403,
       "detail": ""
     }
