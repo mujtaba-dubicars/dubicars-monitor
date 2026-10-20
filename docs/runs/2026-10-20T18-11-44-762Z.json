@@ -1,80 +1,80 @@
 {
-  "timestamp": "2026-10-13T18:11:42.742Z",
+  "timestamp": "2026-10-20T18:11:44.762Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 8,
-    "slow": 2,
+    "pass": 7,
+    "slow": 3,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 3
+    "issues": 4
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 789,
+      "response_time_ms": 905,
       "result": "SLOW",
-      "detail": "789ms > 600ms"
+      "detail": "905ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 352,
+      "response_time_ms": 422,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "byd",
+      "query": "toyota",
       "http_status": 200,
-      "response_time_ms": 586,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "audi",
-      "http_status": 200,
-      "response_time_ms": 461,
-      "result": "PASS",
-      "detail": ""
+      "response_time_ms": 617,
+      "result": "SLOW",
+      "detail": "617ms > 600ms"
     },
     {
       "endpoint": "suggestions",
       "query": "honda",
       "http_status": 200,
-      "response_time_ms": 452,
+      "response_time_ms": 467,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "bmw",
+      "http_status": 200,
+      "response_time_ms": 502,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1029508",
+      "query": "1034711",
       "http_status": 200,
-      "response_time_ms": 468,
+      "response_time_ms": 394,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "993108",
+      "query": "1016798",
       "http_status": 200,
-      "response_time_ms": 529,
+      "response_time_ms": 447,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "994882",
+      "query": "1016343",
       "http_status": 200,
-      "response_time_ms": 537,
+      "response_time_ms": 488,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1950,
+      "load_time_ms": 2582,
       "result": "PASS",
-      "detail": "9 non-critical request(s) ignored"
+      "detail": "1 console error(s) [info]; 9 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 5362,
+      "load_time_ms": 5142,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 5362ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5142ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 203,
+      "url": "https://www.dubicars.com/2020-bmw-x4-m-sport-full-option-pm-zero-down-payment-1037351.html",
+      "load_time_ms": 454,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "request_url": "https://www.dubicars.com/2020-bmw-x4-m-sport-full-option-pm-zero-down-payment-1037351.html",
       "status": 403,
       "detail": ""
     }
