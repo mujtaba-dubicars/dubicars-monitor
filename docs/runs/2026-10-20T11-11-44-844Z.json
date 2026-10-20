@@ -1,80 +1,80 @@
 {
-  "timestamp": "2026-10-13T11:11:45.362Z",
+  "timestamp": "2026-10-20T11:11:44.844Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 7,
-    "slow": 3,
+    "pass": 8,
+    "slow": 2,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 4
+    "issues": 3
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 733,
+      "response_time_ms": 791,
       "result": "SLOW",
-      "detail": "733ms > 600ms"
+      "detail": "791ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 330,
+      "response_time_ms": 342,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "toyota",
+      "query": "byd",
       "http_status": 200,
-      "response_time_ms": 666,
-      "result": "SLOW",
-      "detail": "666ms > 600ms"
+      "response_time_ms": 260,
+      "result": "PASS",
+      "detail": "cache?(Age:3599,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "suggestions",
-      "query": "audi",
+      "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 510,
+      "response_time_ms": 181,
       "result": "PASS",
-      "detail": ""
+      "detail": "cache?(Age:3599,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "suggestions",
-      "query": "honda",
+      "query": "bmw",
       "http_status": 200,
-      "response_time_ms": 163,
-      "result": "PASS",
-      "detail": "cache?(Age:3601,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "items",
-      "query": "978891",
-      "http_status": 200,
-      "response_time_ms": 454,
+      "response_time_ms": 367,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1029471",
+      "query": "1037354",
       "http_status": 200,
-      "response_time_ms": 478,
+      "response_time_ms": 377,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "974389",
+      "query": "1035284",
       "http_status": 200,
-      "response_time_ms": 389,
+      "response_time_ms": 458,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1035254",
+      "http_status": 200,
+      "response_time_ms": 353,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1712,
+      "load_time_ms": 1932,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4839,
+      "load_time_ms": 4921,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4839ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4921ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 172,
+      "url": "https://www.dubicars.com/2025-mercedes-benz-glc-220d-4matic-glc-200-coupe-premium-plus-agency-warranty-service-contract-until-2203-1037354.html",
+      "load_time_ms": 197,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "request_url": "https://www.dubicars.com/2025-mercedes-benz-glc-220d-4matic-glc-200-coupe-premium-plus-agency-warranty-service-contract-until-2203-1037354.html",
       "status": 403,
       "detail": ""
     }
