@@ -1,32 +1,48 @@
 {
-  "timestamp": "2026-10-15T22:18:44.572Z",
+  "timestamp": "2026-10-22T22:24:18.541Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 5,
-    "slow": 5,
+    "pass": 4,
+    "slow": 6,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 6
+    "issues": 7
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 743,
+      "response_time_ms": 787,
       "result": "SLOW",
-      "detail": "743ms > 600ms"
+      "detail": "787ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 398,
+      "response_time_ms": 502,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "audi",
+      "http_status": 200,
+      "response_time_ms": 649,
+      "result": "SLOW",
+      "detail": "649ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "toyota",
+      "http_status": 200,
+      "response_time_ms": 453,
       "result": "PASS",
       "detail": ""
     },
@@ -34,70 +50,54 @@
       "endpoint": "suggestions",
       "query": "honda",
       "http_status": 200,
-      "response_time_ms": 624,
-      "result": "SLOW",
-      "detail": "624ms > 600ms"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "toyota",
-      "http_status": 200,
-      "response_time_ms": 179,
-      "result": "PASS",
-      "detail": "cache?(Age:421,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "nissan",
-      "http_status": 200,
-      "response_time_ms": 524,
+      "response_time_ms": 463,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1004687",
+      "query": "1034377",
       "http_status": 200,
-      "response_time_ms": 654,
+      "response_time_ms": 747,
       "result": "SLOW",
-      "detail": "654ms > 600ms"
+      "detail": "747ms > 600ms"
     },
     {
       "endpoint": "items",
-      "query": "983487",
+      "query": "1031978",
       "http_status": 200,
-      "response_time_ms": 50,
-      "result": "PASS",
-      "detail": "cache?(Age:420,CF:HIT)"
+      "response_time_ms": 725,
+      "result": "SLOW",
+      "detail": "725ms > 600ms"
     },
     {
       "endpoint": "items",
-      "query": "1034261",
+      "query": "1032466",
       "http_status": 200,
-      "response_time_ms": 624,
+      "response_time_ms": 775,
       "result": "SLOW",
-      "detail": "624ms > 600ms"
+      "detail": "775ms > 600ms"
     }
   ],
   "journey": [
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1234,
+      "load_time_ms": 1486,
       "result": "PASS",
-      "detail": "10 non-critical request(s) ignored"
+      "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4721,
+      "load_time_ms": 4706,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4721ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4706ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 172,
+      "url": "https://www.dubicars.com/2026-lexus-rx350h-25l-hybrid-awd-full-option-head-up-display-tan-leather-gcc-specs-2026-1034220.html",
+      "load_time_ms": 180,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "request_url": "https://www.dubicars.com/2026-lexus-rx350h-25l-hybrid-awd-full-option-head-up-display-tan-leather-gcc-specs-2026-1034220.html",
       "status": 403,
       "detail": ""
     }
