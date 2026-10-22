@@ -1,0 +1,113 @@
+{
+  "timestamp": "2026-10-22T15:17:06.998Z",
+  "thresholds": {
+    "apiMs": 600,
+    "pageMs": 4000
+  },
+  "summary": {
+    "total": 11,
+    "pass": 8,
+    "slow": 2,
+    "fail": 1,
+    "skipped": 0,
+    "netErrors": 1,
+    "issues": 3
+  },
+  "api": [
+    {
+      "endpoint": "search",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 784,
+      "result": "SLOW",
+      "detail": "784ms > 600ms"
+    },
+    {
+      "endpoint": "homepage",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 431,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "nissan",
+      "http_status": 200,
+      "response_time_ms": 596,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "audi",
+      "http_status": 200,
+      "response_time_ms": 500,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "byd",
+      "http_status": 200,
+      "response_time_ms": 487,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1002866",
+      "http_status": 200,
+      "response_time_ms": 433,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1035286",
+      "http_status": 200,
+      "response_time_ms": 381,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1036622",
+      "http_status": 200,
+      "response_time_ms": 511,
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "journey": [
+    {
+      "step": "land",
+      "url": "https://www.dubicars.com/",
+      "load_time_ms": 1690,
+      "result": "PASS",
+      "detail": "8 non-critical request(s) ignored"
+    },
+    {
+      "step": "search",
+      "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
+      "load_time_ms": 4839,
+      "result": "SLOW",
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4839ms > 4000ms; 10 non-critical request(s) ignored"
+    },
+    {
+      "step": "open_ad",
+      "url": "https://www.dubicars.com/2007-porsche-911-turbo-1036622.html",
+      "load_time_ms": 221,
+      "result": "FAIL",
+      "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
+    }
+  ],
+  "netErrors": [
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/2007-porsche-911-turbo-1036622.html",
+      "status": 403,
+      "detail": ""
+    }
+  ]
+}
