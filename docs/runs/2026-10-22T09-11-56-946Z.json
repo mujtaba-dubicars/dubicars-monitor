@@ -1,48 +1,32 @@
 {
-  "timestamp": "2026-10-15T09:11:42.570Z",
+  "timestamp": "2026-10-22T09:11:56.946Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 6,
-    "slow": 4,
+    "pass": 8,
+    "slow": 2,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 5
+    "issues": 3
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 829,
+      "response_time_ms": 627,
       "result": "SLOW",
-      "detail": "829ms > 600ms"
+      "detail": "627ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 424,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "mercedes",
-      "http_status": 200,
-      "response_time_ms": 696,
-      "result": "SLOW",
-      "detail": "696ms > 600ms"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "byd",
-      "http_status": 200,
-      "response_time_ms": 457,
+      "response_time_ms": 422,
       "result": "PASS",
       "detail": ""
     },
@@ -50,31 +34,47 @@
       "endpoint": "suggestions",
       "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 103,
+      "response_time_ms": 225,
       "result": "PASS",
-      "detail": "cache?(Age:3603,X-Cache:Hit from cloudfront)"
+      "detail": "cache?(Age:3539,X-Cache:Hit from cloudfront)"
     },
     {
-      "endpoint": "items",
-      "query": "941304",
+      "endpoint": "suggestions",
+      "query": "audi",
       "http_status": 200,
-      "response_time_ms": 925,
-      "result": "SLOW",
-      "detail": "925ms > 600ms"
+      "response_time_ms": 163,
+      "result": "PASS",
+      "detail": "cache?(Age:3538,X-Cache:Hit from cloudfront)"
     },
     {
-      "endpoint": "items",
-      "query": "1033727",
+      "endpoint": "suggestions",
+      "query": "honda",
       "http_status": 200,
-      "response_time_ms": 463,
+      "response_time_ms": 516,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "878045",
+      "query": "1000469",
       "http_status": 200,
-      "response_time_ms": 559,
+      "response_time_ms": 359,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1029458",
+      "http_status": 200,
+      "response_time_ms": 390,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1009458",
+      "http_status": 200,
+      "response_time_ms": 320,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 2915,
+      "load_time_ms": 2332,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4931,
+      "load_time_ms": 4948,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4931ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4948ms > 4000ms; 11 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 204,
+      "url": "https://www.dubicars.com/2023-audi-rsq3-agency-warranty-service-contract-until-3009-rsq3-25tfsi-400-hp-1037350.html",
+      "load_time_ms": 200,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "request_url": "https://www.dubicars.com/2023-audi-rsq3-agency-warranty-service-contract-until-3009-rsq3-25tfsi-400-hp-1037350.html",
       "status": 403,
       "detail": ""
     }
