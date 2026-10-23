@@ -1,80 +1,80 @@
 {
-  "timestamp": "2026-10-16T06:11:43.925Z",
+  "timestamp": "2026-10-23T06:11:37.854Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 7,
-    "slow": 3,
+    "pass": 6,
+    "slow": 4,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 4
+    "issues": 5
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 721,
+      "response_time_ms": 840,
       "result": "SLOW",
-      "detail": "721ms > 600ms"
+      "detail": "840ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 611,
+      "response_time_ms": 1122,
       "result": "SLOW",
-      "detail": "611ms > 600ms"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "bmw",
-      "http_status": 200,
-      "response_time_ms": 589,
-      "result": "PASS",
-      "detail": ""
+      "detail": "1122ms > 600ms"
     },
     {
       "endpoint": "suggestions",
       "query": "byd",
       "http_status": 200,
-      "response_time_ms": 512,
+      "response_time_ms": 262,
+      "result": "PASS",
+      "detail": "cache?(Age:3583,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "nissan",
+      "http_status": 200,
+      "response_time_ms": 483,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "honda",
+      "query": "audi",
       "http_status": 200,
-      "response_time_ms": 160,
-      "result": "PASS",
-      "detail": "cache?(Age:3603,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "items",
-      "query": "1020720",
-      "http_status": 200,
-      "response_time_ms": 348,
+      "response_time_ms": 470,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "973757",
+      "query": "1020005",
       "http_status": 200,
-      "response_time_ms": 424,
+      "response_time_ms": 557,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "950876",
+      "query": "1038536",
       "http_status": 200,
-      "response_time_ms": 418,
+      "response_time_ms": 626,
+      "result": "SLOW",
+      "detail": "626ms > 600ms"
+    },
+    {
+      "endpoint": "items",
+      "query": "1010601",
+      "http_status": 200,
+      "response_time_ms": 449,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 2255,
+      "load_time_ms": 1757,
       "result": "PASS",
-      "detail": "8 non-critical request(s) ignored"
+      "detail": "9 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4985,
+      "load_time_ms": 4742,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4985ms > 4000ms; 12 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4742ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 213,
+      "url": "https://www.dubicars.com/2026-toyota-land-cruiser-toyota-lc300-vxr-35l-pet-at-2026-my-1017638.html",
+      "load_time_ms": 169,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "request_url": "https://www.dubicars.com/2026-toyota-land-cruiser-toyota-lc300-vxr-35l-pet-at-2026-my-1017638.html",
       "status": 403,
       "detail": ""
     }
