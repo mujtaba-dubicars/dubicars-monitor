@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-16T05:11:41.149Z",
+  "timestamp": "2026-10-23T05:11:55.522Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
@@ -18,63 +18,63 @@
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 785,
+      "response_time_ms": 713,
       "result": "SLOW",
-      "detail": "785ms > 600ms"
+      "detail": "713ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 467,
+      "response_time_ms": 435,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "toyota",
+      "query": "bmw",
       "http_status": 200,
-      "response_time_ms": 296,
+      "response_time_ms": 472,
       "result": "PASS",
-      "detail": "cache?(Age:3594,X-Cache:Hit from cloudfront)"
+      "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "audi",
+      "query": "byd",
       "http_status": 200,
-      "response_time_ms": 103,
+      "response_time_ms": 507,
       "result": "PASS",
-      "detail": "cache?(Age:3593,X-Cache:Hit from cloudfront)"
+      "detail": ""
     },
     {
       "endpoint": "suggestions",
       "query": "honda",
       "http_status": 200,
-      "response_time_ms": 451,
+      "response_time_ms": 162,
+      "result": "PASS",
+      "detail": "cache?(Age:3615,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "items",
+      "query": "940063",
+      "http_status": 200,
+      "response_time_ms": 444,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1024834",
+      "query": "993274",
       "http_status": 200,
-      "response_time_ms": 417,
+      "response_time_ms": 514,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "986846",
+      "query": "1025789",
       "http_status": 200,
-      "response_time_ms": 406,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "1026797",
-      "http_status": 200,
-      "response_time_ms": 416,
+      "response_time_ms": 466,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1698,
+      "load_time_ms": 2999,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4939,
+      "load_time_ms": 5054,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4939ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5054ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 225,
+      "url": "https://www.dubicars.com/2026-toyota-hiace-28l-diesel-highroof-14-seater-manual-transmission-for-re-export-only-906961.html",
+      "load_time_ms": 223,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "request_url": "https://www.dubicars.com/2026-toyota-hiace-28l-diesel-highroof-14-seater-manual-transmission-for-re-export-only-906961.html",
       "status": 403,
       "detail": ""
     }
