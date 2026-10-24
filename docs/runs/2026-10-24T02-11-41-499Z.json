@@ -1,80 +1,80 @@
 {
-  "timestamp": "2026-10-17T02:11:39.714Z",
+  "timestamp": "2026-10-24T02:11:41.499Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 8,
-    "slow": 2,
+    "pass": 7,
+    "slow": 3,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 3
+    "issues": 4
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 771,
+      "response_time_ms": 799,
       "result": "SLOW",
-      "detail": "771ms > 600ms"
+      "detail": "799ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 362,
+      "response_time_ms": 359,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "honda",
+      "query": "bmw",
       "http_status": 200,
-      "response_time_ms": 575,
-      "result": "PASS",
-      "detail": ""
+      "response_time_ms": 642,
+      "result": "SLOW",
+      "detail": "642ms > 600ms"
     },
     {
       "endpoint": "suggestions",
       "query": "mercedes",
       "http_status": 200,
-      "response_time_ms": 466,
+      "response_time_ms": 453,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "toyota",
+      "query": "byd",
       "http_status": 200,
-      "response_time_ms": 456,
+      "response_time_ms": 453,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "966516",
+      "query": "959613",
       "http_status": 200,
-      "response_time_ms": 482,
+      "response_time_ms": 436,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "968183",
+      "query": "1019076",
       "http_status": 200,
-      "response_time_ms": 465,
+      "response_time_ms": 426,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "970338",
+      "query": "1017856",
       "http_status": 200,
-      "response_time_ms": 457,
+      "response_time_ms": 410,
       "result": "PASS",
       "detail": ""
     }
@@ -83,29 +83,29 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1817,
+      "load_time_ms": 2087,
       "result": "PASS",
-      "detail": "8 non-critical request(s) ignored"
+      "detail": "9 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 5075,
+      "load_time_ms": 5059,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 5075ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5059ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 206,
+      "url": "https://www.dubicars.com/2022-toyota-land-cruiser-2022-model-gxr-twin-turbo-35l-engine-full-option-1021099.html",
+      "load_time_ms": 201,
       "result": "FAIL",
-      "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
+      "detail": "1 network request(s) failed; 3 non-critical request(s) ignored"
     }
   ],
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "request_url": "https://www.dubicars.com/2022-toyota-land-cruiser-2022-model-gxr-twin-turbo-35l-engine-full-option-1021099.html",
       "status": 403,
       "detail": ""
     }
