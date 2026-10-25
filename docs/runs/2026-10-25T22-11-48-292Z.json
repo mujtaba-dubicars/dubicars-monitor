@@ -1,103 +1,103 @@
 {
-  "timestamp": "2026-10-18T22:11:52.409Z",
+  "timestamp": "2026-10-25T22:11:48.292Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 4,
-    "slow": 6,
+    "pass": 2,
+    "slow": 8,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 7
+    "issues": 9
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 665,
+      "response_time_ms": 856,
       "result": "SLOW",
-      "detail": "665ms > 600ms"
+      "detail": "856ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 632,
+      "response_time_ms": 631,
       "result": "SLOW",
-      "detail": "632ms > 600ms"
+      "detail": "631ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "bmw",
+      "http_status": 200,
+      "response_time_ms": 845,
+      "result": "SLOW",
+      "detail": "845ms > 600ms"
     },
     {
       "endpoint": "suggestions",
       "query": "toyota",
       "http_status": 200,
-      "response_time_ms": 582,
+      "response_time_ms": 349,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "audi",
+      "query": "byd",
       "http_status": 200,
-      "response_time_ms": 512,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "mercedes",
-      "http_status": 200,
-      "response_time_ms": 358,
+      "response_time_ms": 553,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "973646",
+      "query": "846100",
       "http_status": 200,
-      "response_time_ms": 608,
+      "response_time_ms": 710,
       "result": "SLOW",
-      "detail": "608ms > 600ms"
+      "detail": "710ms > 600ms"
     },
     {
       "endpoint": "items",
-      "query": "834289",
+      "query": "976042",
       "http_status": 200,
-      "response_time_ms": 781,
+      "response_time_ms": 834,
       "result": "SLOW",
-      "detail": "781ms > 600ms"
+      "detail": "834ms > 600ms"
     },
     {
       "endpoint": "items",
-      "query": "966072",
+      "query": "1038395",
       "http_status": 200,
-      "response_time_ms": 752,
+      "response_time_ms": 820,
       "result": "SLOW",
-      "detail": "752ms > 600ms"
+      "detail": "820ms > 600ms"
     }
   ],
   "journey": [
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 2279,
-      "result": "PASS",
-      "detail": "8 non-critical request(s) ignored"
+      "load_time_ms": 4034,
+      "result": "SLOW",
+      "detail": "4034ms > 4000ms; 8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 5155,
+      "load_time_ms": 4701,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 5155ms > 4000ms; 12 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4701ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 208,
+      "url": "https://www.dubicars.com/2021-mercedes-maybach-s500-maybach-710324.html",
+      "load_time_ms": 359,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "request_url": "https://www.dubicars.com/2021-mercedes-maybach-s500-maybach-710324.html",
       "status": 403,
       "detail": ""
     }
