@@ -1,0 +1,113 @@
+{
+  "timestamp": "2026-10-28T16:11:49.365Z",
+  "thresholds": {
+    "apiMs": 600,
+    "pageMs": 4000
+  },
+  "summary": {
+    "total": 11,
+    "pass": 7,
+    "slow": 3,
+    "fail": 1,
+    "skipped": 0,
+    "netErrors": 1,
+    "issues": 4
+  },
+  "api": [
+    {
+      "endpoint": "search",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 830,
+      "result": "SLOW",
+      "detail": "830ms > 600ms"
+    },
+    {
+      "endpoint": "homepage",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 386,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "byd",
+      "http_status": 200,
+      "response_time_ms": 304,
+      "result": "PASS",
+      "detail": "cache?(Age:504,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "toyota",
+      "http_status": 200,
+      "response_time_ms": 59,
+      "result": "PASS",
+      "detail": "cache?(Age:505,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "audi",
+      "http_status": 200,
+      "response_time_ms": 60,
+      "result": "PASS",
+      "detail": "cache?(Age:504,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "items",
+      "query": "1037671",
+      "http_status": 200,
+      "response_time_ms": 444,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1038781",
+      "http_status": 200,
+      "response_time_ms": 445,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1037261",
+      "http_status": 200,
+      "response_time_ms": 408,
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "journey": [
+    {
+      "step": "land",
+      "url": "https://www.dubicars.com/",
+      "load_time_ms": 4105,
+      "result": "SLOW",
+      "detail": "4105ms > 4000ms; 8 non-critical request(s) ignored"
+    },
+    {
+      "step": "search",
+      "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
+      "load_time_ms": 5352,
+      "result": "SLOW",
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5352ms > 4000ms; 10 non-critical request(s) ignored"
+    },
+    {
+      "step": "open_ad",
+      "url": "https://www.dubicars.com/2018-mitsubishi-pajero-gls-ml-diamond-gls-mid-35l-189-hp-7-seater-889954.html",
+      "load_time_ms": 619,
+      "result": "FAIL",
+      "detail": "1 network request(s) failed; 3 non-critical request(s) ignored"
+    }
+  ],
+  "netErrors": [
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/2018-mitsubishi-pajero-gls-ml-diamond-gls-mid-35l-189-hp-7-seater-889954.html",
+      "status": 403,
+      "detail": ""
+    }
+  ]
+}
