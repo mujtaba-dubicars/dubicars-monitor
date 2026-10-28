@@ -1,46 +1,46 @@
 {
-  "timestamp": "2026-10-21T22:11:52.843Z",
+  "timestamp": "2026-10-28T22:11:42.000Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 5,
-    "slow": 5,
+    "pass": 4,
+    "slow": 6,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 6
+    "issues": 7
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 784,
+      "response_time_ms": 787,
       "result": "SLOW",
-      "detail": "784ms > 600ms"
+      "detail": "787ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 772,
+      "response_time_ms": 748,
       "result": "SLOW",
-      "detail": "772ms > 600ms"
+      "detail": "748ms > 600ms"
     },
     {
       "endpoint": "suggestions",
-      "query": "bmw",
+      "query": "toyota",
       "http_status": 200,
-      "response_time_ms": 559,
+      "response_time_ms": 551,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "honda",
+      "query": "bmw",
       "http_status": 200,
       "response_time_ms": 296,
       "result": "PASS",
@@ -48,56 +48,56 @@
     },
     {
       "endpoint": "suggestions",
-      "query": "byd",
+      "query": "honda",
       "http_status": 200,
-      "response_time_ms": 464,
+      "response_time_ms": 455,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "960163",
+      "query": "920254",
       "http_status": 200,
-      "response_time_ms": 634,
+      "response_time_ms": 1170,
       "result": "SLOW",
-      "detail": "634ms > 600ms"
+      "detail": "1170ms > 600ms"
     },
     {
       "endpoint": "items",
-      "query": "967858",
+      "query": "1034754",
       "http_status": 200,
-      "response_time_ms": 728,
+      "response_time_ms": 706,
       "result": "SLOW",
-      "detail": "728ms > 600ms"
+      "detail": "706ms > 600ms"
     },
     {
       "endpoint": "items",
-      "query": "1006364",
+      "query": "1034995",
       "http_status": 200,
-      "response_time_ms": 448,
-      "result": "PASS",
-      "detail": ""
+      "response_time_ms": 692,
+      "result": "SLOW",
+      "detail": "692ms > 600ms"
     }
   ],
   "journey": [
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 3155,
+      "load_time_ms": 3015,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 5120,
+      "load_time_ms": 6142,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 5120ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 6142ms > 4000ms; 11 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2022-toyota-land-cruiser-gxr-twin-turbo-33l-diesel-engine-full-option-black-to-black-exterior-and-interior-very-clean-and-pe-1027232.html",
-      "load_time_ms": 237,
+      "url": "https://www.dubicars.com/2025-toyota-land-cruiser-1007190.html",
+      "load_time_ms": 335,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2022-toyota-land-cruiser-gxr-twin-turbo-33l-diesel-engine-full-option-black-to-black-exterior-and-interior-very-clean-and-pe-1027232.html",
+      "request_url": "https://www.dubicars.com/2025-toyota-land-cruiser-1007190.html",
       "status": 403,
       "detail": ""
     }
