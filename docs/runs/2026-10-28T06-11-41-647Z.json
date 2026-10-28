@@ -1,32 +1,48 @@
 {
-  "timestamp": "2026-10-21T06:11:47.426Z",
+  "timestamp": "2026-10-28T06:11:41.647Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 8,
-    "slow": 2,
+    "pass": 7,
+    "slow": 3,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 3
+    "issues": 4
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 746,
+      "response_time_ms": 809,
       "result": "SLOW",
-      "detail": "746ms > 600ms"
+      "detail": "809ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 544,
+      "response_time_ms": 610,
+      "result": "SLOW",
+      "detail": "610ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "audi",
+      "http_status": 200,
+      "response_time_ms": 271,
+      "result": "PASS",
+      "detail": "cache?(Age:3589,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "nissan",
+      "http_status": 200,
+      "response_time_ms": 449,
       "result": "PASS",
       "detail": ""
     },
@@ -34,47 +50,31 @@
       "endpoint": "suggestions",
       "query": "bmw",
       "http_status": 200,
-      "response_time_ms": 257,
-      "result": "PASS",
-      "detail": "cache?(Age:3606,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "nissan",
-      "http_status": 200,
-      "response_time_ms": 467,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "audi",
-      "http_status": 200,
-      "response_time_ms": 467,
+      "response_time_ms": 456,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1029456",
+      "query": "981595",
       "http_status": 200,
-      "response_time_ms": 417,
+      "response_time_ms": 433,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1023108",
+      "query": "906961",
       "http_status": 200,
-      "response_time_ms": 416,
+      "response_time_ms": 442,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1029458",
+      "query": "1025764",
       "http_status": 200,
-      "response_time_ms": 479,
+      "response_time_ms": 423,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 2090,
+      "load_time_ms": 2056,
       "result": "PASS",
-      "detail": "11 non-critical request(s) ignored"
+      "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 5345,
+      "load_time_ms": 17629,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 5345ms > 4000ms; 14 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 17629ms > 4000ms; 11 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2026-toyota-hilux-toyota-hilux-40l-v6-double-cabin-pickup-petrol-4wd-gcc-specs-export-ready-973757.html",
-      "load_time_ms": 206,
+      "url": "https://www.dubicars.com/2025-toyota-land-cruiser-1007190.html",
+      "load_time_ms": 266,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2026-toyota-hilux-toyota-hilux-40l-v6-double-cabin-pickup-petrol-4wd-gcc-specs-export-ready-973757.html",
+      "request_url": "https://www.dubicars.com/2025-toyota-land-cruiser-1007190.html",
       "status": 403,
       "detail": ""
     }
