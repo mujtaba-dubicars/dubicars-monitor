@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-22T09:11:56.946Z",
+  "timestamp": "2026-10-29T09:11:39.047Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
@@ -18,15 +18,15 @@
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 627,
+      "response_time_ms": 832,
       "result": "SLOW",
-      "detail": "627ms > 600ms"
+      "detail": "832ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 422,
+      "response_time_ms": 341,
       "result": "PASS",
       "detail": ""
     },
@@ -34,47 +34,47 @@
       "endpoint": "suggestions",
       "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 225,
+      "response_time_ms": 579,
       "result": "PASS",
-      "detail": "cache?(Age:3539,X-Cache:Hit from cloudfront)"
+      "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "audi",
+      "query": "toyota",
       "http_status": 200,
-      "response_time_ms": 163,
+      "response_time_ms": 124,
       "result": "PASS",
-      "detail": "cache?(Age:3538,X-Cache:Hit from cloudfront)"
+      "detail": "cache?(Age:3579,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "suggestions",
-      "query": "honda",
+      "query": "mercedes",
       "http_status": 200,
-      "response_time_ms": 516,
+      "response_time_ms": 328,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1000469",
+      "query": "593211",
       "http_status": 200,
-      "response_time_ms": 359,
+      "response_time_ms": 459,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1029458",
+      "query": "1036193",
       "http_status": 200,
-      "response_time_ms": 390,
+      "response_time_ms": 430,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1009458",
+      "query": "887915",
       "http_status": 200,
-      "response_time_ms": 320,
+      "response_time_ms": 443,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 2332,
+      "load_time_ms": 1461,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4948,
+      "load_time_ms": 4888,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4948ms > 4000ms; 11 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4888ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-audi-rsq3-agency-warranty-service-contract-until-3009-rsq3-25tfsi-400-hp-1037350.html",
-      "load_time_ms": 200,
+      "url": "https://www.dubicars.com/2025-toyota-land-cruiser-1007190.html",
+      "load_time_ms": 399,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-audi-rsq3-agency-warranty-service-contract-until-3009-rsq3-25tfsi-400-hp-1037350.html",
+      "request_url": "https://www.dubicars.com/2025-toyota-land-cruiser-1007190.html",
       "status": 403,
       "detail": ""
     }
