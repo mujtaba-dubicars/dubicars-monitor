@@ -1,32 +1,40 @@
 {
-  "timestamp": "2026-10-21T23:20:04.839Z",
+  "timestamp": "2026-10-29T00:11:40.303Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 7,
-    "slow": 3,
+    "pass": 8,
+    "slow": 2,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 4
+    "issues": 3
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 840,
+      "response_time_ms": 780,
       "result": "SLOW",
-      "detail": "840ms > 600ms"
+      "detail": "780ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 364,
+      "response_time_ms": 418,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "toyota",
+      "http_status": 200,
+      "response_time_ms": 516,
       "result": "PASS",
       "detail": ""
     },
@@ -34,47 +42,39 @@
       "endpoint": "suggestions",
       "query": "bmw",
       "http_status": 200,
-      "response_time_ms": 645,
-      "result": "SLOW",
-      "detail": "645ms > 600ms"
+      "response_time_ms": 293,
+      "result": "PASS",
+      "detail": ""
     },
     {
       "endpoint": "suggestions",
       "query": "byd",
       "http_status": 200,
-      "response_time_ms": 335,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "honda",
-      "http_status": 200,
-      "response_time_ms": 332,
+      "response_time_ms": 456,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "646637",
+      "query": "970338",
       "http_status": 200,
-      "response_time_ms": 441,
+      "response_time_ms": 479,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "973647",
+      "query": "972423",
       "http_status": 200,
-      "response_time_ms": 431,
+      "response_time_ms": 537,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1010541",
+      "query": "1040852",
       "http_status": 200,
-      "response_time_ms": 390,
+      "response_time_ms": 557,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 3503,
+      "load_time_ms": 1811,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 5274,
+      "load_time_ms": 5079,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 5274ms > 4000ms; 11 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5079ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2025-ford-expedition-35l-400-hp-4wd-916859.html",
-      "load_time_ms": 487,
+      "url": "https://www.dubicars.com/2025-toyota-land-cruiser-1007190.html",
+      "load_time_ms": 313,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2025-ford-expedition-35l-400-hp-4wd-916859.html",
+      "request_url": "https://www.dubicars.com/2025-toyota-land-cruiser-1007190.html",
       "status": 403,
       "detail": ""
     }
