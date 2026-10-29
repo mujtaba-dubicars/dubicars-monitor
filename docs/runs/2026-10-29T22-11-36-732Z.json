@@ -1,103 +1,103 @@
 {
-  "timestamp": "2026-10-22T22:11:42.970Z",
+  "timestamp": "2026-10-29T22:11:36.732Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 3,
-    "slow": 7,
+    "pass": 4,
+    "slow": 6,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 8
+    "issues": 7
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 679,
+      "response_time_ms": 832,
       "result": "SLOW",
-      "detail": "679ms > 600ms"
+      "detail": "832ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 705,
+      "response_time_ms": 661,
       "result": "SLOW",
-      "detail": "705ms > 600ms"
+      "detail": "661ms > 600ms"
     },
     {
       "endpoint": "suggestions",
-      "query": "byd",
+      "query": "mercedes",
       "http_status": 200,
-      "response_time_ms": 641,
-      "result": "SLOW",
-      "detail": "641ms > 600ms"
+      "response_time_ms": 591,
+      "result": "PASS",
+      "detail": ""
     },
     {
       "endpoint": "suggestions",
       "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 505,
+      "response_time_ms": 316,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "bmw",
+      "query": "toyota",
       "http_status": 200,
-      "response_time_ms": 349,
+      "response_time_ms": 473,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1034995",
+      "query": "984490",
       "http_status": 200,
-      "response_time_ms": 1021,
+      "response_time_ms": 866,
       "result": "SLOW",
-      "detail": "1021ms > 600ms"
+      "detail": "866ms > 600ms"
     },
     {
       "endpoint": "items",
-      "query": "1032959",
+      "query": "1039980",
       "http_status": 200,
-      "response_time_ms": 666,
+      "response_time_ms": 806,
       "result": "SLOW",
-      "detail": "666ms > 600ms"
+      "detail": "806ms > 600ms"
     },
     {
       "endpoint": "items",
-      "query": "1031648",
+      "query": "959330",
       "http_status": 200,
-      "response_time_ms": 711,
+      "response_time_ms": 783,
       "result": "SLOW",
-      "detail": "711ms > 600ms"
+      "detail": "783ms > 600ms"
     }
   ],
   "journey": [
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 2553,
+      "load_time_ms": 2032,
       "result": "PASS",
-      "detail": "8 non-critical request(s) ignored"
+      "detail": "10 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4962,
+      "load_time_ms": 5434,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4962ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5434ms > 4000ms; 11 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2026-lexus-rx350h-25l-hybrid-awd-full-option-head-up-display-tan-leather-gcc-specs-2026-1034220.html",
-      "load_time_ms": 185,
+      "url": "https://www.dubicars.com/2025-toyota-land-cruiser-1007190.html",
+      "load_time_ms": 387,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2026-lexus-rx350h-25l-hybrid-awd-full-option-head-up-display-tan-leather-gcc-specs-2026-1034220.html",
+      "request_url": "https://www.dubicars.com/2025-toyota-land-cruiser-1007190.html",
       "status": 403,
       "detail": ""
     }
