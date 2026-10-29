@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-22T11:11:40.795Z",
+  "timestamp": "2026-10-29T11:11:36.794Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
@@ -18,63 +18,63 @@
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 811,
+      "response_time_ms": 836,
       "result": "SLOW",
-      "detail": "811ms > 600ms"
+      "detail": "836ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 419,
+      "response_time_ms": 459,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "toyota",
+      "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 279,
+      "response_time_ms": 464,
       "result": "PASS",
-      "detail": "cache?(Age:3571,X-Cache:Hit from cloudfront)"
+      "detail": ""
     },
     {
       "endpoint": "suggestions",
       "query": "honda",
       "http_status": 200,
-      "response_time_ms": 141,
+      "response_time_ms": 121,
       "result": "PASS",
-      "detail": "cache?(Age:3571,X-Cache:Hit from cloudfront)"
+      "detail": "cache?(Age:3593,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "suggestions",
-      "query": "audi",
+      "query": "bmw",
       "http_status": 200,
-      "response_time_ms": 126,
-      "result": "PASS",
-      "detail": "cache?(Age:3571,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "items",
-      "query": "909982",
-      "http_status": 200,
-      "response_time_ms": 435,
+      "response_time_ms": 472,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1014633",
+      "query": "1021155",
       "http_status": 200,
-      "response_time_ms": 468,
+      "response_time_ms": 471,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1038172",
+      "query": "1037345",
       "http_status": 200,
-      "response_time_ms": 363,
+      "response_time_ms": 411,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1025374",
+      "http_status": 200,
+      "response_time_ms": 424,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 3576,
+      "load_time_ms": 1515,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4867,
+      "load_time_ms": 4763,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4867ms > 4000ms; 11 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4763ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2022-ford-ranger-4x4-32l-ford-ranger-32l-4x4-high-ride-dc-hi-at-dsl-2022-819842.html",
-      "load_time_ms": 194,
+      "url": "https://www.dubicars.com/2025-toyota-land-cruiser-1007190.html",
+      "load_time_ms": 396,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2022-ford-ranger-4x4-32l-ford-ranger-32l-4x4-high-ride-dc-hi-at-dsl-2022-819842.html",
+      "request_url": "https://www.dubicars.com/2025-toyota-land-cruiser-1007190.html",
       "status": 403,
       "detail": ""
     }
