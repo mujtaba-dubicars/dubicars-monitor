@@ -1,111 +1,111 @@
 {
-  "timestamp": "2026-10-23T18:18:26.614Z",
+  "timestamp": "2026-10-30T19:23:49.280Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 7,
-    "slow": 3,
+    "pass": 8,
+    "slow": 2,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 4
+    "issues": 3
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 752,
+      "response_time_ms": 691,
       "result": "SLOW",
-      "detail": "752ms > 600ms"
+      "detail": "691ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 365,
+      "response_time_ms": 388,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "toyota",
+      "query": "audi",
       "http_status": 200,
-      "response_time_ms": 608,
-      "result": "SLOW",
-      "detail": "608ms > 600ms"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "honda",
-      "http_status": 200,
-      "response_time_ms": 532,
+      "response_time_ms": 595,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "nissan",
+      "query": "byd",
       "http_status": 200,
-      "response_time_ms": 352,
+      "response_time_ms": 508,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "bmw",
+      "http_status": 200,
+      "response_time_ms": 518,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1035538",
+      "query": "1035852",
       "http_status": 200,
-      "response_time_ms": 496,
+      "response_time_ms": 506,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1018240",
+      "query": "997443",
       "http_status": 200,
-      "response_time_ms": 402,
+      "response_time_ms": 369,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1028918",
+      "query": "1042344",
       "http_status": 200,
-      "response_time_ms": 484,
+      "response_time_ms": 70,
       "result": "PASS",
-      "detail": ""
+      "detail": "cache?(Age:304,CF:HIT)"
     }
   ],
   "journey": [
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 2103,
+      "load_time_ms": 2005,
       "result": "PASS",
       "detail": "9 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4760,
+      "load_time_ms": 4751,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4760ms > 4000ms; 11 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4751ms > 4000ms; 11 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2027-mercedes-benz-g63-amg-g63-km-germany-specs-carbon-fiber-double-night-back-screen-1036618.html",
-      "load_time_ms": 202,
+      "url": "https://www.dubicars.com/2025-toyota-land-cruiser-1007190.html",
+      "load_time_ms": 238,
       "result": "FAIL",
-      "detail": "1 network request(s) failed; 1 non-critical request(s) ignored"
+      "detail": "1 network request(s) failed; 3 non-critical request(s) ignored"
     }
   ],
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2027-mercedes-benz-g63-amg-g63-km-germany-specs-carbon-fiber-double-night-back-screen-1036618.html",
+      "request_url": "https://www.dubicars.com/2025-toyota-land-cruiser-1007190.html",
       "status": 403,
       "detail": ""
     }
