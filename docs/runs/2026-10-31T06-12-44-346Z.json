@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-24T05:54:36.378Z",
+  "timestamp": "2026-10-31T06:12:44.346Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
@@ -18,63 +18,63 @@
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 1178,
+      "response_time_ms": 753,
       "result": "SLOW",
-      "detail": "1178ms > 600ms"
+      "detail": "753ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 578,
+      "response_time_ms": 542,
       "result": "PASS",
       "detail": ""
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "honda",
-      "http_status": 200,
-      "response_time_ms": 101,
-      "result": "PASS",
-      "detail": "cache?(Age:2574,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "suggestions",
       "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 289,
+      "response_time_ms": 266,
       "result": "PASS",
-      "detail": ""
+      "detail": "cache?(Age:1840,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "suggestions",
       "query": "byd",
       "http_status": 200,
-      "response_time_ms": 346,
+      "response_time_ms": 511,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "toyota",
+      "http_status": 200,
+      "response_time_ms": 162,
+      "result": "PASS",
+      "detail": "cache?(Age:1841,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "items",
+      "query": "1027611",
+      "http_status": 200,
+      "response_time_ms": 418,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "916270",
+      "query": "1018839",
       "http_status": 200,
-      "response_time_ms": 419,
+      "response_time_ms": 384,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1034624",
+      "query": "1041353",
       "http_status": 200,
-      "response_time_ms": 440,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "974301",
-      "http_status": 200,
-      "response_time_ms": 385,
+      "response_time_ms": 376,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1878,
+      "load_time_ms": 2301,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4882,
+      "load_time_ms": 4896,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4882ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4896ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2026-kia-carnival-35l-korean-specs-v6-petrol-8-speed-automatic-lhd-best-price-958062.html",
-      "load_time_ms": 204,
+      "url": "https://www.dubicars.com/2025-toyota-land-cruiser-1007190.html",
+      "load_time_ms": 284,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2026-kia-carnival-35l-korean-specs-v6-petrol-8-speed-automatic-lhd-best-price-958062.html",
+      "request_url": "https://www.dubicars.com/2025-toyota-land-cruiser-1007190.html",
       "status": 403,
       "detail": ""
     }
