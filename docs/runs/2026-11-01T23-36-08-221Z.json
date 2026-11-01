@@ -1,48 +1,32 @@
 {
-  "timestamp": "2026-10-25T22:33:58.499Z",
+  "timestamp": "2026-11-01T23:36:08.221Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 4,
-    "slow": 6,
+    "pass": 7,
+    "slow": 3,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 7
+    "issues": 4
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 728,
+      "response_time_ms": 723,
       "result": "SLOW",
-      "detail": "728ms > 600ms"
+      "detail": "723ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 459,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "honda",
-      "http_status": 200,
-      "response_time_ms": 619,
-      "result": "SLOW",
-      "detail": "619ms > 600ms"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "audi",
-      "http_status": 200,
-      "response_time_ms": 514,
+      "response_time_ms": 338,
       "result": "PASS",
       "detail": ""
     },
@@ -50,54 +34,70 @@
       "endpoint": "suggestions",
       "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 515,
+      "response_time_ms": 639,
+      "result": "SLOW",
+      "detail": "639ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "honda",
+      "http_status": 200,
+      "response_time_ms": 486,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "byd",
+      "http_status": 200,
+      "response_time_ms": 326,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "965084",
+      "query": "952415",
       "http_status": 200,
-      "response_time_ms": 668,
-      "result": "SLOW",
-      "detail": "668ms > 600ms"
+      "response_time_ms": 406,
+      "result": "PASS",
+      "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "972207",
+      "query": "973647",
       "http_status": 200,
-      "response_time_ms": 715,
-      "result": "SLOW",
-      "detail": "715ms > 600ms"
+      "response_time_ms": 364,
+      "result": "PASS",
+      "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "825549",
+      "query": "966072",
       "http_status": 200,
-      "response_time_ms": 684,
-      "result": "SLOW",
-      "detail": "684ms > 600ms"
+      "response_time_ms": 378,
+      "result": "PASS",
+      "detail": ""
     }
   ],
   "journey": [
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1792,
+      "load_time_ms": 1986,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 5037,
+      "load_time_ms": 4759,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 5037ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4759ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
       "url": "https://www.dubicars.com/2025-toyota-land-cruiser-1007190.html",
-      "load_time_ms": 223,
+      "load_time_ms": 439,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
