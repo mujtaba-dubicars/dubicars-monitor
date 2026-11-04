@@ -1,32 +1,48 @@
 {
-  "timestamp": "2026-10-28T11:11:55.591Z",
+  "timestamp": "2026-11-04T11:11:38.522Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 8,
-    "slow": 2,
+    "pass": 7,
+    "slow": 3,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 3
+    "issues": 4
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 646,
+      "response_time_ms": 699,
       "result": "SLOW",
-      "detail": "646ms > 600ms"
+      "detail": "699ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 284,
+      "response_time_ms": 347,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "mercedes",
+      "http_status": 200,
+      "response_time_ms": 288,
+      "result": "PASS",
+      "detail": "cache?(Age:3594,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "byd",
+      "http_status": 200,
+      "response_time_ms": 533,
       "result": "PASS",
       "detail": ""
     },
@@ -34,47 +50,31 @@
       "endpoint": "suggestions",
       "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 285,
+      "response_time_ms": 183,
       "result": "PASS",
-      "detail": "cache?(Age:3602,X-Cache:Hit from cloudfront)"
+      "detail": "cache?(Age:3595,X-Cache:Hit from cloudfront)"
     },
     {
-      "endpoint": "suggestions",
-      "query": "byd",
+      "endpoint": "items",
+      "query": "1033360",
       "http_status": 200,
-      "response_time_ms": 515,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "bmw",
-      "http_status": 200,
-      "response_time_ms": 353,
+      "response_time_ms": 390,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1031506",
+      "query": "1038251",
       "http_status": 200,
-      "response_time_ms": 305,
-      "result": "PASS",
-      "detail": ""
+      "response_time_ms": 819,
+      "result": "SLOW",
+      "detail": "819ms > 600ms"
     },
     {
       "endpoint": "items",
-      "query": "1029506",
+      "query": "1042626",
       "http_status": 200,
-      "response_time_ms": 360,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "1009486",
-      "http_status": 200,
-      "response_time_ms": 335,
+      "response_time_ms": 402,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 2358,
+      "load_time_ms": 2145,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4880,
+      "load_time_ms": 4917,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4880ms > 4000ms; 11 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4917ms > 4000ms; 12 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2025-toyota-land-cruiser-1007190.html",
-      "load_time_ms": 286,
+      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "load_time_ms": 264,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2025-toyota-land-cruiser-1007190.html",
+      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
       "status": 403,
       "detail": ""
     }
