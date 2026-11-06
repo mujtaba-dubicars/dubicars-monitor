@@ -1,80 +1,80 @@
 {
-  "timestamp": "2026-10-30T10:11:43.826Z",
+  "timestamp": "2026-11-06T10:11:39.822Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 7,
-    "slow": 3,
+    "pass": 6,
+    "slow": 4,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 4
+    "issues": 5
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 892,
+      "response_time_ms": 812,
       "result": "SLOW",
-      "detail": "892ms > 600ms"
+      "detail": "812ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 380,
-      "result": "PASS",
-      "detail": ""
+      "response_time_ms": 877,
+      "result": "SLOW",
+      "detail": "877ms > 600ms"
     },
     {
       "endpoint": "suggestions",
-      "query": "audi",
+      "query": "toyota",
       "http_status": 200,
-      "response_time_ms": 406,
+      "response_time_ms": 218,
       "result": "PASS",
-      "detail": "cache?(Age:3604,X-Cache:Hit from cloudfront)"
+      "detail": "cache?(Age:2793,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "suggestions",
-      "query": "nissan",
+      "query": "honda",
       "http_status": 200,
-      "response_time_ms": 60,
+      "response_time_ms": 102,
       "result": "PASS",
-      "detail": "cache?(Age:3605,X-Cache:Hit from cloudfront)"
+      "detail": "cache?(Age:3607,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "suggestions",
       "query": "bmw",
       "http_status": 200,
-      "response_time_ms": 104,
-      "result": "PASS",
-      "detail": "cache?(Age:3604,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "items",
-      "query": "1029332",
-      "http_status": 200,
-      "response_time_ms": 472,
+      "response_time_ms": 435,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "995613",
+      "query": "1002927",
       "http_status": 200,
-      "response_time_ms": 444,
+      "response_time_ms": 933,
+      "result": "SLOW",
+      "detail": "933ms > 600ms"
+    },
+    {
+      "endpoint": "items",
+      "query": "1032477",
+      "http_status": 200,
+      "response_time_ms": 450,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1002053",
+      "query": "991387",
       "http_status": 200,
-      "response_time_ms": 415,
+      "response_time_ms": 469,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 4350,
-      "result": "SLOW",
-      "detail": "4350ms > 4000ms; 8 non-critical request(s) ignored"
+      "load_time_ms": 1901,
+      "result": "PASS",
+      "detail": "9 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 5281,
+      "load_time_ms": 5094,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 5281ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5094ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2025-ram-1500-995613.html",
-      "load_time_ms": 621,
+      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "load_time_ms": 290,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2025-ram-1500-995613.html",
+      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
       "status": 403,
       "detail": ""
     }
