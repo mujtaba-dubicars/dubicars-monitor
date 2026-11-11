@@ -1,80 +1,80 @@
 {
-  "timestamp": "2026-11-04T07:11:36.801Z",
+  "timestamp": "2026-11-11T07:11:41.739Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 6,
-    "slow": 4,
+    "pass": 7,
+    "slow": 3,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 5
+    "issues": 4
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 823,
+      "response_time_ms": 758,
       "result": "SLOW",
-      "detail": "823ms > 600ms"
+      "detail": "758ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 638,
-      "result": "SLOW",
-      "detail": "638ms > 600ms"
+      "response_time_ms": 339,
+      "result": "PASS",
+      "detail": ""
     },
     {
       "endpoint": "suggestions",
       "query": "byd",
       "http_status": 200,
-      "response_time_ms": 675,
+      "response_time_ms": 662,
       "result": "SLOW",
-      "detail": "675ms > 600ms"
+      "detail": "662ms > 600ms"
     },
     {
       "endpoint": "suggestions",
       "query": "mercedes",
       "http_status": 200,
-      "response_time_ms": 519,
+      "response_time_ms": 516,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "bmw",
+      "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 139,
+      "response_time_ms": 162,
       "result": "PASS",
-      "detail": "cache?(Age:3600,X-Cache:Hit from cloudfront)"
+      "detail": "cache?(Age:3040,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "items",
-      "query": "1036225",
+      "query": "1038272",
       "http_status": 200,
-      "response_time_ms": 492,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "908607",
-      "http_status": 200,
-      "response_time_ms": 504,
+      "response_time_ms": 367,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1029984",
+      "query": "1027435",
       "http_status": 200,
-      "response_time_ms": 531,
+      "response_time_ms": 425,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1046984",
+      "http_status": 200,
+      "response_time_ms": 498,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1975,
+      "load_time_ms": 1820,
       "result": "PASS",
       "detail": "9 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4908,
+      "load_time_ms": 4910,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4908ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4910ms > 4000ms; 11 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
       "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 290,
+      "load_time_ms": 311,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
