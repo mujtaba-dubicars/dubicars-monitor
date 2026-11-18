@@ -1,103 +1,103 @@
 {
-  "timestamp": "2026-11-11T12:11:44.790Z",
+  "timestamp": "2026-11-18T12:11:53.507Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 6,
-    "slow": 4,
+    "pass": 7,
+    "slow": 3,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 5
+    "issues": 4
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 679,
+      "response_time_ms": 750,
       "result": "SLOW",
-      "detail": "679ms > 600ms"
+      "detail": "750ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 658,
+      "response_time_ms": 649,
       "result": "SLOW",
-      "detail": "658ms > 600ms"
+      "detail": "649ms > 600ms"
     },
     {
       "endpoint": "suggestions",
-      "query": "toyota",
+      "query": "bmw",
       "http_status": 200,
-      "response_time_ms": 199,
+      "response_time_ms": 541,
       "result": "PASS",
-      "detail": "cache?(Age:3605,X-Cache:Hit from cloudfront)"
+      "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "byd",
+      "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 115,
+      "response_time_ms": 107,
       "result": "PASS",
-      "detail": "cache?(Age:3606,X-Cache:Hit from cloudfront)"
+      "detail": "cache?(Age:3619,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "suggestions",
-      "query": "honda",
+      "query": "audi",
       "http_status": 200,
-      "response_time_ms": 301,
+      "response_time_ms": 107,
+      "result": "PASS",
+      "detail": "cache?(Age:3618,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "items",
+      "query": "1003712",
+      "http_status": 200,
+      "response_time_ms": 497,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1043408",
+      "query": "991387",
       "http_status": 200,
-      "response_time_ms": 534,
+      "response_time_ms": 438,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1017786",
+      "query": "1032477",
       "http_status": 200,
-      "response_time_ms": 469,
+      "response_time_ms": 479,
       "result": "PASS",
       "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "997487",
-      "http_status": 200,
-      "response_time_ms": 708,
-      "result": "SLOW",
-      "detail": "708ms > 600ms"
     }
   ],
   "journey": [
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1651,
+      "load_time_ms": 2455,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4971,
+      "load_time_ms": 5039,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4971ms > 4000ms; 11 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 5039ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 290,
+      "url": "https://www.dubicars.com/2019-mercedes-benz-g63-amg-drive-now-pay-in-2027-1011953.html",
+      "load_time_ms": 671,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "request_url": "https://www.dubicars.com/2019-mercedes-benz-g63-amg-drive-now-pay-in-2027-1011953.html",
       "status": 403,
       "detail": ""
     }
