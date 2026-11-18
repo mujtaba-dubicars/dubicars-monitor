@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-11T11:11:38.990Z",
+  "timestamp": "2026-11-18T11:11:34.807Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
@@ -26,7 +26,23 @@
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 448,
+      "response_time_ms": 465,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "nissan",
+      "http_status": 200,
+      "response_time_ms": 657,
+      "result": "SLOW",
+      "detail": "657ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "audi",
+      "http_status": 200,
+      "response_time_ms": 472,
       "result": "PASS",
       "detail": ""
     },
@@ -34,47 +50,31 @@
       "endpoint": "suggestions",
       "query": "byd",
       "http_status": 200,
-      "response_time_ms": 607,
-      "result": "SLOW",
-      "detail": "607ms > 600ms"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "toyota",
-      "http_status": 200,
-      "response_time_ms": 20,
+      "response_time_ms": 126,
       "result": "PASS",
-      "detail": "cache?(Age:3602,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "nissan",
-      "http_status": 200,
-      "response_time_ms": 122,
-      "result": "PASS",
-      "detail": "cache?(Age:3602,X-Cache:Hit from cloudfront)"
+      "detail": "cache?(Age:3596,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "items",
-      "query": "1032223",
+      "query": "1032476",
       "http_status": 200,
-      "response_time_ms": 450,
+      "response_time_ms": 487,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1031493",
+      "query": "1045965",
       "http_status": 200,
-      "response_time_ms": 452,
+      "response_time_ms": 497,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1029473",
+      "query": "1029252",
       "http_status": 200,
-      "response_time_ms": 440,
+      "response_time_ms": 512,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1461,
+      "load_time_ms": 1440,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4808,
+      "load_time_ms": 4561,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4808ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4561ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 432,
+      "url": "https://www.dubicars.com/2024-byd-leopard-8-brand-flagship-chinese-specs-luxury-off-road-suv-1031576.html",
+      "load_time_ms": 278,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "request_url": "https://www.dubicars.com/2024-byd-leopard-8-brand-flagship-chinese-specs-luxury-off-road-suv-1031576.html",
       "status": 403,
       "detail": ""
     }
