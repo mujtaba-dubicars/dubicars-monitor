@@ -1,80 +1,80 @@
 {
-  "timestamp": "2026-11-12T11:10:59.487Z",
+  "timestamp": "2026-11-19T11:12:35.320Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 8,
-    "slow": 2,
-    "fail": 1,
+    "pass": 6,
+    "slow": 3,
+    "fail": 2,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 3
+    "issues": 5
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 722,
+      "response_time_ms": 824,
       "result": "SLOW",
-      "detail": "722ms > 600ms"
+      "detail": "824ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 413,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "nissan",
-      "http_status": 200,
-      "response_time_ms": 249,
-      "result": "PASS",
-      "detail": "cache?(Age:3543,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "honda",
-      "http_status": 200,
-      "response_time_ms": 339,
+      "response_time_ms": 419,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
       "query": "byd",
+      "http_status": 0,
+      "response_time_ms": 3004,
+      "result": "FAIL",
+      "detail": "fetch failed"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "toyota",
       "http_status": 200,
-      "response_time_ms": 122,
+      "response_time_ms": 2372,
+      "result": "SLOW",
+      "detail": "2372ms > 600ms; cache?(Age:3649,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "honda",
+      "http_status": 200,
+      "response_time_ms": 160,
       "result": "PASS",
-      "detail": "cache?(Age:3544,X-Cache:Hit from cloudfront)"
+      "detail": "cache?(Age:3651,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "items",
-      "query": "1044354",
+      "query": "1030084",
       "http_status": 200,
-      "response_time_ms": 524,
+      "response_time_ms": 391,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1044364",
+      "query": "1030371",
       "http_status": 200,
-      "response_time_ms": 447,
+      "response_time_ms": 406,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1044392",
+      "query": "1043857",
       "http_status": 200,
-      "response_time_ms": 473,
+      "response_time_ms": 395,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1439,
+      "load_time_ms": 2174,
       "result": "PASS",
-      "detail": "9 non-critical request(s) ignored"
+      "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4651,
+      "load_time_ms": 4775,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4651ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4775ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 581,
+      "url": "https://www.dubicars.com/2023-jeep-wrangler-sport-s-canadian-specs-perfect-condition-1044894.html",
+      "load_time_ms": 306,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "request_url": "https://www.dubicars.com/2023-jeep-wrangler-sport-s-canadian-specs-perfect-condition-1044894.html",
       "status": 403,
       "detail": ""
     }
