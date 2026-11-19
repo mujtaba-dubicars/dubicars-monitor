@@ -1,80 +1,80 @@
 {
-  "timestamp": "2026-11-12T04:11:41.775Z",
+  "timestamp": "2026-11-19T04:15:49.600Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 6,
-    "slow": 4,
+    "pass": 8,
+    "slow": 2,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 5
+    "issues": 3
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 896,
+      "response_time_ms": 702,
       "result": "SLOW",
-      "detail": "896ms > 600ms"
+      "detail": "702ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 733,
-      "result": "SLOW",
-      "detail": "733ms > 600ms"
+      "response_time_ms": 389,
+      "result": "PASS",
+      "detail": ""
     },
     {
       "endpoint": "suggestions",
       "query": "mercedes",
       "http_status": 200,
-      "response_time_ms": 697,
-      "result": "SLOW",
-      "detail": "697ms > 600ms"
+      "response_time_ms": 120,
+      "result": "PASS",
+      "detail": "cache?(Age:2870,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "toyota",
+      "http_status": 200,
+      "response_time_ms": 456,
+      "result": "PASS",
+      "detail": ""
     },
     {
       "endpoint": "suggestions",
       "query": "honda",
       "http_status": 200,
-      "response_time_ms": 531,
+      "response_time_ms": 101,
       "result": "PASS",
-      "detail": ""
+      "detail": "cache?(Age:2871,X-Cache:Hit from cloudfront)"
     },
     {
-      "endpoint": "suggestions",
-      "query": "bmw",
+      "endpoint": "items",
+      "query": "1044244",
       "http_status": 200,
-      "response_time_ms": 344,
+      "response_time_ms": 446,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1047944",
+      "query": "1013678",
       "http_status": 200,
-      "response_time_ms": 479,
+      "response_time_ms": 429,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1045737",
+      "query": "820531",
       "http_status": 200,
-      "response_time_ms": 472,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "1048031",
-      "http_status": 200,
-      "response_time_ms": 464,
+      "response_time_ms": 469,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 3786,
+      "load_time_ms": 1429,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 5010,
+      "load_time_ms": 4746,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 5010ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4746ms > 4000ms; 11 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2024-baic-bj40-1042677.html",
-      "load_time_ms": 743,
+      "url": "https://www.dubicars.com/2021-ram-1500-trx-luxury-1044244.html",
+      "load_time_ms": 227,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2024-baic-bj40-1042677.html",
+      "request_url": "https://www.dubicars.com/2021-ram-1500-trx-luxury-1044244.html",
       "status": 403,
       "detail": ""
     }
