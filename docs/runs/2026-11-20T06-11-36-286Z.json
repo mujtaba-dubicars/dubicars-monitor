@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-13T06:11:37.783Z",
+  "timestamp": "2026-11-20T06:11:36.286Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
@@ -18,63 +18,63 @@
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 816,
+      "response_time_ms": 701,
       "result": "SLOW",
-      "detail": "816ms > 600ms"
+      "detail": "701ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 406,
+      "response_time_ms": 444,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "bmw",
+      "query": "byd",
       "http_status": 200,
-      "response_time_ms": 403,
+      "response_time_ms": 188,
       "result": "PASS",
-      "detail": ""
+      "detail": "cache?(Age:3598,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "suggestions",
       "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 446,
+      "response_time_ms": 421,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "honda",
+      "query": "audi",
       "http_status": 200,
-      "response_time_ms": 104,
-      "result": "PASS",
-      "detail": "cache?(Age:3601,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "items",
-      "query": "879243",
-      "http_status": 200,
-      "response_time_ms": 472,
+      "response_time_ms": 493,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1006464",
+      "query": "1050976",
       "http_status": 200,
-      "response_time_ms": 491,
+      "response_time_ms": 420,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "938329",
+      "query": "1010834",
       "http_status": 200,
-      "response_time_ms": 551,
+      "response_time_ms": 476,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1010804",
+      "http_status": 200,
+      "response_time_ms": 485,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 2045,
+      "load_time_ms": 1617,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 5522,
+      "load_time_ms": 4430,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 5522ms > 4000ms; 13 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4430ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 281,
+      "url": "https://www.dubicars.com/2026-nissan-patrol-2026-nissan-patrol-city-35l-twin-turbo-v6-425-hp-4wd-gcc-specs-988040.html",
+      "load_time_ms": 266,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "request_url": "https://www.dubicars.com/2026-nissan-patrol-2026-nissan-patrol-city-35l-twin-turbo-v6-425-hp-4wd-gcc-specs-988040.html",
       "status": 403,
       "detail": ""
     }
