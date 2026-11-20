@@ -1,103 +1,103 @@
 {
-  "timestamp": "2026-11-13T11:11:51.682Z",
+  "timestamp": "2026-11-20T11:11:51.928Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 5,
-    "slow": 5,
+    "pass": 6,
+    "slow": 4,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 6
+    "issues": 5
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 971,
+      "response_time_ms": 869,
       "result": "SLOW",
-      "detail": "971ms > 600ms"
+      "detail": "869ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 525,
-      "result": "PASS",
-      "detail": ""
+      "response_time_ms": 700,
+      "result": "SLOW",
+      "detail": "700ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "toyota",
+      "http_status": 200,
+      "response_time_ms": 627,
+      "result": "SLOW",
+      "detail": "627ms > 600ms"
     },
     {
       "endpoint": "suggestions",
       "query": "byd",
       "http_status": 200,
-      "response_time_ms": 495,
+      "response_time_ms": 124,
       "result": "PASS",
-      "detail": ""
+      "detail": "cache?(Age:3614,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "suggestions",
-      "query": "honda",
+      "query": "bmw",
       "http_status": 200,
-      "response_time_ms": 144,
-      "result": "PASS",
-      "detail": "cache?(Age:3612,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "mercedes",
-      "http_status": 200,
-      "response_time_ms": 336,
+      "response_time_ms": 313,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1029511",
+      "query": "1035803",
       "http_status": 200,
-      "response_time_ms": 2189,
-      "result": "SLOW",
-      "detail": "2189ms > 600ms"
+      "response_time_ms": 398,
+      "result": "PASS",
+      "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1046510",
+      "query": "1032884",
       "http_status": 200,
-      "response_time_ms": 971,
-      "result": "SLOW",
-      "detail": "971ms > 600ms"
+      "response_time_ms": 381,
+      "result": "PASS",
+      "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1029471",
+      "query": "1035524",
       "http_status": 200,
-      "response_time_ms": 1002,
-      "result": "SLOW",
-      "detail": "1002ms > 600ms"
+      "response_time_ms": 536,
+      "result": "PASS",
+      "detail": ""
     }
   ],
   "journey": [
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 2164,
+      "load_time_ms": 1907,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4852,
+      "load_time_ms": 4931,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4852ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4931ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 342,
+      "url": "https://www.dubicars.com/2023-mercedes-benz-g63-amg-mrcedes-benz-g63-only-13000-km-brabus-g800-special-color-full-carbon-fiber-1035544.html",
+      "load_time_ms": 319,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "request_url": "https://www.dubicars.com/2023-mercedes-benz-g63-amg-mrcedes-benz-g63-only-13000-km-brabus-g800-special-color-full-carbon-fiber-1035544.html",
       "status": 403,
       "detail": ""
     }
