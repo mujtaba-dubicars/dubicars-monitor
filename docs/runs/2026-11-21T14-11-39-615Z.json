@@ -1,32 +1,32 @@
 {
-  "timestamp": "2026-11-14T14:11:35.990Z",
+  "timestamp": "2026-11-21T14:11:39.615Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 8,
-    "slow": 2,
+    "pass": 7,
+    "slow": 3,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 3
+    "issues": 4
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 742,
+      "response_time_ms": 835,
       "result": "SLOW",
-      "detail": "742ms > 600ms"
+      "detail": "835ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 522,
+      "response_time_ms": 405,
       "result": "PASS",
       "detail": ""
     },
@@ -34,15 +34,15 @@
       "endpoint": "suggestions",
       "query": "toyota",
       "http_status": 200,
-      "response_time_ms": 209,
-      "result": "PASS",
-      "detail": "cache?(Age:3589,X-Cache:Hit from cloudfront)"
+      "response_time_ms": 655,
+      "result": "SLOW",
+      "detail": "655ms > 600ms"
     },
     {
       "endpoint": "suggestions",
       "query": "audi",
       "http_status": 200,
-      "response_time_ms": 484,
+      "response_time_ms": 518,
       "result": "PASS",
       "detail": ""
     },
@@ -50,31 +50,31 @@
       "endpoint": "suggestions",
       "query": "honda",
       "http_status": 200,
-      "response_time_ms": 108,
+      "response_time_ms": 149,
       "result": "PASS",
-      "detail": "cache?(Age:3589,X-Cache:Hit from cloudfront)"
+      "detail": "cache?(Age:3602,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "items",
-      "query": "1044406",
+      "query": "1039276",
+      "http_status": 200,
+      "response_time_ms": 469,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1042596",
+      "http_status": 200,
+      "response_time_ms": 426,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1051486",
       "http_status": 200,
       "response_time_ms": 546,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "1026643",
-      "http_status": 200,
-      "response_time_ms": 464,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "1026233",
-      "http_status": 200,
-      "response_time_ms": 471,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1695,
+      "load_time_ms": 2209,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4721,
+      "load_time_ms": 4810,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4721ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4810ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 260,
+      "url": "https://www.dubicars.com/2025-land-rover-defender-octa-first-edition-1043926.html",
+      "load_time_ms": 663,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "request_url": "https://www.dubicars.com/2025-land-rover-defender-octa-first-edition-1043926.html",
       "status": 403,
       "detail": ""
     }
