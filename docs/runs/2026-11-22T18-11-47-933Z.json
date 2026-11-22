@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-15T18:11:31.418Z",
+  "timestamp": "2026-11-22T18:11:47.933Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
@@ -18,63 +18,63 @@
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 788,
+      "response_time_ms": 792,
       "result": "SLOW",
-      "detail": "788ms > 600ms"
+      "detail": "792ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 481,
+      "response_time_ms": 388,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "audi",
+      "query": "byd",
       "http_status": 200,
-      "response_time_ms": 462,
+      "response_time_ms": 448,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "toyota",
+      "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 120,
+      "response_time_ms": 307,
       "result": "PASS",
-      "detail": "cache?(Age:3595,X-Cache:Hit from cloudfront)"
+      "detail": ""
     },
     {
       "endpoint": "suggestions",
       "query": "bmw",
       "http_status": 200,
-      "response_time_ms": 492,
+      "response_time_ms": 473,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1039875",
+      "query": "1043279",
       "http_status": 200,
-      "response_time_ms": 558,
+      "response_time_ms": 445,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1031506",
+      "query": "1044809",
       "http_status": 200,
-      "response_time_ms": 427,
+      "response_time_ms": 498,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "914920",
+      "query": "1045648",
       "http_status": 200,
-      "response_time_ms": 529,
+      "response_time_ms": 463,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1315,
+      "load_time_ms": 1331,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4650,
+      "load_time_ms": 4506,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4650ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4506ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 247,
+      "url": "https://www.dubicars.com/2022-volkswagen-teramont-r-full-service-from-vw-dealer-warranty-till-10-free-accident-free-paint-1044809.html",
+      "load_time_ms": 234,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "request_url": "https://www.dubicars.com/2022-volkswagen-teramont-r-full-service-from-vw-dealer-warranty-till-10-free-accident-free-paint-1044809.html",
       "status": 403,
       "detail": ""
     }
