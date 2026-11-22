@@ -1,80 +1,80 @@
 {
-  "timestamp": "2026-11-15T11:11:33.898Z",
+  "timestamp": "2026-11-22T11:11:34.857Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 8,
-    "slow": 2,
+    "pass": 7,
+    "slow": 3,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 3
+    "issues": 4
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 747,
+      "response_time_ms": 789,
       "result": "SLOW",
-      "detail": "747ms > 600ms"
+      "detail": "789ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 422,
+      "response_time_ms": 572,
       "result": "PASS",
       "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "byd",
+      "http_status": 200,
+      "response_time_ms": 691,
+      "result": "SLOW",
+      "detail": "691ms > 600ms"
     },
     {
       "endpoint": "suggestions",
       "query": "toyota",
       "http_status": 200,
-      "response_time_ms": 261,
-      "result": "PASS",
-      "detail": "cache?(Age:3600,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "mercedes",
-      "http_status": 200,
-      "response_time_ms": 340,
+      "response_time_ms": 513,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "honda",
+      "query": "bmw",
       "http_status": 200,
-      "response_time_ms": 332,
+      "response_time_ms": 141,
+      "result": "PASS",
+      "detail": "cache?(Age:3596,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "items",
+      "query": "1039057",
+      "http_status": 200,
+      "response_time_ms": 456,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1031579",
+      "query": "1039079",
       "http_status": 200,
-      "response_time_ms": 406,
+      "response_time_ms": 428,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1025472",
+      "query": "1033565",
       "http_status": 200,
-      "response_time_ms": 439,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "1023643",
-      "http_status": 200,
-      "response_time_ms": 419,
+      "response_time_ms": 491,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1674,
+      "load_time_ms": 1989,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4541,
+      "load_time_ms": 4500,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4541ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4500ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 254,
+      "url": "https://www.dubicars.com/2023-maserati-mc20-cielo-mansory-european-specs-1042542.html",
+      "load_time_ms": 293,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "request_url": "https://www.dubicars.com/2023-maserati-mc20-cielo-mansory-european-specs-1042542.html",
       "status": 403,
       "detail": ""
     }
