@@ -1,0 +1,113 @@
+{
+  "timestamp": "2026-11-22T03:15:20.249Z",
+  "thresholds": {
+    "apiMs": 600,
+    "pageMs": 4000
+  },
+  "summary": {
+    "total": 11,
+    "pass": 7,
+    "slow": 3,
+    "fail": 1,
+    "skipped": 0,
+    "netErrors": 1,
+    "issues": 4
+  },
+  "api": [
+    {
+      "endpoint": "search",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 823,
+      "result": "SLOW",
+      "detail": "823ms > 600ms"
+    },
+    {
+      "endpoint": "homepage",
+      "query": "",
+      "http_status": 200,
+      "response_time_ms": 605,
+      "result": "SLOW",
+      "detail": "605ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "byd",
+      "http_status": 200,
+      "response_time_ms": 256,
+      "result": "PASS",
+      "detail": "cache?(Age:3819,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "audi",
+      "http_status": 200,
+      "response_time_ms": 496,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "honda",
+      "http_status": 200,
+      "response_time_ms": 466,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1021099",
+      "http_status": 200,
+      "response_time_ms": 544,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1046550",
+      "http_status": 200,
+      "response_time_ms": 588,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1010541",
+      "http_status": 200,
+      "response_time_ms": 524,
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "journey": [
+    {
+      "step": "land",
+      "url": "https://www.dubicars.com/",
+      "load_time_ms": 1562,
+      "result": "PASS",
+      "detail": "8 non-critical request(s) ignored"
+    },
+    {
+      "step": "search",
+      "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
+      "load_time_ms": 4621,
+      "result": "SLOW",
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4621ms > 4000ms; 10 non-critical request(s) ignored"
+    },
+    {
+      "step": "open_ad",
+      "url": "https://www.dubicars.com/2025-toyota-land-cruiser-toyota-land-cruiser-vxr-twin-turbo-35l-engine-2025-model-full-option-1051313.html",
+      "load_time_ms": 496,
+      "result": "FAIL",
+      "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
+    }
+  ],
+  "netErrors": [
+    {
+      "page": "open_ad",
+      "request_url": "https://www.dubicars.com/2025-toyota-land-cruiser-toyota-land-cruiser-vxr-twin-turbo-35l-engine-2025-model-full-option-1051313.html",
+      "status": 403,
+      "detail": ""
+    }
+  ]
+}
