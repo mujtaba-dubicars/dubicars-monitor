@@ -1,80 +1,80 @@
 {
-  "timestamp": "2026-11-16T11:12:00.396Z",
+  "timestamp": "2026-11-23T11:11:37.084Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 8,
-    "slow": 2,
+    "pass": 6,
+    "slow": 4,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 3
+    "issues": 5
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 767,
+      "response_time_ms": 1345,
       "result": "SLOW",
-      "detail": "767ms > 600ms"
+      "detail": "1345ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 399,
+      "response_time_ms": 654,
+      "result": "SLOW",
+      "detail": "654ms > 600ms"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "toyota",
+      "http_status": 200,
+      "response_time_ms": 461,
       "result": "PASS",
       "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "honda",
+      "http_status": 200,
+      "response_time_ms": 127,
+      "result": "PASS",
+      "detail": "cache?(Age:3414,X-Cache:Hit from cloudfront)"
     },
     {
       "endpoint": "suggestions",
       "query": "bmw",
       "http_status": 200,
-      "response_time_ms": 338,
+      "response_time_ms": 120,
       "result": "PASS",
-      "detail": ""
+      "detail": "cache?(Age:3414,X-Cache:Hit from cloudfront)"
     },
     {
-      "endpoint": "suggestions",
-      "query": "mercedes",
+      "endpoint": "items",
+      "query": "1038781",
       "http_status": 200,
-      "response_time_ms": 314,
-      "result": "PASS",
-      "detail": ""
+      "response_time_ms": 609,
+      "result": "SLOW",
+      "detail": "609ms > 600ms"
     },
     {
-      "endpoint": "suggestions",
-      "query": "byd",
+      "endpoint": "items",
+      "query": "1030371",
       "http_status": 200,
-      "response_time_ms": 294,
+      "response_time_ms": 563,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1045877",
+      "query": "1042251",
       "http_status": 200,
-      "response_time_ms": 435,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "1040605",
-      "http_status": 200,
-      "response_time_ms": 493,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "1033176",
-      "http_status": 200,
-      "response_time_ms": 501,
+      "response_time_ms": 480,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1479,
+      "load_time_ms": 1982,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4617,
+      "load_time_ms": 4646,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4617ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4646ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 225,
+      "url": "https://www.dubicars.com/2021-toyota-prado-gcc-spec-alfuttaim-warranty-history-exceptional-condition-1042131.html",
+      "load_time_ms": 299,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "request_url": "https://www.dubicars.com/2021-toyota-prado-gcc-spec-alfuttaim-warranty-history-exceptional-condition-1042131.html",
       "status": 403,
       "detail": ""
     }
