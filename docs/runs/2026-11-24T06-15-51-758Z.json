@@ -1,48 +1,32 @@
 {
-  "timestamp": "2026-11-17T06:11:57.693Z",
+  "timestamp": "2026-11-24T06:15:51.758Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 5,
-    "slow": 5,
+    "pass": 8,
+    "slow": 2,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 6
+    "issues": 3
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 813,
+      "response_time_ms": 665,
       "result": "SLOW",
-      "detail": "813ms > 600ms"
+      "detail": "665ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 753,
-      "result": "SLOW",
-      "detail": "753ms > 600ms"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "byd",
-      "http_status": 200,
-      "response_time_ms": 615,
-      "result": "SLOW",
-      "detail": "615ms > 600ms"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "mercedes",
-      "http_status": 200,
-      "response_time_ms": 520,
+      "response_time_ms": 369,
       "result": "PASS",
       "detail": ""
     },
@@ -50,54 +34,70 @@
       "endpoint": "suggestions",
       "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 355,
+      "response_time_ms": 121,
+      "result": "PASS",
+      "detail": "cache?(Age:737,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "bmw",
+      "http_status": 200,
+      "response_time_ms": 100,
+      "result": "PASS",
+      "detail": "cache?(Age:736,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "toyota",
+      "http_status": 200,
+      "response_time_ms": 436,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1044235",
+      "query": "1049974",
       "http_status": 200,
-      "response_time_ms": 586,
+      "response_time_ms": 433,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1037668",
+      "query": "1049977",
       "http_status": 200,
-      "response_time_ms": 584,
+      "response_time_ms": 406,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1045034",
+      "query": "1053197",
       "http_status": 200,
-      "response_time_ms": 1105,
-      "result": "SLOW",
-      "detail": "1105ms > 600ms"
+      "response_time_ms": 538,
+      "result": "PASS",
+      "detail": ""
     }
   ],
   "journey": [
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1762,
+      "load_time_ms": 1401,
       "result": "PASS",
-      "detail": "9 non-critical request(s) ignored"
+      "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4862,
+      "load_time_ms": 4336,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4862ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4336ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 315,
+      "url": "https://www.dubicars.com/2023-toyota-prado-v6-full-option-40-petrol-1049530.html",
+      "load_time_ms": 210,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "request_url": "https://www.dubicars.com/2023-toyota-prado-v6-full-option-40-petrol-1049530.html",
       "status": 403,
       "detail": ""
     }
