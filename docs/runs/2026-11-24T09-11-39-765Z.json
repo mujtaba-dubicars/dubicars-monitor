@@ -1,48 +1,32 @@
 {
-  "timestamp": "2026-11-17T09:11:59.121Z",
+  "timestamp": "2026-11-24T09:11:39.765Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 8,
-    "slow": 2,
+    "pass": 7,
+    "slow": 3,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 3
+    "issues": 4
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 743,
+      "response_time_ms": 839,
       "result": "SLOW",
-      "detail": "743ms > 600ms"
+      "detail": "839ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 444,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "byd",
-      "http_status": 200,
-      "response_time_ms": 120,
-      "result": "PASS",
-      "detail": "cache?(Age:3594,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "audi",
-      "http_status": 200,
-      "response_time_ms": 472,
+      "response_time_ms": 427,
       "result": "PASS",
       "detail": ""
     },
@@ -50,31 +34,47 @@
       "endpoint": "suggestions",
       "query": "toyota",
       "http_status": 200,
-      "response_time_ms": 103,
+      "response_time_ms": 463,
       "result": "PASS",
-      "detail": "cache?(Age:3594,X-Cache:Hit from cloudfront)"
+      "detail": ""
     },
     {
-      "endpoint": "items",
-      "query": "968822",
+      "endpoint": "suggestions",
+      "query": "bmw",
       "http_status": 200,
-      "response_time_ms": 437,
+      "response_time_ms": 342,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "honda",
+      "http_status": 200,
+      "response_time_ms": 322,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1034715",
+      "query": "1024918",
       "http_status": 200,
-      "response_time_ms": 524,
+      "response_time_ms": 623,
+      "result": "SLOW",
+      "detail": "623ms > 600ms"
+    },
+    {
+      "endpoint": "items",
+      "query": "1025949",
+      "http_status": 200,
+      "response_time_ms": 587,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1037287",
+      "query": "1029930",
       "http_status": 200,
-      "response_time_ms": 417,
+      "response_time_ms": 589,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1318,
+      "load_time_ms": 1993,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4556,
+      "load_time_ms": 4867,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4556ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4867ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
-      "load_time_ms": 914,
+      "url": "https://www.dubicars.com/2026-toyota-hiace-35l-automatic-2026-model-gcc-1015647.html",
+      "load_time_ms": 307,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "request_url": "https://www.dubicars.com/2026-toyota-hiace-35l-automatic-2026-model-gcc-1015647.html",
       "status": 403,
       "detail": ""
     }
