@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-18T12:11:53.507Z",
+  "timestamp": "2026-11-25T12:11:37.389Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
@@ -18,63 +18,63 @@
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 750,
+      "response_time_ms": 873,
       "result": "SLOW",
-      "detail": "750ms > 600ms"
+      "detail": "873ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 649,
-      "result": "SLOW",
-      "detail": "649ms > 600ms"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "bmw",
-      "http_status": 200,
-      "response_time_ms": 541,
+      "response_time_ms": 443,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "nissan",
+      "query": "toyota",
       "http_status": 200,
-      "response_time_ms": 107,
-      "result": "PASS",
-      "detail": "cache?(Age:3619,X-Cache:Hit from cloudfront)"
+      "response_time_ms": 608,
+      "result": "SLOW",
+      "detail": "608ms > 600ms"
     },
     {
       "endpoint": "suggestions",
       "query": "audi",
       "http_status": 200,
-      "response_time_ms": 107,
+      "response_time_ms": 468,
       "result": "PASS",
-      "detail": "cache?(Age:3618,X-Cache:Hit from cloudfront)"
+      "detail": ""
     },
     {
-      "endpoint": "items",
-      "query": "1003712",
+      "endpoint": "suggestions",
+      "query": "byd",
       "http_status": 200,
-      "response_time_ms": 497,
+      "response_time_ms": 507,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "991387",
+      "query": "1050239",
       "http_status": 200,
-      "response_time_ms": 438,
+      "response_time_ms": 577,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1032477",
+      "query": "1033730",
       "http_status": 200,
-      "response_time_ms": 479,
+      "response_time_ms": 466,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1051199",
+      "http_status": 200,
+      "response_time_ms": 475,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 2455,
+      "load_time_ms": 1700,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 5039,
+      "load_time_ms": 4723,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 5039ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4723ms > 4000ms; 12 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2019-mercedes-benz-g63-amg-drive-now-pay-in-2027-1011953.html",
-      "load_time_ms": 671,
+      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "load_time_ms": 481,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2019-mercedes-benz-g63-amg-drive-now-pay-in-2027-1011953.html",
+      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
       "status": 403,
       "detail": ""
     }
