@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-18T13:11:40.704Z",
+  "timestamp": "2026-11-25T13:11:47.625Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
@@ -18,63 +18,63 @@
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 840,
+      "response_time_ms": 839,
       "result": "SLOW",
-      "detail": "840ms > 600ms"
+      "detail": "839ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
+      "http_status": 200,
+      "response_time_ms": 389,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "audi",
+      "http_status": 200,
+      "response_time_ms": 184,
+      "result": "PASS",
+      "detail": "cache?(Age:3610,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "byd",
+      "http_status": 200,
+      "response_time_ms": 46,
+      "result": "PASS",
+      "detail": "cache?(Age:924,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "honda",
+      "http_status": 200,
+      "response_time_ms": 513,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "1034711",
       "http_status": 200,
       "response_time_ms": 456,
       "result": "PASS",
       "detail": ""
     },
     {
-      "endpoint": "suggestions",
-      "query": "nissan",
+      "endpoint": "items",
+      "query": "1035281",
       "http_status": 200,
-      "response_time_ms": 282,
-      "result": "PASS",
-      "detail": "cache?(Age:3587,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "bmw",
-      "http_status": 200,
-      "response_time_ms": 14,
-      "result": "PASS",
-      "detail": "cache?(Age:3587,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "byd",
-      "http_status": 200,
-      "response_time_ms": 293,
+      "response_time_ms": 399,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1048797",
+      "query": "1048820",
       "http_status": 200,
-      "response_time_ms": 451,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "1029468",
-      "http_status": 200,
-      "response_time_ms": 539,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "1049077",
-      "http_status": 200,
-      "response_time_ms": 465,
+      "response_time_ms": 471,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1813,
+      "load_time_ms": 2471,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4809,
+      "load_time_ms": 4594,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4809ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4594ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2024-mercedes-benz-g63-amg-g63-clean-title-1048817.html",
-      "load_time_ms": 287,
+      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "load_time_ms": 355,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2024-mercedes-benz-g63-amg-g63-clean-title-1048817.html",
+      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
       "status": 403,
       "detail": ""
     }
