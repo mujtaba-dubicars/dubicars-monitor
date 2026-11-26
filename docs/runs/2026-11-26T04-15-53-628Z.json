@@ -1,46 +1,46 @@
 {
-  "timestamp": "2026-11-19T03:27:57.741Z",
+  "timestamp": "2026-11-26T04:15:53.628Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 6,
-    "slow": 4,
+    "pass": 7,
+    "slow": 3,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 5
+    "issues": 4
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 745,
+      "response_time_ms": 855,
       "result": "SLOW",
-      "detail": "745ms > 600ms"
+      "detail": "855ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 643,
-      "result": "SLOW",
-      "detail": "643ms > 600ms"
+      "response_time_ms": 440,
+      "result": "PASS",
+      "detail": ""
     },
     {
       "endpoint": "suggestions",
       "query": "nissan",
       "http_status": 200,
-      "response_time_ms": 627,
+      "response_time_ms": 601,
       "result": "SLOW",
-      "detail": "627ms > 600ms"
+      "detail": "601ms > 600ms"
     },
     {
       "endpoint": "suggestions",
-      "query": "honda",
+      "query": "toyota",
       "http_status": 200,
       "response_time_ms": 327,
       "result": "PASS",
@@ -48,33 +48,33 @@
     },
     {
       "endpoint": "suggestions",
-      "query": "mercedes",
+      "query": "byd",
       "http_status": 200,
-      "response_time_ms": 491,
+      "response_time_ms": 468,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1046286",
+      "query": "1052475",
       "http_status": 200,
-      "response_time_ms": 424,
+      "response_time_ms": 446,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1042800",
+      "query": "1052552",
       "http_status": 200,
-      "response_time_ms": 436,
+      "response_time_ms": 478,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "973647",
+      "query": "1018055",
       "http_status": 200,
-      "response_time_ms": 461,
+      "response_time_ms": 459,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1555,
+      "load_time_ms": 1558,
       "result": "PASS",
-      "detail": "8 non-critical request(s) ignored"
+      "detail": "11 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4754,
+      "load_time_ms": 4519,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4754ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4519ms > 4000ms; 12 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2027-toyota-hilux-s-z-premium-360-camera-bsm-ventilated-seats-diff-lock-wireless-charger-glxs-z-1050421.html",
-      "load_time_ms": 279,
+      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "load_time_ms": 445,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2027-toyota-hilux-s-z-premium-360-camera-bsm-ventilated-seats-diff-lock-wireless-charger-glxs-z-1050421.html",
+      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
       "status": 403,
       "detail": ""
     }
