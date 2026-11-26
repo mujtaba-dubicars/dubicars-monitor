@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-19T06:11:44.679Z",
+  "timestamp": "2026-11-26T06:16:31.613Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
@@ -18,13 +18,29 @@
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 826,
+      "response_time_ms": 843,
       "result": "SLOW",
-      "detail": "826ms > 600ms"
+      "detail": "843ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
+      "http_status": 200,
+      "response_time_ms": 414,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "nissan",
+      "http_status": 200,
+      "response_time_ms": 453,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "audi",
       "http_status": 200,
       "response_time_ms": 334,
       "result": "PASS",
@@ -32,49 +48,33 @@
     },
     {
       "endpoint": "suggestions",
-      "query": "mercedes",
+      "query": "honda",
       "http_status": 200,
-      "response_time_ms": 611,
+      "response_time_ms": 122,
+      "result": "PASS",
+      "detail": "cache?(Age:3892,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "items",
+      "query": "1029332",
+      "http_status": 200,
+      "response_time_ms": 520,
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "endpoint": "items",
+      "query": "976985",
+      "http_status": 200,
+      "response_time_ms": 630,
       "result": "SLOW",
-      "detail": "611ms > 600ms"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "byd",
-      "http_status": 200,
-      "response_time_ms": 185,
-      "result": "PASS",
-      "detail": "cache?(Age:3553,X-Cache:Hit from cloudfront)"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "bmw",
-      "http_status": 200,
-      "response_time_ms": 375,
-      "result": "PASS",
-      "detail": ""
+      "detail": "630ms > 600ms"
     },
     {
       "endpoint": "items",
-      "query": "1027525",
+      "query": "1014529",
       "http_status": 200,
-      "response_time_ms": 566,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "1035360",
-      "http_status": 200,
-      "response_time_ms": 392,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "824784",
-      "http_status": 200,
-      "response_time_ms": 487,
+      "response_time_ms": 476,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1927,
+      "load_time_ms": 1689,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4842,
+      "load_time_ms": 4552,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4842ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4552ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-lamborghini-huracan-2023-lamborghini-huracan-52l-naturally-aspirated-v10-6900-km-warranty-service-877390.html",
-      "load_time_ms": 299,
+      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "load_time_ms": 236,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-lamborghini-huracan-2023-lamborghini-huracan-52l-naturally-aspirated-v10-6900-km-warranty-service-877390.html",
+      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
       "status": 403,
       "detail": ""
     }
