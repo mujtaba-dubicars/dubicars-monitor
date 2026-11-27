@@ -1,80 +1,80 @@
 {
-  "timestamp": "2026-11-20T11:11:51.928Z",
+  "timestamp": "2026-11-27T11:11:40.786Z",
   "thresholds": {
     "apiMs": 600,
     "pageMs": 4000
   },
   "summary": {
     "total": 11,
-    "pass": 6,
-    "slow": 4,
+    "pass": 8,
+    "slow": 2,
     "fail": 1,
     "skipped": 0,
     "netErrors": 1,
-    "issues": 5
+    "issues": 3
   },
   "api": [
     {
       "endpoint": "search",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 869,
+      "response_time_ms": 836,
       "result": "SLOW",
-      "detail": "869ms > 600ms"
+      "detail": "836ms > 600ms"
     },
     {
       "endpoint": "homepage",
       "query": "",
       "http_status": 200,
-      "response_time_ms": 700,
-      "result": "SLOW",
-      "detail": "700ms > 600ms"
-    },
-    {
-      "endpoint": "suggestions",
-      "query": "toyota",
-      "http_status": 200,
-      "response_time_ms": 627,
-      "result": "SLOW",
-      "detail": "627ms > 600ms"
+      "response_time_ms": 427,
+      "result": "PASS",
+      "detail": ""
     },
     {
       "endpoint": "suggestions",
       "query": "byd",
       "http_status": 200,
-      "response_time_ms": 124,
+      "response_time_ms": 449,
       "result": "PASS",
-      "detail": "cache?(Age:3614,X-Cache:Hit from cloudfront)"
+      "detail": ""
     },
     {
       "endpoint": "suggestions",
-      "query": "bmw",
+      "query": "honda",
       "http_status": 200,
-      "response_time_ms": 313,
+      "response_time_ms": 113,
+      "result": "PASS",
+      "detail": "cache?(Age:3602,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "suggestions",
+      "query": "nissan",
+      "http_status": 200,
+      "response_time_ms": 114,
+      "result": "PASS",
+      "detail": "cache?(Age:3602,X-Cache:Hit from cloudfront)"
+    },
+    {
+      "endpoint": "items",
+      "query": "1021336",
+      "http_status": 200,
+      "response_time_ms": 472,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1035803",
+      "query": "1009579",
       "http_status": 200,
-      "response_time_ms": 398,
+      "response_time_ms": 423,
       "result": "PASS",
       "detail": ""
     },
     {
       "endpoint": "items",
-      "query": "1032884",
+      "query": "1009476",
       "http_status": 200,
-      "response_time_ms": 381,
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "endpoint": "items",
-      "query": "1035524",
-      "http_status": 200,
-      "response_time_ms": 536,
+      "response_time_ms": 422,
       "result": "PASS",
       "detail": ""
     }
@@ -83,21 +83,21 @@
     {
       "step": "land",
       "url": "https://www.dubicars.com/",
-      "load_time_ms": 1907,
+      "load_time_ms": 2388,
       "result": "PASS",
       "detail": "8 non-critical request(s) ignored"
     },
     {
       "step": "search",
       "url": "https://www.dubicars.com/search?q=Nissan%20Navara",
-      "load_time_ms": 4931,
+      "load_time_ms": 4678,
       "result": "SLOW",
-      "detail": "search via URL fallback (typed failed: search popup did not open); 4931ms > 4000ms; 10 non-critical request(s) ignored"
+      "detail": "search via URL fallback (typed failed: search popup did not open); 4678ms > 4000ms; 10 non-critical request(s) ignored"
     },
     {
       "step": "open_ad",
-      "url": "https://www.dubicars.com/2023-mercedes-benz-g63-amg-mrcedes-benz-g63-only-13000-km-brabus-g800-special-color-full-carbon-fiber-1035544.html",
-      "load_time_ms": 319,
+      "url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
+      "load_time_ms": 328,
       "result": "FAIL",
       "detail": "1 network request(s) failed; 2 non-critical request(s) ignored"
     }
@@ -105,7 +105,7 @@
   "netErrors": [
     {
       "page": "open_ad",
-      "request_url": "https://www.dubicars.com/2023-mercedes-benz-g63-amg-mrcedes-benz-g63-only-13000-km-brabus-g800-special-color-full-carbon-fiber-1035544.html",
+      "request_url": "https://www.dubicars.com/2023-toyota-land-cruiser-toyota-landcruiser-gxr-v6-full-option-petrol-lhd-40l-1029177.html",
       "status": 403,
       "detail": ""
     }
